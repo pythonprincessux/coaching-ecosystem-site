@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
   background:
     radial-gradient(circle at top left, rgba(255,255,255,0.55), transparent 28%),
     radial-gradient(circle at 85% 20%, rgba(231, 224, 240, 0.45), transparent 24%),
@@ -238,6 +238,10 @@ a {
 
 .section p + p {
   margin-top: 18px;
+}
+
+.section strong {
+  color: var(--text);
 }
 
 /* Cards / grids */
@@ -637,8 +641,4 @@ a {
   .fcr-identity {
     font-size: 3rem !important;
   }
-}
-.section.light .container p strong,
-.section .container p strong {
-  color: var(--text);
 }
