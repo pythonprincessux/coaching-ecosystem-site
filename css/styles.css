@@ -14,6 +14,8 @@
   --max-width: 1200px;
 }
 
+/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +42,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Layout containers */
 
 .container,
 .nav-container,
@@ -205,7 +209,7 @@ a {
   margin-top: 18px;
 }
 
-/* Method cards */
+/* Cards */
 
 .method-grid {
   display: grid;
@@ -259,7 +263,6 @@ a {
 
 .audience-list li {
   font-size: 1.15rem;
-  color: var(--text);
   margin-bottom: 14px;
 }
 
@@ -273,7 +276,6 @@ a {
 
 .belief-grid p {
   font-size: 1.2rem;
-  color: var(--text);
   background: white;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -303,7 +305,6 @@ a {
   font-size: 4rem !important;
   letter-spacing: -0.04em;
   margin-top: 20px;
-  margin-bottom: 8px;
 }
 
 .fcr-words {
@@ -332,7 +333,7 @@ a {
   margin-top: 16px;
 }
 
-/* Ways to begin */
+/* Begin cards */
 
 .begin-grid {
   display: grid;
@@ -363,13 +364,6 @@ a {
   background: transparent;
   border: none;
   box-shadow: none;
-  padding-top: 24px;
-  padding-bottom: 8px;
-}
-
-.signature h2 {
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 /* Footer */
@@ -399,79 +393,7 @@ a {
   font-size: 0.96rem;
 }
 
-/* Responsive */
-
-@media (max-width: 1100px) {
-  .hero,
-  .bio-section,
-  .method-grid,
-  .principles-grid,
-  .begin-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-image {
-    min-height: 500px;
-  }
-
-  .bio-section {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .nav-container,
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav {
-    gap: 14px;
-  }
-
-  .method-grid,
-  .principles-grid,
-  .begin-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section .container {
-    padding: 26px;
-  }
-
-  .hero {
-    width: min(var(--max-width), calc(100% - 28px));
-    gap: 18px;
-  }
-
-  .container,
-  .nav-container,
-  .footer-container {
-    width: min(var(--max-width), calc(100% - 28px));
-  }
-
-  .hero-text {
-    padding: 10px 0;
-  }
-
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-
-  .hero-image {
-    min-height: 360px;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-}
-/* Form styling */
+/* Forms */
 
 .form-wrap {
   margin-top: 28px;
@@ -497,7 +419,6 @@ a {
 .form-field label {
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--text);
 }
 
 .form-field input,
@@ -505,31 +426,22 @@ a {
   width: 100%;
   border: 1px solid var(--line);
   background: #fffdfb;
-  color: var(--text);
   border-radius: 16px;
   padding: 16px 18px;
   font: inherit;
   font-size: 1rem;
   outline: none;
   transition: 0.2s ease;
-  box-shadow: 0 6px 16px rgba(24, 24, 24, 0.03);
-}
-
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-  color: #9b938d;
 }
 
 .form-field input:focus,
 .form-field textarea:focus {
   border-color: #b7a6d6;
   box-shadow: 0 0 0 4px rgba(183, 166, 214, 0.18);
-  background: #ffffff;
 }
 
 .form-field textarea {
   min-height: 150px;
-  resize: vertical;
 }
 
 .form-actions {
@@ -545,15 +457,37 @@ a {
   font-size: 0.98rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 22px rgba(24, 24, 24, 0.14);
 }
 
-.form-button:hover {
-  background: #2b2b2b;
+/* Responsive */
+
+@media (max-width: 1100px) {
+
+  .hero,
+  .bio-section,
+  .method-grid,
+  .principles-grid,
+  .begin-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-section {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 @media (max-width: 760px) {
+
+  .method-grid,
+  .principles-grid,
+  .begin-grid,
   .form-grid {
     grid-template-columns: 1fr;
   }
+
 }
