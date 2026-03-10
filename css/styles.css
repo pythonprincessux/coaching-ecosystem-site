@@ -35,7 +35,10 @@ body {
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
   background:
     radial-gradient(circle at top left, rgba(255,255,255,0.55), transparent 28%),
+    radial-gradient(circle at 85% 20%, rgba(231, 224, 240, 0.45), transparent 24%),
+    radial-gradient(circle at 20% 75%, rgba(242, 225, 229, 0.35), transparent 22%),
     linear-gradient(to bottom, #faf7f3 0%, var(--bg) 100%);
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
