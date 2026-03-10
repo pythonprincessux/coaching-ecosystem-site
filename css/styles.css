@@ -104,6 +104,7 @@ a {
 
 .nav a:hover {
   color: #7d6a9b;
+  opacity: 0.9;
 }
 
 .cta-button {
@@ -198,6 +199,10 @@ a {
   padding: 38px 0;
 }
 
+.section + .section {
+  margin-top: 6px;
+}
+
 .section .container {
   background: rgba(255, 255, 255, 0.58);
   border: 1px solid var(--line);
@@ -228,7 +233,7 @@ a {
 .section p {
   font-size: 1.04rem;
   color: var(--muted);
-  max-width: 900px;
+  max-width: 720px;
 }
 
 .section p + p {
@@ -412,28 +417,6 @@ a {
   box-shadow: var(--shadow-card);
 }
 
-.begin-card:hover {
-  transform: translateY(-2px);
-  border-color: #ddd0c4;
-}
-
-/* Signature */
-
-.signature .container {
-  text-align: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.signature h2 {
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Forms */
 
 .form-wrap {
@@ -541,13 +524,29 @@ a {
   font-size: 0.96rem;
 }
 
-/* Utility for simple button rows */
+/* Utility */
 
 .button-row {
   margin-top: 24px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+/* Hover polish */
+
+.method-card,
+.begin-card,
+.principles-grid > div {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.method-card:hover,
+.begin-card:hover,
+.principles-grid > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(24, 24, 24, 0.09);
+  border-color: #d9cfc5;
 }
 
 /* Responsive */
@@ -638,17 +637,4 @@ a {
   .fcr-identity {
     font-size: 3rem !important;
   }
-}
-.method-card,
-.begin-card,
-.principles-grid > div {
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-
-.method-card:hover,
-.begin-card:hover,
-.principles-grid > div:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(24,24,24,.09);
-  border-color: #d9cfc5;
 }
