@@ -638,3 +638,7 @@ a {
     font-size: 3rem !important;
   }
 }
+.section.light .container p strong,
+.section .container p strong {
+  color: var(--text);
+}
