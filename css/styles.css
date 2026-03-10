@@ -639,3 +639,16 @@ a {
     font-size: 3rem !important;
   }
 }
+.method-card,
+.begin-card,
+.principles-grid > div {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.method-card:hover,
+.begin-card:hover,
+.principles-grid > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(24,24,24,.09);
+  border-color: #d9cfc5;
+}
