@@ -104,6 +104,8 @@ a {
   opacity: 0.9;
 }
 
+/* Buttons */
+
 .cta-button,
 .primary-button,
 .form-button {
@@ -115,6 +117,9 @@ a {
   box-shadow: 0 10px 22px rgba(60, 42, 33, 0.12);
   border: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta-button:hover,
@@ -130,14 +135,7 @@ a {
   width: min(var(--max-width), calc(100% - 48px));
   margin: 38px auto 34px;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 24px;
-}
-
-.hero-text {
-  padding: 0;
-  position: relative;
-  z-index: 2;
 }
 
 .hero.has-bg {
@@ -152,68 +150,38 @@ a {
   align-items: center;
 }
 
-.hero.has-bg .hero-image-bg {
+.hero-image-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.hero.has-bg .hero-image-bg img {
+.hero-image-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.hero.has-bg .hero-overlay {
+.hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(239, 228, 220, 0.78) 0%,
-    rgba(239, 228, 220, 0.58) 28%,
-    rgba(239, 228, 220, 0.16) 55%,
-    rgba(239, 228, 220, 0.05) 100%
+    rgba(239, 228, 220, 0.80) 0%,
+    rgba(239, 228, 220, 0.60) 28%,
+    rgba(239, 228, 220, 0.18) 55%,
+    rgba(239, 228, 220, 0.04) 100%
   );
   z-index: 1;
 }
 
-.hero.has-bg .hero-content-wrap {
+.hero-content-wrap {
   position: relative;
   z-index: 2;
   width: min(100%, 560px);
   margin-left: 56px;
 }
-
-.hero-text h1 {
-  font-family: "Libre Franklin", Arial, sans-serif;
-  font-size: clamp(3.2rem, 6vw, 5.3rem);
-  line-height: 0.97;
-  letter-spacing: -0.04em;
-  margin-bottom: 24px;
-  font-weight: 800;
-  max-width: 640px;
-  color: var(--text);
-}
-
-.hero-subheadline {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.1rem;
-  color: var(--text);
-  max-width: 430px;
-  margin-bottom: 22px;
-  line-height: 1.55;
-}
-
-.hero-intro {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1rem;
-  color: var(--muted);
-  max-width: 460px;
-  margin-bottom: 28px;
-}
-
-/* Standard hero image pages */
 
 .hero:not(.has-bg) {
   grid-template-columns: 0.96fr 1.04fr;
@@ -228,7 +196,36 @@ a {
   justify-content: center;
 }
 
-.hero:not(.has-bg) .hero-image {
+.hero-text h1 {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: clamp(3.2rem, 6vw, 5.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+  font-weight: 800;
+  max-width: 640px;
+  color: var(--text);
+}
+
+.hero-subheadline {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.08rem;
+  color: var(--text);
+  max-width: 440px;
+  margin-bottom: 22px;
+  line-height: 1.55;
+}
+
+.hero-intro {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.hero-image {
   min-height: 700px;
   border-radius: 36px;
   overflow: hidden;
@@ -237,7 +234,7 @@ a {
   background: #ece4db;
 }
 
-.hero:not(.has-bg) .hero-image img {
+.hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -301,6 +298,11 @@ a {
   color: var(--text);
 }
 
+.section-list {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
 /* Cards / grids */
 
 .method-grid {
@@ -339,10 +341,6 @@ a {
   background: #eee3dd;
 }
 
-.method-card h3 {
-  margin-bottom: 14px;
-}
-
 .method-card p {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 0.95rem;
@@ -351,7 +349,7 @@ a {
   color: var(--text);
 }
 
-/* Audience */
+/* Lists */
 
 .audience-list {
   margin-top: 10px;
@@ -367,7 +365,23 @@ a {
   line-height: 1.75;
 }
 
-/* Begin cards */
+/* Custom grids */
+
+.who-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.who-image img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
 
 .begin-grid {
   display: grid;
@@ -402,10 +416,6 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin-bottom: 16px;
-}
-
-.form-grid.full {
-  grid-template-columns: 1fr;
 }
 
 .form-field {
@@ -456,6 +466,23 @@ a {
   margin-top: 18px;
 }
 
+/* Signature */
+
+.signature .container {
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.signature h2 {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Footer */
 
 .site-footer {
@@ -493,7 +520,7 @@ a {
   flex-wrap: wrap;
 }
 
-/* Hover polish */
+/* Hover */
 
 .method-card,
 .begin-card {
@@ -527,13 +554,17 @@ a {
     min-height: 620px;
   }
 
-  .hero.has-bg .hero-content-wrap {
+  .hero-content-wrap {
     margin-left: 36px;
     width: min(100%, 480px);
   }
 
-  .hero:not(.has-bg) .hero-image {
+  .hero-image {
     min-height: 520px;
+  }
+
+  .who-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -561,62 +592,42 @@ a {
     padding-top: 36px;
   }
 
-  .hero.has-bg .hero-content-wrap {
+  .hero-content-wrap {
     margin-left: 24px;
     margin-right: 24px;
     width: calc(100% - 48px);
-.section-list {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
+  }
 
-.who-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 28px;
-  align-items: center;
-}
+  .hero:not(.has-bg) {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 28px;
+  }
 
-.who-image img {
-  width: 100%;
-  max-height: 520px;
-  object-fit: cover;
-  border-radius: 28px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-soft);
-}
+  .hero:not(.has-bg) .hero-text {
+    padding: 8px 0;
+  }
 
-.signature .container {
-  text-align: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+  .hero-text h1 {
+    font-size: 3rem;
+  }
 
-.signature h2 {
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .section {
+    padding: 24px 0;
+  }
 
-@media (max-width: 900px) {
-  .who-grid {
+  .section .container {
+    padding: 28px;
+  }
+
+  .method-grid,
+  .method-grid.three-up,
+  .begin-grid,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
-  .who-image {
-    order: 2;
+  .logo {
+    font-size: 1.3rem;
   }
-
-  .who-text {
-    order: 1;
-  }
-}
-.hero-text h1 {
-line-height: 1.05;
-}
-.hero-subheadline {
-max-width: 420px;
 }
