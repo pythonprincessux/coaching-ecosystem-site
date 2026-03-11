@@ -120,10 +120,10 @@ a {
   transform: translateY(-1px);
 }
 
-/* Hero with background image */
+/* Homepage hero */
 .hero-bg {
   width: min(var(--max-width), calc(100% - 48px));
-  min-height: 700px;
+  min-height: 720px;
   margin: 36px auto 34px;
   border-radius: 34px;
   overflow: hidden;
@@ -183,7 +183,7 @@ a {
   margin-bottom: 28px;
 }
 
-/* Split hero for inner pages */
+/* Inner page hero */
 .page-hero {
   width: min(var(--max-width), calc(100% - 48px));
   margin: 36px auto 34px;
@@ -346,42 +346,6 @@ a {
   color: var(--text);
 }
 
-/* Optional two-column block */
-.who-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 28px;
-  align-items: center;
-}
-
-.who-image img {
-  width: 100%;
-  max-height: 520px;
-  object-fit: cover;
-  border-radius: 28px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-soft);
-}
-
-/* Start-here cards */
-.begin-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 26px;
-}
-
-.begin-card {
-  background: rgba(255,255,255,0.55);
-  border: 1px solid var(--line-soft);
-  border-radius: 24px;
-  padding: 28px 22px;
-  min-height: 150px;
-  display: flex;
-  align-items: end;
-  box-shadow: var(--shadow-card);
-}
-
 /* Forms */
 .form-wrap {
   margin-top: 26px;
@@ -488,8 +452,7 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .method-grid,
-  .begin-grid {
+  .method-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -499,10 +462,6 @@ a {
 
   .page-hero-image {
     min-height: 500px;
-  }
-
-  .who-grid {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -558,7 +517,6 @@ a {
 
   .method-grid,
   .method-grid.three-up,
-  .begin-grid,
   .form-grid {
     grid-template-columns: 1fr;
   }
