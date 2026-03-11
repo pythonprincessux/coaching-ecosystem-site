@@ -614,3 +614,9 @@ a {
     order: 1;
   }
 }
+.hero-text h1 {
+line-height: 1.05;
+}
+.hero-subheadline {
+max-width: 420px;
+}
