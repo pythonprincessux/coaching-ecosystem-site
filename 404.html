@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="The page you requested could not be found."
+  >
+
+  <title>Page Not Found | Focused • Clear • Ready™</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .error-page {
+      min-height: calc(100vh - 90px);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      padding: 80px 20px;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(199, 148, 63, 0.2),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #071b45,
+          #102d62
+        );
+      text-align: center;
+    }
+
+    .error-page::before,
+    .error-page::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(226, 196, 130, 0.25);
+      border-radius: 50%;
+    }
+
+    .error-page::before {
+      width: 520px;
+      height: 520px;
+      top: -260px;
+      right: -120px;
+    }
+
+    .error-page::after {
+      width: 360px;
+      height: 360px;
+      bottom: -220px;
+      left: -90px;
+    }
+
+    .error-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-number {
+      margin: 0;
+      color: rgba(226, 196, 130, 0.2);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(8rem, 25vw, 17rem);
+      font-weight: 500;
+      line-height: 0.75;
+    }
+
+    .error-content .eyebrow {
+      margin-top: 42px;
+      color: #e2c482;
+    }
+
+    .error-content h1 {
+      margin: 14px 0 22px;
+      color: #ffffff;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.4rem, 6vw, 4.7rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .error-content p {
+      max-width: 610px;
+      margin-inline: auto;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.8;
+    }
+
+    .error-actions {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+
+    <a class="logo" href="index.html">
+      Focused • Clear • Ready™
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="method.html">The Method</a>
+      <a href="whole-life.html">Whole-Life Leadership</a>
+      <a href="business-leadership.html">Business Leadership</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+
+      <a
+        class="cta-button"
+        href="https://calendly.com/fcrlife-info/30min"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Clarity Call
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="error-page">
+  <div class="error-content">
+
+    <p class="error-number">404</p>
+
+    <p class="eyebrow">This page could not be found</p>
+
+    <h1>
+      A clearer path begins here.
+    </h1>
+
+    <p>
+      The page may have moved, the address may be incorrect, or the resource
+      may no longer be available. Return to the homepage or explore the
+      resource library.
+    </p>
+
+    <div class="error-actions">
+      <a class="primary-button" href="index.html">
+        Return Home
+      </a>
+
+      <a class="secondary-button" href="resources.html">
+        Explore Resources
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
