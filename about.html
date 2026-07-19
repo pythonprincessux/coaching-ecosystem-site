@@ -2,160 +2,1525 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Focused • Clear • Ready™</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Meet Allegra Bey, leadership coach, speaker, facilitator, and creator of the Focused • Clear • Ready™ Method."
+  >
+
+  <title>About Allegra Bey | Focused • Clear • Ready™</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* =========================================
+       ABOUT PAGE
+    ========================================= */
+
+    .about-hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 760px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at 78% 28%,
+          rgba(199, 148, 63, 0.18),
+          transparent 32%
+        ),
+        linear-gradient(
+          115deg,
+          #f7f1e7 0%,
+          #fbf8f2 55%,
+          #eee3d3 100%
+        );
+    }
+
+    .about-hero::before,
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(199, 148, 63, 0.52);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .about-hero::before {
+      width: 670px;
+      height: 670px;
+      top: -170px;
+      right: -110px;
+    }
+
+    .about-hero::after {
+      width: 470px;
+      height: 470px;
+      right: 170px;
+      bottom: -300px;
+    }
+
+    .about-hero-inner {
+      width: min(1240px, calc(100% - 40px));
+      margin-inline: auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+      align-items: center;
+      gap: 70px;
+      padding: 90px 0;
+    }
+
+    .about-hero-copy {
+      max-width: 600px;
+    }
+
+    .about-hero-copy h1 {
+      max-width: 580px;
+      margin: 12px 0 26px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3.7rem, 7vw, 6.8rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+    }
+
+    .about-hero-copy .hero-lead {
+      max-width: 570px;
+      color: var(--text-soft);
+      font-size: 1.08rem;
+      line-height: 1.85;
+    }
+
+    .about-hero-copy .hero-foundation {
+      margin-top: 22px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .about-portrait-wrap {
+      min-height: 570px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .about-portrait-wrap::before {
+      content: "";
+      width: 84%;
+      height: 92%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border: 1px solid rgba(199, 148, 63, 0.65);
+      border-radius: 52% 52% 10px 10px;
+    }
+
+    .about-portrait {
+      width: 91%;
+      height: 570px;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      border-radius: 48% 48% 8px 8px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(7, 27, 69, 0.12),
+          rgba(199, 148, 63, 0.18)
+        ),
+        #e8dfd3;
+      box-shadow: 0 30px 70px rgba(7, 27, 69, 0.18);
+    }
+
+    .about-portrait img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .portrait-placeholder {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 40px;
+      color: var(--navy);
+      text-align: center;
+    }
+
+    .portrait-placeholder span {
+      display: block;
+      color: var(--gold-dark);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.45rem;
+      line-height: 1.5;
+    }
+
+    .portrait-caption {
+      position: absolute;
+      z-index: 4;
+      right: -12px;
+      bottom: 35px;
+      border: 1px solid rgba(199, 148, 63, 0.55);
+      padding: 18px 24px;
+      background: rgba(255, 255, 255, 0.93);
+      box-shadow: var(--shadow-card);
+    }
+
+    .portrait-caption strong {
+      display: block;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.12rem;
+    }
+
+    .portrait-caption span {
+      color: var(--gold-dark);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+
+    /* STORY */
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 0.75fr 1.4fr 0.85fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .story-heading h2 {
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .story-copy p {
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .story-copy p + p {
+      margin-top: 19px;
+    }
+
+    .story-copy .story-emphasis {
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.17rem;
+      font-style: italic;
+    }
+
+    .story-quote {
+      position: relative;
+      border-left: 2px solid var(--gold);
+      padding: 38px 0 38px 34px;
+    }
+
+    .story-quote::before {
+      content: "“";
+      position: absolute;
+      top: -20px;
+      left: 25px;
+      color: rgba(199, 148, 63, 0.18);
+      font-family: Georgia, serif;
+      font-size: 8rem;
+      line-height: 1;
+    }
+
+    .story-quote blockquote {
+      position: relative;
+      z-index: 2;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.7rem;
+      line-height: 1.45;
+    }
+
+
+    /* PHILOSOPHY */
+
+    .about-philosophy {
+      background:
+        radial-gradient(
+          circle at 20% 40%,
+          rgba(199, 148, 63, 0.14),
+          transparent 31%
+        ),
+        var(--navy);
+      color: var(--white);
+    }
+
+    .about-philosophy h2 {
+      color: var(--white);
+    }
+
+    .about-philosophy .section-heading p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .about-philosophy .eyebrow {
+      color: var(--gold-light) !important;
+    }
+
+    .philosophy-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 52px;
+    }
+
+    .philosophy-card {
+      min-height: 330px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(226, 196, 130, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 38px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+    }
+
+    .philosophy-card:hover {
+      border-color: var(--gold-light);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-7px);
+    }
+
+    .philosophy-card .card-number {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+    }
+
+    .philosophy-card h3 {
+      margin: 58px 0 18px;
+      color: var(--white);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .philosophy-card p {
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.75;
+    }
+
+    .philosophy-card .gold-line {
+      width: 45px;
+      height: 1px;
+      position: absolute;
+      top: 78px;
+      left: 38px;
+      background: var(--gold);
+    }
+
+
+    /* FOUNDER */
+
+    .founder-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .founder-image {
+      min-height: 540px;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(7, 27, 69, 0.12),
+          rgba(199, 148, 63, 0.18)
+        ),
+        #e9e0d4;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .founder-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .founder-copy h2 {
+      margin: 10px 0 22px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .founder-copy .founder-intro {
+      max-width: 610px;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .founder-roles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 34px;
+    }
+
+    .founder-role {
+      border-bottom: 1px solid var(--line);
+      padding: 15px 0;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .founder-role span {
+      margin-right: 10px;
+      color: var(--gold-dark);
+    }
+
+
+    /* CREDENTIALS */
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .credential-card {
+      min-height: 260px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 31px;
+      background: var(--white);
+      box-shadow: var(--shadow-card);
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .credential-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 22px 48px rgba(7, 27, 69, 0.13);
+      transform: translateY(-6px);
+    }
+
+    .credential-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(199, 148, 63, 0.55);
+      border-radius: 50%;
+      color: var(--gold-dark);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.15rem;
+    }
+
+    .credential-card h3 {
+      margin: 27px 0 13px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.45rem;
+    }
+
+    .credential-card p {
+      color: var(--text-soft);
+      font-size: 0.94rem;
+      line-height: 1.72;
+    }
+
+
+    /* WORKING TOGETHER */
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .experience-card {
+      min-height: 270px;
+      border: 1px solid rgba(199, 148, 63, 0.28);
+      border-radius: var(--radius-lg);
+      padding: 31px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(245, 239, 228, 0.82)
+        );
+      box-shadow: var(--shadow-card);
+    }
+
+    .experience-card span {
+      display: block;
+      color: var(--gold-dark);
+      font-size: 1.5rem;
+    }
+
+    .experience-card h3 {
+      margin: 40px 0 13px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.55rem;
+    }
+
+    .experience-card p {
+      font-size: 0.92rem;
+      line-height: 1.72;
+    }
+
+
+    /* VALUES */
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    .value-card {
+      min-height: 245px;
+      border-top: 2px solid var(--gold);
+      padding: 29px 20px;
+      background: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .value-card .value-number {
+      color: var(--gold-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+    }
+
+    .value-card h3 {
+      margin: 48px 0 13px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.35rem;
+    }
+
+    .value-card p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+
+    /* WHY FCR */
+
+    .origin-section {
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .origin-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .origin-copy h2 {
+      margin-bottom: 24px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 500;
+      line-height: 1.04;
+    }
+
+    .origin-copy p {
+      line-height: 1.82;
+    }
+
+    .origin-copy p + p {
+      margin-top: 18px;
+    }
+
+    .fcr-sequence {
+      display: grid;
+      gap: 15px;
+    }
+
+    .sequence-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      align-items: center;
+      gap: 27px;
+    }
+
+    .sequence-word {
+      position: relative;
+      z-index: 2;
+      border: 1px solid var(--gold);
+      padding: 23px 20px;
+      background: var(--navy);
+      color: var(--gold-light);
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .sequence-explanation {
+      border-left: 1px solid rgba(199, 148, 63, 0.45);
+      padding: 18px 0 18px 28px;
+    }
+
+    .sequence-explanation h3 {
+      margin-bottom: 6px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.3rem;
+    }
+
+    .sequence-explanation p {
+      font-size: 0.92rem;
+      line-height: 1.68;
+    }
+
+    .sequence-arrow {
+      margin-left: 83px;
+      color: var(--gold-dark);
+      font-size: 1.3rem;
+    }
+
+
+    /* PERSONAL NOTE */
+
+    .personal-note {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(199, 148, 63, 0.4);
+      border-radius: var(--radius-xl);
+      padding: 60px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(241, 230, 212, 0.92)
+        );
+      box-shadow: var(--shadow-soft);
+    }
+
+    .personal-note::after {
+      content: "A";
+      position: absolute;
+      right: 35px;
+      bottom: -60px;
+      color: rgba(199, 148, 63, 0.08);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 15rem;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .personal-note-inner {
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+      margin-inline: auto;
+    }
+
+    .personal-note p {
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.4rem;
+      line-height: 1.75;
+    }
+
+    .personal-note p + p {
+      margin-top: 18px;
+    }
+
+    .personal-signature {
+      margin-top: 35px;
+      color: var(--gold-dark) !important;
+      font-size: 2rem !important;
+      font-style: italic;
+    }
+
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1100px) {
+      .about-hero-inner,
+      .founder-layout,
+      .origin-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+      }
+
+      .story-layout {
+        grid-template-columns: 1fr 1.5fr;
+      }
+
+      .story-quote {
+        grid-column: 1 / -1;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .experience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      .about-hero {
+        min-height: auto;
+      }
+
+      .about-hero-inner,
+      .founder-layout,
+      .origin-layout,
+      .story-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .about-hero-copy {
+        max-width: none;
+      }
+
+      .about-portrait-wrap {
+        min-height: 480px;
+      }
+
+      .about-portrait {
+        height: 480px;
+      }
+
+      .philosophy-cards,
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .about-hero-inner {
+        width: min(100% - 28px, 1240px);
+        padding: 65px 0;
+      }
+
+      .about-hero-copy h1 {
+        font-size: clamp(3.3rem, 17vw, 4.8rem);
+      }
+
+      .about-portrait-wrap {
+        min-height: 390px;
+      }
+
+      .about-portrait {
+        width: 100%;
+        height: 390px;
+      }
+
+      .portrait-caption {
+        right: 8px;
+        bottom: 15px;
+      }
+
+      .experience-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sequence-step {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .sequence-explanation {
+        border-left: 0;
+        border-top: 1px solid rgba(199, 148, 63, 0.4);
+        padding: 18px 4px;
+      }
+
+      .sequence-arrow {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .personal-note {
+        padding: 38px 25px;
+      }
+
+      .personal-note p {
+        font-size: 1.12rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="nav-container">
-    <h1 class="logo">Focused • Clear • Ready™</h1>
-    <nav class="nav">
+
+    <a class="logo" href="index.html" aria-label="Focused Clear Ready home">
+      Focused • Clear • Ready™
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
-      <a href="method.html">FCR Method</a>
+      <a href="method.html">The Method</a>
+      <a href="whole-life.html">Whole-Life Leadership</a>
+      <a href="business-leadership.html">Business Leadership</a>
       <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+      <a href="about.html" aria-current="page">About</a>
+
+      <a
+        class="cta-button"
+        href="https://calendly.com/fcrlife-info/30min"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Clarity Call
+      </a>
     </nav>
+
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="page-hero-text">
-    <h1>Meet Allegra Bey</h1>
 
-    <p class="page-hero-subheadline">
-      Creator of the Focused • Clear • Ready™ Method.
-    </p>
+<main>
 
-    <p class="page-hero-intro">
-      Allegra Bey is the creator of the Focused • Clear • Ready™ Method—a calm, structured approach that helps women think clearly, trust themselves, and move forward with grounded, confident decisions.
-    </p>
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
 
-    <p class="page-hero-intro">
-      Because she understands how heavy it can feel to carry constant internal noise, Allegra is deeply committed to helping women quiet that noise and return to a place of clarity, peace, and inner steadiness.
-    </p>
-  </div>
+      <div class="about-hero-copy">
+        <p class="eyebrow">About Allegra Bey</p>
 
-  <div class="page-hero-image about-photo-frame">
-    <img src="images/auntie-home.png" alt="Allegra Bey portrait">
-  </div>
-</section>
+        <h1>
+          Leadership begins within.
+        </h1>
 
-<section class="section light">
-  <div class="container">
-    <h2>Whole-Life Leadership</h2>
+        <p class="hero-lead">
+          The most meaningful leadership is not simply about managing
+          responsibilities or achieving goals. It begins with how we
+          understand ourselves, make decisions, and move through life with
+          intention.
+        </p>
 
-    <p>
-      My work supports women in becoming Focused • Clear • Ready™ in their whole life—especially in seasons where life and the body call for a deeper way of leading themselves.
-    </p>
-  </div>
-</section>
+        <p class="hero-foundation">
+          That belief became the foundation of Focused • Clear • Ready™.
+        </p>
 
-<section class="section">
-  <div class="container">
-    <h2>At the Heart of Her Work</h2>
+        <div class="button-row">
+          <a
+            class="primary-button"
+            href="https://calendly.com/fcrlife-info/30min"
+            target="_blank"
+            rel="noopener"
+          >
+            Book a Clarity Call
+          </a>
 
-    <p>
-      At the heart of Allegra’s work is a simple but powerful belief:
-    </p>
+          <a class="secondary-button" href="#her-story">
+            Read Her Story
+          </a>
+        </div>
+      </div>
 
-    <p><strong>Begin within. Move with ease.</strong></p>
+      <div class="about-portrait-wrap">
 
-    <p>
-      She believes clarity does not come from pressure or overthinking, but from learning to quiet the inner noise, reconnect with what is true, and move forward with calm intention.
-    </p>
-  </div>
-</section>
+        <div class="about-portrait">
+          <img
+            src="images/allegra-bey.jpg"
+            alt="Portrait of leadership coach Allegra Bey"
+            onerror="
+              this.style.display='none';
+              this.nextElementSibling.style.display='grid';
+            "
+          >
 
-<section class="section light">
-  <div class="container">
-    <h2>The Work</h2>
+          <div class="portrait-placeholder" style="display:none;">
+            <span>
+              Add Allegra's portrait as<br>
+              images/allegra-bey.jpg
+            </span>
+          </div>
+        </div>
 
-    <p>
-      Through the Focused • Clear • Ready™ Method, Allegra supports women in:
-    </p>
+        <div class="portrait-caption">
+          <strong>Allegra Bey</strong>
+          <span>Leadership Coach &amp; Founder</span>
+        </div>
 
-    <ul class="section-list">
-      <li>gaining clarity about what truly matters</li>
-      <li>strengthening decision-making and self-trust</li>
-      <li>leading with calm, grounded confidence</li>
-      <li>moving forward with focused, aligned action</li>
-    </ul>
+      </div>
 
-    <p>
-      Her approach offers a more sustainable and intentional way to grow—one that allows women to move forward without overwhelm or constant pressure.
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>Experience &amp; Perspective</h2>
-
-    <p>
-      With a Master of Education (M.Ed.), a Bachelor of Science in Professional Services, and more than 30 years as an educator and consultant, Allegra’s work is grounded in both profound expertise and lived experience.
-    </p>
-
-    <p>
-      She brings decades of insight, care, and real-world understanding to the women she serves.
-    </p>
-  </div>
-</section>
-
-<section class="section light">
-  <div class="container">
-    <h2>A Deeper Understanding</h2>
-
-    <p>
-      Her work was shaped not only by education and experience, but by life itself.
-    </p>
-
-    <p>
-      Having navigated challenges, loss, and seasons of uncertainty, Allegra understands what it means to keep moving forward—and also what it means to pause, reflect, and begin again from a more grounded place.
-    </p>
-
-    <p>
-      She created Focused • Clear • Ready™ for women who know they are capable of more, but are ready to move forward with greater clarity and less internal strain.
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>Her Mission</h2>
-
-    <p>
-      Allegra’s work is centered on one intention:
-    </p>
-
-    <p><strong>To help women experience more clarity, peace, and inner steadiness—not someday, but now.</strong></p>
-
-    <p>
-      She invites women to lead from within, trust themselves more deeply, and move forward in a way that feels focused, clear, and ready.
-    </p>
-
-    <div class="button-row">
-      <a class="primary-button" href="https://form.jotform.com/222217613216143" target="_blank" rel="noopener">FCR Clarity Assessment</a>
-      <a class="cta-button" href="method.html">Explore the Method</a>
     </div>
-  </div>
-</section>
+  </section>
+
+
+  <!-- STORY -->
+  <section class="section" id="her-story">
+    <div class="container">
+
+      <div class="story-layout">
+
+        <div class="story-heading">
+          <p class="eyebrow">The story behind the work</p>
+
+          <h2>
+            It started with a pattern.
+          </h2>
+        </div>
+
+        <div class="story-copy">
+          <p>
+            Throughout my career and personal journey, I noticed highly capable
+            women accomplishing extraordinary things while quietly carrying
+            overwhelming responsibility.
+          </p>
+
+          <p>
+            They were not lacking intelligence, motivation, discipline, or
+            ambition. They were often lacking something much less visible:
+            space.
+          </p>
+
+          <p class="story-emphasis">
+            Space to reflect. Space to think. Space to understand themselves
+            before responding to everyone else's expectations.
+          </p>
+
+          <p>
+            That observation eventually became more than an idea. It became a
+            framework for helping women lead their lives, careers, businesses,
+            and relationships with greater clarity and ease.
+          </p>
+
+          <p>
+            Focused • Clear • Ready™ was created to help people pause the cycle
+            of automatic response, reconnect with what matters, and move
+            forward from a stronger internal foundation.
+          </p>
+        </div>
+
+        <div class="story-quote">
+          <blockquote>
+            I do not believe people need fixing. I believe they deserve the
+            opportunity to understand themselves more clearly.
+          </blockquote>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PHILOSOPHY -->
+  <section class="section about-philosophy">
+    <div class="container">
+
+      <div class="section-heading centered">
+        <p class="eyebrow">My philosophy</p>
+
+        <h2>
+          Sustainable leadership is built from the inside out.
+        </h2>
+
+        <p>
+          The work begins by creating enough awareness and clarity to choose a
+          way forward that reflects who you are, what you value, and what you
+          can realistically sustain.
+        </p>
+      </div>
+
+      <div class="philosophy-cards">
+
+        <article class="philosophy-card">
+          <span class="card-number">01</span>
+          <div class="gold-line"></div>
+
+          <h3>Begin Within™</h3>
+
+          <p>
+            Real leadership begins with awareness. Before responding to the
+            world around you, create space to understand what is happening
+            within you.
+          </p>
+        </article>
+
+        <article class="philosophy-card">
+          <span class="card-number">02</span>
+          <div class="gold-line"></div>
+
+          <h3>Lead With Intention</h3>
+
+          <p>
+            Clarity creates better decisions. When you know what matters, you
+            can focus your time, energy, communication, and actions more
+            intentionally.
+          </p>
+        </article>
+
+        <article class="philosophy-card">
+          <span class="card-number">03</span>
+          <div class="gold-line"></div>
+
+          <h3>Lead With Ease™</h3>
+
+          <p>
+            Ease is not the absence of effort. It is the result of greater
+            alignment, self-trust, preparation, and sustainable ways of moving
+            forward.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MEET THE FOUNDER -->
+  <section class="section light">
+    <div class="container">
+
+      <div class="founder-layout">
+
+        <div class="founder-image">
+          <img
+            src="images/allegra-bey.jpg"
+            alt="Allegra Bey, founder of Focused Clear Ready"
+            onerror="
+              this.style.display='none';
+              this.parentElement.innerHTML=
+              '<div class=&quot;portrait-placeholder&quot;><span>Add Allegra&#39;s portrait as<br>images/allegra-bey.jpg</span></div>';
+            "
+          >
+        </div>
+
+        <div class="founder-copy">
+          <p class="eyebrow">Meet the founder</p>
+
+          <h2>
+            Allegra Bey
+          </h2>
+
+          <p class="founder-intro">
+            I partner with women who are ready to lead with greater clarity,
+            confidence, and alignment at work and in life.
+          </p>
+
+          <p class="founder-intro">
+            My approach combines thoughtful reflection with practical
+            application. The goal is not to hand you a predetermined answer.
+            It is to help you strengthen the way you understand yourself,
+            evaluate your choices, and move forward.
+          </p>
+
+          <div class="founder-roles">
+            <div class="founder-role">
+              <span>✦</span> Leadership Coach
+            </div>
+
+            <div class="founder-role">
+              <span>✦</span> Facilitator
+            </div>
+
+            <div class="founder-role">
+              <span>✦</span> Speaker
+            </div>
+
+            <div class="founder-role">
+              <span>✦</span> Creator of the FCR™ Method
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CREDENTIALS -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-heading centered">
+        <p class="eyebrow">Credentials and experience</p>
+
+        <h2>
+          Experience grounded in leadership, learning, and service.
+        </h2>
+
+        <p>
+          Replace the descriptions below with Allegra's exact degrees,
+          certifications, organizations, and professional experience.
+        </p>
+      </div>
+
+      <div class="credentials-grid">
+
+        <article class="credential-card">
+          <div class="credential-icon">01</div>
+
+          <h3>Education</h3>
+
+          <p>
+            Advanced education and study supporting leadership, business,
+            personal development, or organizational effectiveness.
+          </p>
+        </article>
+
+        <article class="credential-card">
+          <div class="credential-icon">02</div>
+
+          <h3>Professional Training</h3>
+
+          <p>
+            Coaching, facilitation, leadership, and development training that
+            supports thoughtful and ethical client work.
+          </p>
+        </article>
+
+        <article class="credential-card">
+          <div class="credential-icon">03</div>
+
+          <h3>Leadership Experience</h3>
+
+          <p>
+            Professional experience leading people, initiatives,
+            organizations, programs, or community-based work.
+          </p>
+        </article>
+
+        <article class="credential-card">
+          <div class="credential-icon">04</div>
+
+          <h3>Speaking &amp; Facilitation</h3>
+
+          <p>
+            Experience guiding conversations, workshops, presentations, and
+            learning experiences for diverse audiences.
+          </p>
+        </article>
+
+        <article class="credential-card">
+          <div class="credential-icon">05</div>
+
+          <h3>Community Leadership</h3>
+
+          <p>
+            Service, mentorship, and involvement in initiatives designed to
+            strengthen individuals, families, or communities.
+          </p>
+        </article>
+
+        <article class="credential-card">
+          <div class="credential-icon">06</div>
+
+          <h3>Continuous Learning</h3>
+
+          <p>
+            An ongoing commitment to reflection, professional growth,
+            evidence-informed practice, and personal development.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- COACHING EXPERIENCE -->
+  <section class="section light">
+    <div class="container">
+
+      <div class="section-heading centered">
+        <p class="eyebrow">What coaching with me feels like</p>
+
+        <h2>
+          A space where you can slow down without losing momentum.
+        </h2>
+
+        <p>
+          Our conversations are designed to help you think more clearly,
+          explore honestly, and turn meaningful reflection into practical
+          movement.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+
+        <article class="experience-card">
+          <span>01</span>
+
+          <h3>Thoughtful</h3>
+
+          <p>
+            You will not be rushed. We create room to examine what matters,
+            what is changing, and what deserves your attention.
+          </p>
+        </article>
+
+        <article class="experience-card">
+          <span>02</span>
+
+          <h3>Honest</h3>
+
+          <p>
+            We explore what is true, even when the truth is uncomfortable,
+            complicated, or different from what others expect.
+          </p>
+        </article>
+
+        <article class="experience-card">
+          <span>03</span>
+
+          <h3>Practical</h3>
+
+          <p>
+            Reflection becomes action you can actually carry into your
+            relationships, work, leadership, and everyday decisions.
+          </p>
+        </article>
+
+        <article class="experience-card">
+          <span>04</span>
+
+          <h3>Supportive</h3>
+
+          <p>
+            Growth happens without judgment. You remain responsible for your
+            choices, but you do not have to examine them alone.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- VALUES -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-heading centered">
+        <p class="eyebrow">My values</p>
+
+        <h2>
+          Principles that shape how I coach, lead, and serve.
+        </h2>
+      </div>
+
+      <div class="values-grid">
+
+        <article class="value-card">
+          <span class="value-number">01</span>
+
+          <h3>Curiosity</h3>
+
+          <p>
+            I believe better questions create better decisions.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="value-number">02</span>
+
+          <h3>Integrity</h3>
+
+          <p>
+            I will not make decisions for you. I will help you think more
+            clearly about your own.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="value-number">03</span>
+
+          <h3>Presence</h3>
+
+          <p>
+            Meaningful transformation requires attention, honesty, and space.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="value-number">04</span>
+
+          <h3>Respect</h3>
+
+          <p>
+            You remain the expert on your life, your values, and your choices.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="value-number">05</span>
+
+          <h3>Growth</h3>
+
+          <p>
+            Leadership is not a destination. It is a lifelong practice.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WHY FCR -->
+  <section class="section origin-section">
+    <div class="container">
+
+      <div class="origin-layout">
+
+        <div class="origin-copy">
+          <p class="eyebrow">Why Focused • Clear • Ready™</p>
+
+          <h2>
+            The order matters.
+          </h2>
+
+          <p>
+            You cannot become clear while your attention is scattered across
+            every demand, expectation, fear, and possibility.
+          </p>
+
+          <p>
+            You cannot become ready until you understand what you are preparing
+            to do, why it matters, and whether it aligns with your values and
+            capacity.
+          </p>
+
+          <p>
+            Focus creates the space. Clarity creates direction. Readiness
+            creates movement.
+          </p>
+
+          <p>
+            Together, they create a practical foundation for leadership that
+            feels less reactive and more intentional.
+          </p>
+        </div>
+
+        <div class="fcr-sequence">
+
+          <article class="sequence-step">
+            <div class="sequence-word">Focused</div>
+
+            <div class="sequence-explanation">
+              <h3>Slow the noise.</h3>
+
+              <p>
+                Direct your attention toward what truly matters in the current
+                moment, decision, or season.
+              </p>
+            </div>
+          </article>
+
+          <div class="sequence-arrow" aria-hidden="true">↓</div>
+
+          <article class="sequence-step">
+            <div class="sequence-word">Clear</div>
+
+            <div class="sequence-explanation">
+              <h3>Understand what is true.</h3>
+
+              <p>
+                Gain insight into your needs, values, options, responsibilities,
+                and desired direction.
+              </p>
+            </div>
+          </article>
+
+          <div class="sequence-arrow" aria-hidden="true">↓</div>
+
+          <article class="sequence-step">
+            <div class="sequence-word">Ready™</div>
+
+            <div class="sequence-explanation">
+              <h3>Move with intention.</h3>
+
+              <p>
+                Take the next aligned step with greater confidence,
+                preparation, and self-trust.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PERSONAL LETTER -->
+  <section class="section">
+    <div class="container">
+
+      <div class="personal-note">
+        <div class="personal-note-inner">
+
+          <p class="eyebrow">A personal note</p>
+
+          <p>
+            If you have found your way here, you may be carrying more than
+            people realize.
+          </p>
+
+          <p>
+            You may be leading well on the outside while quietly wondering how
+            to lead yourself through what comes next.
+          </p>
+
+          <p>
+            My hope is that whether we work together or not, you leave here
+            believing you do not have to navigate every important decision
+            alone.
+          </p>
+
+          <p>
+            You deserve space to reflect, understand yourself more clearly, and
+            move forward in a way that feels honest and sustainable.
+          </p>
+
+          <p>
+            Thank you for being here.
+          </p>
+
+          <p class="personal-signature">
+            Allegra
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta-section">
+    <div class="container">
+
+      <p class="eyebrow">Ready to begin?</p>
+
+      <h2>
+        Take the next step toward greater clarity, confidence, and alignment.
+      </h2>
+
+      <p>
+        Begin with the Clarity Assessment or schedule a complimentary
+        conversation to explore what support may be most useful.
+      </p>
+
+      <div class="button-row centered-buttons">
+
+        <a
+          class="primary-button"
+          href="https://form.jotform.com/222217613216143"
+          target="_blank"
+          rel="noopener"
+        >
+          Take the Clarity Assessment
+        </a>
+
+        <a
+          class="secondary-button"
+          href="https://calendly.com/fcrlife-info/30min"
+          target="_blank"
+          rel="noopener"
+        >
+          Book a Clarity Call
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
 
 <footer class="site-footer">
   <div class="footer-container">
-    <p>© Focused • Clear • Ready™</p>
-    <nav>
+
+    <div class="footer-brand">
+      <p class="footer-logo">Focused • Clear • Ready™</p>
+      <p>Begin Within. Lead With Ease.™</p>
+    </div>
+
+    <nav aria-label="Footer navigation">
       <a href="index.html">Home</a>
-      <a href="method.html">FCR Method</a>
+      <a href="method.html">The Method</a>
+      <a href="whole-life.html">Whole-Life Leadership</a>
+      <a href="business-leadership.html">Business Leadership</a>
       <a href="resources.html">Resources</a>
       <a href="about.html">About</a>
     </nav>
+
+    <p class="copyright">
+      © 2026 Focused • Clear • Ready™. All rights reserved.
+    </p>
+
   </div>
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
