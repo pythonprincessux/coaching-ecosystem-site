@@ -2,221 +2,1491 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources — Focused • Clear • Ready™</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore Focused • Clear • Ready™ resources, assessments, reflection tools, guides, and practical support for whole-life and professional leadership."
+  >
+
+  <title>Resources | Focused • Clear • Ready™</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* =========================================
+       RESOURCES PAGE
+    ========================================= */
+
+    .resources-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 105px;
+      background:
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(199, 148, 63, 0.18),
+          transparent 27%
+        ),
+        linear-gradient(
+          120deg,
+          #071b45 0%,
+          #102d62 58%,
+          #071b45 100%
+        );
+    }
+
+    .resources-hero::before,
+    .resources-hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(226, 196, 130, 0.25);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .resources-hero::before {
+      width: 560px;
+      height: 560px;
+      top: -260px;
+      right: -80px;
+    }
+
+    .resources-hero::after {
+      width: 360px;
+      height: 360px;
+      right: 190px;
+      bottom: -250px;
+    }
+
+    .resources-hero-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+      align-items: center;
+      gap: 70px;
+    }
+
+    .resources-hero-copy h1 {
+      max-width: 760px;
+      margin: 14px 0 28px;
+      color: var(--white);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3.6rem, 7vw, 6.8rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+    }
+
+    .resources-hero-copy .hero-lead {
+      max-width: 690px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 1.08rem;
+      line-height: 1.85;
+    }
+
+    .resources-hero .eyebrow {
+      color: var(--gold-light) !important;
+    }
+
+    .resources-hero-visual {
+      min-height: 430px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .resource-stack {
+      width: 320px;
+      height: 380px;
+      position: relative;
+    }
+
+    .resource-sheet {
+      position: absolute;
+      width: 250px;
+      height: 330px;
+      border: 1px solid rgba(226, 196, 130, 0.55);
+      border-radius: 6px;
+      background: var(--cream);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.27);
+    }
+
+    .resource-sheet:nth-child(1) {
+      top: 26px;
+      left: 0;
+      transform: rotate(-9deg);
+      opacity: 0.75;
+    }
+
+    .resource-sheet:nth-child(2) {
+      top: 12px;
+      right: 0;
+      transform: rotate(8deg);
+      opacity: 0.85;
+    }
+
+    .resource-sheet.featured {
+      top: 0;
+      left: 35px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px;
+      transform: none;
+      opacity: 1;
+    }
+
+    .resource-sheet .sheet-label {
+      color: var(--gold-dark);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .resource-sheet h2 {
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .resource-sheet .sheet-lines {
+      display: grid;
+      gap: 11px;
+    }
+
+    .resource-sheet .sheet-lines span {
+      height: 1px;
+      display: block;
+      background: rgba(7, 27, 69, 0.16);
+    }
+
+    .resource-sheet .sheet-mark {
+      color: var(--gold-dark);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+
+    /* FEATURED ASSESSMENT */
+
+    .assessment-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .assessment-visual {
+      min-height: 570px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(
+          circle at 35% 25%,
+          rgba(199, 148, 63, 0.18),
+          transparent 28%
+        ),
+        var(--navy);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .assessment-ring {
+      width: 390px;
+      height: 390px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(226, 196, 130, 0.55);
+      border-radius: 50%;
+    }
+
+    .assessment-ring::before,
+    .assessment-ring::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(226, 196, 130, 0.24);
+      border-radius: 50%;
+    }
+
+    .assessment-ring::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .assessment-ring::after {
+      width: 470px;
+      height: 470px;
+    }
+
+    .assessment-center {
+      width: 220px;
+      height: 220px;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      padding: 28px;
+      background: var(--cream);
+      color: var(--navy);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      text-align: center;
+    }
+
+    .assessment-center span {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.55rem;
+      line-height: 1.25;
+    }
+
+    .assessment-copy h2 {
+      margin: 12px 0 22px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .assessment-copy p {
+      line-height: 1.82;
+    }
+
+    .assessment-copy p + p {
+      margin-top: 17px;
+    }
+
+    .assessment-benefits {
+      display: grid;
+      gap: 13px;
+      margin: 28px 0 32px;
+    }
+
+    .assessment-benefit {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 13px;
+      align-items: start;
+    }
+
+    .assessment-benefit span {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .assessment-benefit p {
+      color: var(--navy);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+
+    /* RESOURCE LIBRARY */
+
+    .resource-library {
+      background: var(--cream);
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 52px;
+    }
+
+    .resource-card {
+      min-height: 430px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--white);
+      box-shadow: var(--shadow-card);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .resource-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 24px 52px rgba(7, 27, 69, 0.14);
+      transform: translateY(-7px);
+    }
+
+    .resource-card-top {
+      min-height: 180px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(7, 27, 69, 0.98),
+          rgba(16, 45, 98, 0.94)
+        );
+    }
+
+    .resource-card-top::after {
+      content: "";
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      top: -95px;
+      right: -65px;
+      border: 1px solid rgba(226, 196, 130, 0.35);
+      border-radius: 50%;
+    }
+
+    .resource-card-number {
+      color: var(--gold-light);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 3.8rem;
+      line-height: 1;
+    }
+
+    .resource-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+    }
+
+    .resource-type {
+      color: var(--gold-dark);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .resource-card h3 {
+      margin: 16px 0 14px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .resource-card p {
+      color: var(--text-soft);
+      font-size: 0.94rem;
+      line-height: 1.72;
+    }
+
+    .resource-card .resource-link {
+      margin-top: auto;
+      padding-top: 26px;
+      color: var(--navy);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .resource-card .resource-link span {
+      margin-left: 7px;
+      color: var(--gold-dark);
+    }
+
+    .resource-card.coming-soon {
+      opacity: 0.82;
+    }
+
+    .coming-soon-badge {
+      position: absolute;
+      z-index: 3;
+      top: 20px;
+      right: 20px;
+      border: 1px solid rgba(226, 196, 130, 0.5);
+      border-radius: 999px;
+      padding: 7px 12px;
+      background: rgba(7, 27, 69, 0.72);
+      color: var(--gold-light);
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+
+    /* RESOURCE PATHWAYS */
+
+    .pathway-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .pathway-card {
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .pathway-card.whole-life {
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(199, 148, 63, 0.19),
+          transparent 29%
+        ),
+        var(--navy);
+      color: var(--white);
+    }
+
+    .pathway-card.business {
+      border: 1px solid rgba(199, 148, 63, 0.35);
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(199, 148, 63, 0.16),
+          transparent 27%
+        ),
+        var(--white);
+    }
+
+    .pathway-card .pathway-number {
+      color: var(--gold-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .pathway-card.whole-life .pathway-number {
+      color: var(--gold-light);
+    }
+
+    .pathway-card h3 {
+      max-width: 500px;
+      margin: 68px 0 20px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.3rem, 4vw, 3.7rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .pathway-card.whole-life h3 {
+      color: var(--white);
+    }
+
+    .pathway-card.business h3 {
+      color: var(--navy);
+    }
+
+    .pathway-card p {
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    .pathway-card.whole-life p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .pathway-card .text-link {
+      display: inline-block;
+      margin-top: 28px;
+      color: var(--gold-dark);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .pathway-card.whole-life .text-link {
+      color: var(--gold-light);
+    }
+
+
+    /* JOURNAL */
+
+    .journal-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .journal-intro {
+      position: sticky;
+      top: 120px;
+    }
+
+    .journal-intro h2 {
+      margin: 12px 0 22px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.8rem, 5vw, 4.7rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .journal-intro p {
+      line-height: 1.8;
+    }
+
+    .journal-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .journal-entry {
+      display: grid;
+      grid-template-columns: 80px minmax(0, 1fr);
+      gap: 25px;
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+      padding: 26px 0;
+    }
+
+    .journal-entry:first-child {
+      padding-top: 0;
+    }
+
+    .journal-entry-number {
+      color: var(--gold-dark);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2rem;
+    }
+
+    .journal-entry .entry-category {
+      color: var(--gold-dark);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .journal-entry h3 {
+      margin: 10px 0 11px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.55rem;
+      line-height: 1.25;
+    }
+
+    .journal-entry p {
+      font-size: 0.93rem;
+      line-height: 1.72;
+    }
+
+    .journal-entry a {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--navy);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+
+    /* EMAIL SIGNUP */
+
+    .signup-panel {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      border: 1px solid rgba(199, 148, 63, 0.4);
+      border-radius: var(--radius-xl);
+      padding: 60px;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(199, 148, 63, 0.18),
+          transparent 30%
+        ),
+        var(--cream);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .signup-copy h2 {
+      margin: 12px 0 20px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.6rem, 5vw, 4.3rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .signup-copy p {
+      max-width: 650px;
+      line-height: 1.8;
+    }
+
+    .signup-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .signup-form label {
+      color: var(--navy);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .signup-form input {
+      width: 100%;
+      border: 1px solid rgba(7, 27, 69, 0.22);
+      border-radius: 4px;
+      padding: 16px 17px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--navy);
+      font: inherit;
+    }
+
+    .signup-form input:focus {
+      border-color: var(--gold);
+      outline: 2px solid rgba(199, 148, 63, 0.15);
+    }
+
+    .signup-form button {
+      width: 100%;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      padding: 16px 20px;
+      background: var(--navy);
+      color: var(--gold-light);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .signup-form button:hover {
+      background: #102d62;
+      transform: translateY(-2px);
+    }
+
+    .signup-note {
+      color: var(--text-soft);
+      font-size: 0.76rem;
+      line-height: 1.6;
+    }
+
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1050px) {
+      .resources-hero-inner,
+      .assessment-layout,
+      .journal-layout,
+      .signup-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .resources-hero-copy {
+        max-width: 800px;
+      }
+
+      .resources-hero-visual {
+        min-height: 400px;
+      }
+
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .journal-intro {
+        position: static;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .resources-hero {
+        padding: 80px 0;
+      }
+
+      .resources-hero-inner {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .resources-hero-copy h1 {
+        font-size: clamp(3.2rem, 15vw, 5rem);
+      }
+
+      .resources-hero-visual {
+        min-height: 350px;
+      }
+
+      .resource-stack {
+        transform: scale(0.85);
+      }
+
+      .assessment-visual {
+        min-height: 450px;
+      }
+
+      .assessment-ring {
+        width: 300px;
+        height: 300px;
+      }
+
+      .assessment-ring::before {
+        width: 235px;
+        height: 235px;
+      }
+
+      .assessment-ring::after {
+        width: 350px;
+        height: 350px;
+      }
+
+      .assessment-center {
+        width: 180px;
+        height: 180px;
+      }
+
+      .resource-grid,
+      .pathway-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .signup-panel {
+        padding: 38px 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .resource-card {
+        min-height: auto;
+      }
+
+      .pathway-card {
+        min-height: auto;
+        padding: 34px 26px;
+      }
+
+      .pathway-card h3 {
+        margin-top: 45px;
+      }
+
+      .journal-entry {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .journal-entry-number {
+        font-size: 1.35rem;
+      }
+
+      .assessment-ring {
+        width: 250px;
+        height: 250px;
+      }
+
+      .assessment-ring::before {
+        width: 200px;
+        height: 200px;
+      }
+
+      .assessment-ring::after {
+        width: 290px;
+        height: 290px;
+      }
+
+      .assessment-center {
+        width: 155px;
+        height: 155px;
+      }
+
+      .assessment-center span {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="nav-container">
-    <h1 class="logo">Focused • Clear • Ready™</h1>
 
-    <nav class="nav">
+    <a class="logo" href="index.html" aria-label="Focused Clear Ready home">
+      Focused • Clear • Ready™
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
-      <a href="method.html">FCR Method</a>
-      <a href="resources.html">Resources</a>
+      <a href="method.html">The Method</a>
+      <a href="whole-life.html">Whole-Life Leadership</a>
+      <a href="business-leadership.html">Business Leadership</a>
+      <a href="resources.html" aria-current="page">Resources</a>
       <a href="about.html">About</a>
+
+      <a
+        class="cta-button"
+        href="https://calendly.com/fcrlife-info/30min"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Clarity Call
+      </a>
     </nav>
+
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="page-hero-text">
-    <h1>Resources</h1>
 
-    <p class="page-hero-subheadline">
-      A collection of thoughtful tools, reflections, and publications designed to support your clarity, growth, and next steps.
-    </p>
+<main>
 
-    <p class="page-hero-intro">
-      Help yourself feel welcome to explore at your own pace and return when needed.
-    </p>
+  <!-- HERO -->
+  <section class="resources-hero">
+    <div class="resources-hero-inner">
 
-    <div class="button-row">
-      <a class="primary-button" href="https://form.jotform.com/222217613216143" target="_blank" rel="noopener">
-        FCR Clarity Assessment
-      </a>
-    </div>
-  </div>
+      <div class="resources-hero-copy">
+        <p class="eyebrow">Tools for intentional leadership</p>
 
-  <div class="page-hero-image">
-    <img src="images/homepage-3.png" alt="Professional portrait">
-  </div>
-</section>
+        <h1>
+          Resources for becoming more focused, clear, and ready.
+        </h1>
 
-<section class="section light">
-  <div class="container">
-    <h2>FCR Reflection Guides and Tools</h2>
-
-    <p>
-      Simple, thoughtful resources to help you slow down, process where you are, and reconnect with what matters most.
-    </p>
-
-    <p>
-      These guides are designed to support clarity without overwhelm.
-    </p>
-
-    <div class="method-grid three-up">
-
-      <!-- OVERWHELMED -->
-      <div class="method-card">
-        <h3>If You’re Feeling Overwhelmed</h3>
-
-        <div class="pdf-preview">
-          <iframe 
-            src="pdfs/overwhelmed.pdf#view=FitH"
-            width="100%" 
-            height="300"
-            style="border:none;">
-          </iframe>
-        </div>
-
-        <div class="button-row">
-          <a class="primary-button" href="pdfs/overwhelmed.pdf" target="_blank">Open Full</a>
-          <a class="cta-button" href="pdfs/overwhelmed.pdf" download>Download</a>
-        </div>
-      </div>
-
-      <!-- BEFORE YOUR DAY -->
-      <div class="method-card">
-        <h3>Before You Start Your Day</h3>
-
-        <div class="pdf-preview">
-          <iframe 
-            src="pdfs/before-your-day.pdf#view=FitH"
-            width="100%" 
-            height="300"
-            style="border:none;">
-          </iframe>
-        </div>
-
-        <div class="button-row">
-          <a class="primary-button" href="pdfs/before-your-day.pdf" target="_blank">Open Full</a>
-          <a class="cta-button" href="pdfs/before-your-day.pdf" download>Download</a>
-        </div>
-      </div>
-
-      <!-- DAILY CAPACITY -->
-      <div class="method-card">
-        <h3>Daily Capacity Check-In</h3>
-
-        <div class="pdf-preview">
-          <iframe 
-            src="pdfs/daily-capacity.pdf#view=FitH"
-            width="100%" 
-            height="300"
-            style="border:none;">
-          </iframe>
-        </div>
-
-        <div class="button-row">
-          <a class="primary-button" href="pdfs/daily-capacity.pdf" target="_blank">Open Full</a>
-          <a class="cta-button" href="pdfs/daily-capacity.pdf" download>Download</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>Ways to Go Deeper</h2>
-
-    <p>
-      If you’re ready for more structured support, here are a few ways to continue your journey.
-    </p>
-
-    <div class="method-grid">
-      <div class="method-card">
-        <h3>Private Coaching</h3>
-        <p>
-          Personalized guidance to help you move forward with clarity and ease.
+        <p class="hero-lead">
+          Explore assessments, reflection tools, practical guides, and
+          thoughtful resources designed to support clearer decisions,
+          stronger self-leadership, and sustainable forward movement.
         </p>
 
         <div class="button-row">
-          <a class="primary-button" href="https://calendly.com/fcrlife-info/30min" target="_blank">
-            Book a Clarity Session
+          <a
+            class="primary-button"
+            href="https://form.jotform.com/222217613216143"
+            target="_blank"
+            rel="noopener"
+          >
+            Take the Clarity Assessment
+          </a>
+
+          <a class="secondary-button" href="#resource-library">
+            Explore the Library
           </a>
         </div>
       </div>
 
-      <div class="method-card">
-        <h3>Programs &amp; Workshops</h3>
-        <p>
-          Structured experiences for deeper reflection, learning, and growth.
-        </p>
+      <div class="resources-hero-visual" aria-hidden="true">
+        <div class="resource-stack">
+          <div class="resource-sheet"></div>
+          <div class="resource-sheet"></div>
 
-        <div class="button-row">
-          <a class="primary-button" href="#">View Offerings</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+          <div class="resource-sheet featured">
+            <span class="sheet-label">Focused • Clear • Ready™</span>
 
-<section class="section light">
-  <div class="container">
-    <h2>Explore &amp; Be Inspired</h2>
+            <h2>
+              Reflection creates clarity.
+            </h2>
 
-    <p>
-      Thoughtful publications to inspire clarity, peace, and intentional living.
-    </p>
+            <div class="sheet-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
 
-    <div class="method-grid">
-      <div class="method-card">
-        <h3>FCR Magazine</h3>
-        <p>
-          A digital publication offering insight, perspective, and practical guidance for building a life and work that feel aligned and meaningful.
-        </p>
-
-        <div class="button-row">
-          <a class="primary-button" href="https://custommade.fcrprosvc.com/pvYWJT4Vv1C6dRAIu85Gjh" target="_blank">View Magazine</a>
+            <span class="sheet-mark">Begin Within.™</span>
+          </div>
         </div>
       </div>
 
-      <div class="method-card">
-        <h3>Create Heaven at Home</h3>
-        <p>
-          A lifestyle and reflective living publication centered on peace, atmosphere, and thoughtful home-centered inspiration.
-        </p>
+    </div>
+  </section>
 
-        <div class="button-row">
-          <a class="primary-button" href="https://custommade.fcrprosvc.com/chhsummer221" target="_blank">View CH@H</a>
+
+  <!-- FEATURED ASSESSMENT -->
+  <section class="section">
+    <div class="container">
+
+      <div class="assessment-layout">
+
+        <div class="assessment-visual" aria-hidden="true">
+          <div class="assessment-ring">
+            <div class="assessment-center">
+              <span>
+                The FCR™<br>
+                Clarity<br>
+                Assessment
+              </span>
+            </div>
+          </div>
         </div>
+
+        <div class="assessment-copy">
+          <p class="eyebrow">Featured resource</p>
+
+          <h2>
+            Start by understanding where you are now.
+          </h2>
+
+          <p>
+            The Focused • Clear • Ready™ Clarity Assessment is a guided
+            reflection designed to help you examine your current season,
+            identify where your attention may be scattered, and recognize where
+            greater clarity could support you.
+          </p>
+
+          <p>
+            This is not a test and there are no perfect answers. It is a
+            starting point for thoughtful self-awareness and more intentional
+            decision-making.
+          </p>
+
+          <div class="assessment-benefits">
+            <div class="assessment-benefit">
+              <span>1</span>
+              <p>Reflect on your current priorities, responsibilities, and capacity.</p>
+            </div>
+
+            <div class="assessment-benefit">
+              <span>2</span>
+              <p>Identify areas where uncertainty or overthinking may be creating friction.</p>
+            </div>
+
+            <div class="assessment-benefit">
+              <span>3</span>
+              <p>Clarify the area of life or leadership that most needs your attention.</p>
+            </div>
+
+            <div class="assessment-benefit">
+              <span>4</span>
+              <p>Prepare for a more meaningful Clarity Call or coaching conversation.</p>
+            </div>
+          </div>
+
+          <a
+            class="primary-button"
+            href="https://form.jotform.com/222217613216143"
+            target="_blank"
+            rel="noopener"
+          >
+            Take the Free Assessment
+          </a>
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
 
-<section class="section signature">
-  <div class="container">
-    <h2>If you’re not sure where to start, begin with a simple step toward clarity.</h2>
-
-    <div class="button-row" style="justify-content:center;">
-      <a class="primary-button" href="https://form.jotform.com/222217613216143" target="_blank">
-        FCR Clarity Assessment
-      </a>
     </div>
-  </div>
-</section>
+  </section>
+
+
+  <!-- RESOURCE LIBRARY -->
+  <section class="section resource-library" id="resource-library">
+    <div class="container">
+
+      <div class="section-heading centered">
+        <p class="eyebrow">The resource library</p>
+
+        <h2>
+          Practical tools for reflection, decisions, and everyday leadership.
+        </h2>
+
+        <p>
+          These resources can eventually link to downloadable PDFs, Jotform
+          exercises, worksheets, videos, or articles as Allegra's library grows.
+        </p>
+      </div>
+
+      <div class="resource-grid">
+
+        <article class="resource-card">
+          <div class="resource-card-top">
+            <span class="resource-card-number">01</span>
+          </div>
+
+          <div class="resource-card-body">
+            <span class="resource-type">Assessment</span>
+
+            <h3>The FCR™ Clarity Assessment</h3>
+
+            <p>
+              A guided reflection for identifying what deserves your attention
+              and where greater clarity may support your next step.
+            </p>
+
+            <a
+              class="resource-link"
+              href="https://form.jotform.com/222217613216143"
+              target="_blank"
+              rel="noopener"
+            >
+              Take the assessment <span>→</span>
+            </a>
+          </div>
+        </article>
+
+
+        <article class="resource-card coming-soon">
+          <span class="coming-soon-badge">Coming Soon</span>
+
+          <div class="resource-card-top">
+            <span class="resource-card-number">02</span>
+          </div>
+
+          <div class="resource-card-body">
+            <span class="resource-type">Reflection Guide</span>
+
+            <h3>The Begin Within™ Journal</h3>
+
+            <p>
+              A structured reflection guide for slowing automatic reactions,
+              identifying what is happening internally, and creating space
+              before action.
+            </p>
+
+            <span class="resource-link">
+              In development <span>→</span>
+            </span>
+          </div>
+        </article>
+
+
+        <article class="resource-card coming-soon">
+          <span class="coming-soon-badge">Coming Soon</span>
+
+          <div class="resource-card-top">
+            <span class="resource-card-number">03</span>
+          </div>
+
+          <div class="resource-card-body">
+            <span class="resource-type">Decision Tool</span>
+
+            <h3>The Aligned Decision Guide</h3>
+
+            <p>
+              A practical worksheet for evaluating options through priorities,
+              values, capacity, risk, and desired outcomes.
+            </p>
+
+            <span class="resource-link">
+              In development <span>→</span>
+            </span>
+          </div>
+        </article>
+
+
+        <article class="resource-card coming-soon">
+          <span class="coming-soon-badge">Coming Soon</span>
+
+          <div class="resource-card-top">
+            <span class="resource-card-number">04</span>
+          </div>
+
+          <div class="resource-card-body">
+            <span class="resource-type">Leadership Worksheet</span>
+
+            <h3>The Capacity Check-In</h3>
+
+            <p>
+              A simple tool for reviewing your current energy, obligations,
+              boundaries, support, and realistic availability.
+            </p>
+
+            <span class="resource-link">
+              In development <span>→</span>
+            </span>
+          </div>
+        </article>
+
+
+        <article class="resource-card coming-soon">
+          <span class="coming-soon-badge">Coming Soon</span>
+
+          <div class="resource-card-top">
+            <span class="resource-card-number">05</span>
+          </div>
+
+          <div class="resource-card-body">
+            <span class="resource-type">Planning Guide</span>
+
+            <h3>The Ready™ Next-Step Planner</h3>
+
+            <p>
+              A focused planning tool for turning clarity into one realistic,
+              aligned, and sustainable next action.
+            </p>
+
+            <span class="resource-link">
+              In development <span>→</span>
+            </span>
+          </div>
+        </article>
+
+
+        <article class="resource-card coming-soon">
+          <span class="coming-soon-badge">Coming Soon</span>
+
+          <div class="resource-card-top">
+            <span class="resource-card-number">06</span>
+          </div>
+
+          <div class="resource-card-body">
+            <span class="resource-type">Conversation Guide</span>
+
+            <h3>The Clear Communication Worksheet</h3>
+
+            <p>
+              A preparation tool for boundaries, difficult conversations,
+              expectations, requests, and professional communication.
+            </p>
+
+            <span class="resource-link">
+              In development <span>→</span>
+            </span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PATHWAYS -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-heading centered">
+        <p class="eyebrow">Choose your focus</p>
+
+        <h2>
+          Explore resources through the area that matters most right now.
+        </h2>
+
+        <p>
+          The method can support both personal and professional leadership.
+          Choose the path that best reflects your current season.
+        </p>
+      </div>
+
+      <div class="pathway-grid">
+
+        <article class="pathway-card whole-life">
+          <span class="pathway-number">Pathway 01</span>
+
+          <h3>
+            Whole-Life Leadership
+          </h3>
+
+          <p>
+            Explore self-awareness, relationships, boundaries, transitions,
+            well-being, family life, personal priorities, and sustainable daily
+            rhythms.
+          </p>
+
+          <a class="text-link" href="whole-life.html">
+            Explore Whole-Life Leadership →
+          </a>
+        </article>
+
+        <article class="pathway-card business">
+          <span class="pathway-number">Pathway 02</span>
+
+          <h3>
+            Business &amp; Professional Leadership
+          </h3>
+
+          <p>
+            Explore strategy, communication, professional transitions,
+            decision-making, capacity, leadership presence, and sustainable
+            business growth.
+          </p>
+
+          <a class="text-link" href="business-leadership.html">
+            Explore Business Leadership →
+          </a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- JOURNAL / ARTICLES -->
+  <section class="section light">
+    <div class="container">
+
+      <div class="journal-layout">
+
+        <div class="journal-intro">
+          <p class="eyebrow">From the journal</p>
+
+          <h2>
+            Thoughts on clarity, leadership, and living intentionally.
+          </h2>
+
+          <p>
+            This section can later become Allegra's article library. For now,
+            the entries establish the editorial direction and can be connected
+            to individual article pages as content is published.
+          </p>
+        </div>
+
+        <div class="journal-list">
+
+          <article class="journal-entry">
+            <div class="journal-entry-number">01</div>
+
+            <div>
+              <span class="entry-category">Self-Leadership</span>
+
+              <h3>
+                Why capable women still need space to think
+              </h3>
+
+              <p>
+                Responsibility can make reflection feel optional, but clear
+                leadership often begins by creating room to hear your own
+                thinking again.
+              </p>
+
+              <a href="#" aria-label="Read article about space to think">
+                Coming soon →
+              </a>
+            </div>
+          </article>
+
+
+          <article class="journal-entry">
+            <div class="journal-entry-number">02</div>
+
+            <div>
+              <span class="entry-category">Decision-Making</span>
+
+              <h3>
+                The difference between urgency and importance
+              </h3>
+
+              <p>
+                When everything feels immediate, strategic thinking disappears.
+                Learning to separate urgency from importance protects attention
+                and improves decisions.
+              </p>
+
+              <a href="#" aria-label="Read article about urgency and importance">
+                Coming soon →
+              </a>
+            </div>
+          </article>
+
+
+          <article class="journal-entry">
+            <div class="journal-entry-number">03</div>
+
+            <div>
+              <span class="entry-category">Boundaries</span>
+
+              <h3>
+                A boundary is not a rejection
+              </h3>
+
+              <p>
+                Clear boundaries can protect relationships, clarify
+                expectations, and create more honest ways of showing up.
+              </p>
+
+              <a href="#" aria-label="Read article about boundaries">
+                Coming soon →
+              </a>
+            </div>
+          </article>
+
+
+          <article class="journal-entry">
+            <div class="journal-entry-number">04</div>
+
+            <div>
+              <span class="entry-category">Growth</span>
+
+              <h3>
+                Sustainable success requires a capacity conversation
+              </h3>
+
+              <p>
+                Growth becomes difficult to maintain when ambition expands but
+                systems, support, and expectations remain unchanged.
+              </p>
+
+              <a href="#" aria-label="Read article about sustainable success">
+                Coming soon →
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- EMAIL SIGNUP -->
+  <section class="section">
+    <div class="container">
+
+      <div class="signup-panel">
+
+        <div class="signup-copy">
+          <p class="eyebrow">Stay connected</p>
+
+          <h2>
+            Receive thoughtful resources for life and leadership.
+          </h2>
+
+          <p>
+            Add Allegra's email platform form here when it is ready. This area
+            can connect to Mailchimp, ConvertKit, Flodesk, Squarespace Email
+            Campaigns, or another newsletter service.
+          </p>
+        </div>
+
+        <form
+          class="signup-form"
+          action="#"
+          method="post"
+          onsubmit="event.preventDefault();"
+        >
+          <label for="resource-name">First name</label>
+          <input
+            id="resource-name"
+            name="first_name"
+            type="text"
+            placeholder="Your first name"
+          >
+
+          <label for="resource-email">Email address</label>
+          <input
+            id="resource-email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          >
+
+          <button type="submit">
+            Join the Resource List
+          </button>
+
+          <p class="signup-note">
+            This form is currently visual only. Connect it to Allegra's email
+            platform before launching the site.
+          </p>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta-section">
+    <div class="container">
+
+      <p class="eyebrow">Need more personalized support?</p>
+
+      <h2>
+        Resources can begin the reflection. Coaching can help you go deeper.
+      </h2>
+
+      <p>
+        Schedule a complimentary Clarity Call to discuss your current season,
+        what feels difficult, and what kind of support may be useful.
+      </p>
+
+      <div class="button-row centered-buttons">
+
+        <a
+          class="primary-button"
+          href="https://calendly.com/fcrlife-info/30min"
+          target="_blank"
+          rel="noopener"
+        >
+          Book a Clarity Call
+        </a>
+
+        <a class="secondary-button" href="method.html">
+          Explore the Method
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
 
 <footer class="site-footer">
   <div class="footer-container">
-    <p>© Focused • Clear • Ready™</p>
 
-    <nav>
+    <div class="footer-brand">
+      <p class="footer-logo">Focused • Clear • Ready™</p>
+      <p>Begin Within. Lead With Ease.™</p>
+    </div>
+
+    <nav aria-label="Footer navigation">
       <a href="index.html">Home</a>
-      <a href="method.html">FCR Method</a>
+      <a href="method.html">The Method</a>
+      <a href="whole-life.html">Whole-Life Leadership</a>
+      <a href="business-leadership.html">Business Leadership</a>
       <a href="resources.html">Resources</a>
       <a href="about.html">About</a>
     </nav>
+
+    <p class="copyright">
+      © 2026 Focused • Clear • Ready™. All rights reserved.
+    </p>
+
   </div>
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
