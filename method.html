@@ -10,664 +10,854 @@
 
   <meta
     name="description"
-    content="Explore the Focused • Clear • Ready™ Method, a practical self-leadership framework for developing awareness, gaining clarity, making aligned decisions, and moving forward intentionally."
+    content="Explore the Focused • Clear • Ready™ Method, a self-leadership framework designed to help you consider yourself, gain clarity, create alignment, and lead with greater ease."
   >
 
-  <title>The Method | Focused • Clear • Ready™</title>
+  <title>
+    The Method | Focused • Clear • Ready™
+  </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <style>
-    /* Method page only */
 
-    .method-hero-mark {
-      width: 265px;
-      height: 265px;
+  <style>
+
+    /* =====================================================
+       METHOD PAGE ONLY
+    ===================================================== */
+
+    .method-page-hero {
       position: relative;
-      z-index: 2;
-      display: grid;
-      place-items: center;
-      border: 2px solid var(--gold);
-      border-radius: 50%;
+      isolation: isolate;
+      overflow: hidden;
+
+      padding:
+        110px
+        0
+        95px;
+
       background:
         radial-gradient(
-          circle,
-          rgba(255, 255, 255, 0.1),
-          transparent 67%
+          circle at 80% 35%,
+          rgba(197, 155, 98, 0.16),
+          transparent 27%
         ),
-        var(--navy);
+        linear-gradient(
+          135deg,
+          var(--ivory),
+          var(--cream)
+        );
+    }
+
+
+    .method-page-hero-inner {
+      width:
+        min(
+          var(--max-width),
+          calc(100% - 48px)
+        );
+
+      margin-inline: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 0.72fr);
+
+      align-items: center;
+
+      gap: 72px;
+    }
+
+
+    .method-page-copy {
+      max-width: 760px;
+    }
+
+
+    .method-page-copy h1 {
+      margin-bottom: 25px;
+
+      color: var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          3.5rem,
+          6.2vw,
+          6rem
+        );
+
+      line-height: 0.98;
+
+      letter-spacing: -0.05em;
+    }
+
+
+    .method-page-copy .method-intro {
+      max-width: 730px;
+
+      color: var(--text);
+
+      font-size: 1.08rem;
+
+      line-height: 1.86;
+    }
+
+
+    .method-page-copy .method-intro + .method-intro {
+      margin-top: 18px;
+    }
+
+
+    .method-page-signature {
+      margin-top: 30px;
+
+      color: var(--brown);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.92rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.055em;
+    }
+
+
+    /* =====================================================
+       MOTION
+    ===================================================== */
+
+    .method-motion {
+      min-height: 430px;
+
+      position: relative;
+
+      display: grid;
+      place-items: center;
+    }
+
+
+    .method-motion-center {
+      width: 190px;
+      height: 190px;
+
+      position: relative;
+      z-index: 3;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 50%;
+
+      background:
+        rgba(251, 248, 243, 0.9);
+
       box-shadow:
-        0 0 0 22px rgba(199, 148, 63, 0.07),
-        0 28px 70px rgba(0, 0, 0, 0.28);
+        0 0 0 21px rgba(197, 155, 98, 0.06),
+        0 24px 55px rgba(76, 57, 48, 0.13);
+
+      backdrop-filter: blur(5px);
+
       text-align: center;
     }
 
-    .method-hero-mark p {
-      max-width: 180px;
-      color: var(--gold-light);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.4rem;
+
+    .method-motion-center span {
+      max-width: 145px;
+
+      color: var(--brown);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.35rem;
+
       font-weight: 600;
+
       line-height: 1.35;
     }
 
-    .editorial-intro {
-      max-width: 940px;
+
+    .method-orbit {
+      position: absolute;
+
+      border:
+        1px solid
+        rgba(167, 121, 66, 0.4);
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+
+    .method-orbit.one {
+      width: 290px;
+      height: 290px;
+
+      animation:
+        method-orbit-reverse
+        58s
+        linear
+        infinite;
+    }
+
+
+    .method-orbit.two {
+      width: 375px;
+      height: 375px;
+
+      border-style: dashed;
+
+      animation:
+        method-orbit
+        36s
+        linear
+        infinite;
+    }
+
+
+    .method-orbit-dot {
+      width: 11px;
+      height: 11px;
+
+      position: absolute;
+
+      top: 19px;
+      left: 50%;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 18px
+        rgba(197, 155, 98, 0.5);
+
+      transform: translateX(-50%);
+    }
+
+
+    @keyframes method-orbit {
+
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+
+    @keyframes method-orbit-reverse {
+
+      to {
+        transform: rotate(-360deg);
+      }
+
+    }
+
+
+    /* =====================================================
+       METHOD INTRO
+    ===================================================== */
+
+    .method-definition {
+      max-width: 970px;
+
       margin-inline: auto;
+
       text-align: center;
     }
 
-    .editorial-intro .large-statement {
-      margin-bottom: 28px;
-      color: var(--navy);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.25;
+
+    .method-definition h2 {
+      margin-bottom: 24px;
+
+      color: var(--brown-deep);
+
+      font-size:
+        clamp(
+          2.5rem,
+          4.8vw,
+          4rem
+        );
+
+      line-height: 1.05;
     }
 
-    .editorial-intro .supporting-copy {
-      max-width: 760px;
+
+    .method-definition p {
+      max-width: 870px;
+
       margin-inline: auto;
-      font-size: 1.05rem;
+
+      font-size: 1.04rem;
+
       line-height: 1.85;
     }
 
-    .cycle-section {
+
+    /* =====================================================
+       FOUR METHOD STAGES
+    ===================================================== */
+
+    .method-stage-section {
+      position: relative;
+
       overflow: hidden;
-      color: var(--white);
+
       background:
         radial-gradient(
-          circle at 85% 20%,
-          rgba(199, 148, 63, 0.18),
-          transparent 27%
-        ),
-        var(--navy);
-    }
-
-    .cycle-section h2 {
-      color: var(--white);
-    }
-
-    .cycle-section .eyebrow {
-      color: var(--gold-light) !important;
-    }
-
-    .cycle-section .section-heading p {
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .reaction-cycle {
-      max-width: 1080px;
-      margin: 50px auto 0;
-      display: grid;
-      grid-template-columns: repeat(9, auto);
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-    }
-
-    .cycle-item {
-      min-width: 145px;
-      min-height: 145px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(226, 196, 130, 0.5);
-      border-radius: 50%;
-      padding: 22px;
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--white);
-      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.1rem;
-      text-align: center;
-    }
-
-    .cycle-arrow {
-      color: var(--gold-light);
-      font-size: 1.6rem;
-    }
-
-    .cycle-interrupt {
-      max-width: 760px;
-      margin: 45px auto 0;
-      border-top: 1px solid rgba(226, 196, 130, 0.3);
-      border-bottom: 1px solid rgba(226, 196, 130, 0.3);
-      padding: 25px;
-      color: var(--gold-light);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.4rem;
-      font-style: italic;
-      text-align: center;
-    }
-
-    .phase-list {
-      display: grid;
-      gap: 28px;
-    }
-
-    .phase-card {
-      display: grid;
-      grid-template-columns: 130px minmax(0, 1fr);
-      gap: 34px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      padding: 40px;
-      background: var(--white);
-      box-shadow: var(--shadow-card);
-      transition:
-        transform var(--transition),
-        border-color var(--transition),
-        box-shadow var(--transition);
-    }
-
-    .phase-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 24px 55px rgba(7, 27, 69, 0.14);
-      transform: translateY(-5px);
-    }
-
-    .phase-number-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .phase-number {
-      width: 92px;
-      height: 92px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold-light);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 2rem;
-    }
-
-    .phase-number-wrap span:last-child {
-      color: var(--gold-dark);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .phase-content h3 {
-      margin-bottom: 8px;
-      color: var(--navy);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      line-height: 1.1;
-    }
-
-    .phase-tagline {
-      margin-bottom: 22px;
-      color: var(--gold-dark) !important;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.08rem !important;
-      font-style: italic;
-    }
-
-    .phase-details {
-      margin-top: 28px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .phase-detail {
-      border: 1px solid rgba(199, 148, 63, 0.22);
-      border-radius: var(--radius-md);
-      padding: 22px;
-      background: var(--cream);
-    }
-
-    .phase-detail h4 {
-      margin-bottom: 10px;
-      color: var(--navy);
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .phase-detail p,
-    .phase-detail li {
-      color: var(--text-soft);
-      font-size: 0.93rem;
-      line-height: 1.7;
-    }
-
-    .phase-detail ul {
-      padding-left: 18px;
-    }
-
-    .phase-detail li + li {
-      margin-top: 8px;
-    }
-
-    .framework-visual-section {
-      overflow: hidden;
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(199, 148, 63, 0.1),
-          transparent 43%
+          circle at 20% 25%,
+          rgba(197, 155, 98, 0.1),
+          transparent 28%
         ),
         var(--cream);
     }
 
-    .framework-circle {
-      width: min(680px, 90vw);
-      aspect-ratio: 1;
+
+    .method-stage-grid {
+      margin-top: 45px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          4,
+          minmax(0, 1fr)
+        );
+
+      gap: 20px;
+    }
+
+
+    .method-stage {
+      min-height: 100%;
+
       position: relative;
-      margin: 40px auto 0;
-      border: 1px solid rgba(199, 148, 63, 0.45);
-      border-radius: 50%;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius-lg);
+
+      padding:
+        33px;
+
       background:
-        radial-gradient(
-          circle,
-          rgba(255, 255, 255, 0.92) 0 28%,
-          transparent 28.5%
-        );
+        rgba(255, 255, 255, 0.88);
+
       box-shadow:
-        inset 0 0 0 35px rgba(255, 255, 255, 0.22),
-        var(--shadow-soft);
-    }
+        var(--shadow-card);
 
-    .framework-center,
-    .framework-point {
-      position: absolute;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .framework-center {
-      width: 220px;
-      height: 220px;
-      top: 50%;
-      left: 50%;
-      z-index: 2;
-      background: var(--navy);
-      color: var(--gold-light);
-      transform: translate(-50%, -50%);
-      box-shadow: 0 22px 50px rgba(7, 27, 69, 0.25);
-    }
-
-    .framework-center span {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.45rem;
-      line-height: 1.3;
-    }
-
-    .framework-point {
-      width: 170px;
-      height: 170px;
-      background: var(--white);
-      color: var(--navy);
-      box-shadow: var(--shadow-card);
-    }
-
-    .framework-point span {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.18rem;
-      line-height: 1.25;
-    }
-
-    .framework-point.top {
-      top: 2%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .framework-point.right {
-      top: 50%;
-      right: 2%;
-      transform: translateY(-50%);
-    }
-
-    .framework-point.bottom {
-      bottom: 2%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .framework-point.left {
-      top: 50%;
-      left: 2%;
-      transform: translateY(-50%);
-    }
-
-    .principles-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .principle-card {
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      background: var(--white);
-      box-shadow: var(--shadow-card);
-    }
-
-    .principle-card span {
-      color: var(--gold-dark);
-      font-size: 1.45rem;
-    }
-
-    .principle-card h3 {
-      margin-top: 30px;
-      color: var(--navy);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.28rem;
-      line-height: 1.3;
-    }
-
-    .why-it-works-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
-    }
-
-    .why-panel {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      padding: 42px;
-      background: var(--white);
-      box-shadow: var(--shadow-card);
-    }
-
-    .why-panel.featured {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(7, 27, 69, 1),
-          rgba(16, 45, 98, 1)
-        );
-    }
-
-    .why-panel.featured h3 {
-      color: var(--white);
-    }
-
-    .why-panel.featured p,
-    .why-panel.featured li {
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .why-panel.featured .eyebrow {
-      color: var(--gold-light) !important;
-    }
-
-    .why-panel h3 {
-      margin-bottom: 18px;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 2rem;
-    }
-
-    .application-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .application-card {
-      min-height: 190px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 27px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.95),
-          rgba(245, 239, 228, 0.8)
-        );
-      box-shadow: var(--shadow-card);
       transition:
         transform var(--transition),
-        box-shadow var(--transition);
+        box-shadow var(--transition),
+        border-color var(--transition);
     }
 
-    .application-card:hover {
-      box-shadow: 0 22px 45px rgba(7, 27, 69, 0.13);
-      transform: translateY(-6px);
+
+    .method-stage:nth-child(2) {
+      background:
+        var(--blush-soft);
     }
 
-    .application-card span {
-      color: var(--gold-dark);
-      font-size: 1.3rem;
+
+    .method-stage:nth-child(3) {
+      background:
+        var(--champagne-soft);
     }
 
-    .application-card h3 {
-      margin: 23px 0 10px;
-      color: var(--navy);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.3rem;
-    }
 
-    .application-card p {
-      font-size: 0.92rem;
-      line-height: 1.68;
-    }
-
-    .experience-definition {
-      max-width: 880px;
-      margin: 0 auto 34px;
-      text-align: center;
-    }
-
-    .not-this-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .not-this-card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 26px;
-      background: var(--white);
-      box-shadow: var(--shadow-card);
-      text-align: center;
-    }
-
-    .not-this-card .cross {
-      width: 42px;
-      height: 42px;
-      margin: 0 auto 18px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--cream);
-      color: var(--gold-dark);
-      font-weight: 800;
-    }
-
-    .not-this-card h3 {
-      margin-bottom: 10px;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.2rem;
-    }
-
-    .not-this-card p {
-      font-size: 0.9rem;
-      line-height: 1.65;
-    }
-
-    .coaching-summary {
-      max-width: 900px;
-      margin: 35px auto 0;
-      border: 1px solid rgba(199, 148, 63, 0.55);
-      border-radius: var(--radius-lg);
-      padding: 32px;
+    .method-stage:nth-child(4) {
       background:
         linear-gradient(
           145deg,
-          rgba(255, 255, 255, 0.96),
-          rgba(226, 196, 130, 0.2)
+          rgba(255,255,255,0.94),
+          rgba(246,239,231,0.92)
         );
-      text-align: center;
     }
 
-    .coaching-summary p {
-      color: var(--navy);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.2rem;
-      line-height: 1.65;
+
+    .method-stage::before {
+      position: absolute;
+
+      top: 0;
+      right: 0;
+      left: 0;
+
+      height: 3px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--brown),
+          var(--gold)
+        );
+
+      content: "";
     }
 
-    .method-quote-section {
-      padding: 110px 0;
+
+    .method-stage:hover {
+      border-color:
+        rgba(197, 155, 98, 0.7);
+
+      box-shadow:
+        0 22px 46px
+        rgba(76, 57, 48, 0.11);
+
+      transform:
+        translateY(-6px);
+    }
+
+
+    .method-stage-number {
+      width: 54px;
+      height: 54px;
+
+      margin-bottom: 23px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.6);
+
+      color:
+        var(--brown);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.15rem;
+
+      font-weight: 600;
+    }
+
+
+    .method-stage h3 {
+      margin-bottom: 9px;
+
+      color:
+        var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.55rem,
+          2.5vw,
+          2rem
+        );
+
+      line-height: 1.15;
+    }
+
+
+    .method-stage-tagline {
+      margin-bottom: 19px !important;
+
+      color:
+        var(--gold-dark) !important;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1rem !important;
+
+      font-style: normal;
+
+      line-height: 1.55 !important;
+    }
+
+
+    .method-stage p {
+      color:
+        var(--text-soft);
+
+      font-size: 0.94rem;
+
+      line-height: 1.78;
+    }
+
+
+    /* =====================================================
+       CONNECTING LINE
+    ===================================================== */
+
+    .method-path {
+      max-width: 970px;
+
+      margin:
+        50px
+        auto
+        0;
+
+      position: relative;
+
+      height: 42px;
+    }
+
+
+    .method-path-line {
+      position: absolute;
+
+      top: 50%;
+      right: 4%;
+      left: 4%;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          var(--gold),
+          transparent
+        );
+    }
+
+
+    .method-path-dot {
+      width: 9px;
+      height: 9px;
+
+      position: absolute;
+
+      top: 50%;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      transform:
+        translate(-50%, -50%);
+
+      box-shadow:
+        0 0 13px
+        rgba(197, 155, 98, 0.4);
+    }
+
+
+    .method-path-dot:nth-child(2) {
+      left: 12%;
+    }
+
+
+    .method-path-dot:nth-child(3) {
+      left: 37%;
+    }
+
+
+    .method-path-dot:nth-child(4) {
+      left: 63%;
+    }
+
+
+    .method-path-dot:nth-child(5) {
+      left: 88%;
+    }
+
+
+    /* =====================================================
+       METHOD CLOSING
+    ===================================================== */
+
+    .method-closing {
+      position: relative;
+
+      overflow: hidden;
+
+      padding:
+        105px
+        0;
+
       background:
         radial-gradient(
           circle at center,
-          rgba(199, 148, 63, 0.2),
-          transparent 44%
+          rgba(197, 155, 98, 0.15),
+          transparent 43%
         ),
-        var(--navy);
+        linear-gradient(
+          135deg,
+          var(--blush-soft),
+          var(--cream)
+        );
+
       text-align: center;
     }
 
-    .method-quote-section blockquote {
-      max-width: 980px;
+
+    .method-closing .container {
+      max-width: 880px;
+    }
+
+
+    .method-closing h2 {
+      margin-bottom: 23px;
+
+      color: var(--brown-deep);
+
+      font-size:
+        clamp(
+          2.8rem,
+          5vw,
+          4.6rem
+        );
+
+      line-height: 1.04;
+    }
+
+
+    .method-closing p {
+      max-width: 720px;
+
       margin-inline: auto;
-      color: var(--white);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(2.2rem, 5vw, 4.4rem);
-      line-height: 1.16;
-      letter-spacing: -0.025em;
+
+      color: var(--text-soft);
+
+      font-size: 1.02rem;
+
+      line-height: 1.82;
     }
 
-    .method-quote-section blockquote span {
-      color: var(--gold-light);
+
+    .method-closing-brand {
+      margin-top: 32px !important;
+
+      color: var(--brown) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
+
+      font-size: 0.92rem !important;
+
+      font-weight: 800;
+
+      letter-spacing: 0.06em;
     }
 
-    @media (max-width: 1100px) {
-      .principles-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1050px) {
+
+      .method-stage-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
       }
 
-      .application-grid,
-      .not-this-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .reaction-cycle {
-        grid-template-columns: 1fr;
-        max-width: 460px;
-      }
-
-      .cycle-item {
-        width: 100%;
-        min-height: auto;
-        border-radius: var(--radius-lg);
-      }
-
-      .cycle-arrow {
-        transform: rotate(90deg);
-        text-align: center;
-      }
     }
 
-    @media (max-width: 760px) {
-      .phase-card {
-        grid-template-columns: 1fr;
-        padding: 28px;
-      }
 
-      .phase-number-wrap {
-        align-items: flex-start;
-      }
+    @media (max-width: 900px) {
 
-      .phase-number {
-        width: 72px;
-        height: 72px;
-        font-size: 1.55rem;
-      }
-
-      .phase-details,
-      .why-it-works-grid {
+      .method-page-hero-inner {
         grid-template-columns: 1fr;
       }
 
-      .framework-circle {
-        width: 100%;
-        aspect-ratio: auto;
-        display: grid;
-        gap: 16px;
-        border: 0;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
+
+      .method-motion {
+        min-height: 360px;
       }
 
-      .framework-center,
-      .framework-point {
-        width: 100%;
-        height: auto;
-        min-height: 130px;
-        position: static;
-        border-radius: var(--radius-lg);
-        transform: none !important;
+    }
+
+
+    @media (max-width: 680px) {
+
+      .method-page-hero {
+        padding:
+          72px
+          0
+          58px;
       }
 
-      .framework-center {
-        order: -1;
+
+      .method-page-hero-inner {
+        width:
+          min(
+            100% - 28px,
+            var(--max-width)
+          );
       }
 
-      .principles-grid,
-      .application-grid,
-      .not-this-grid {
+
+      .method-page-copy h1 {
+        font-size:
+          clamp(
+            3rem,
+            15vw,
+            4.25rem
+          );
+      }
+
+
+      .method-motion {
+        min-height: 315px;
+      }
+
+
+      .method-motion-center {
+        width: 145px;
+        height: 145px;
+      }
+
+
+      .method-motion-center span {
+        font-size: 1.08rem;
+      }
+
+
+      .method-orbit.one {
+        width: 225px;
+        height: 225px;
+      }
+
+
+      .method-orbit.two {
+        width: 280px;
+        height: 280px;
+      }
+
+
+      .method-stage-grid {
         grid-template-columns: 1fr;
       }
 
-      .why-panel {
-        padding: 30px;
+
+      .method-stage {
+        padding: 27px;
       }
 
-      .method-quote-section {
-        padding: 80px 0;
+
+      .method-path {
+        display: none;
       }
+
+
+      .method-closing {
+        padding:
+          75px
+          0;
+      }
+
     }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .method-orbit {
+        animation: none !important;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="site-header">
+
   <div class="nav-container">
 
-    <a class="logo" href="index.html" aria-label="Focused Clear Ready home">
+
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="Focused Clear Ready home"
+    >
       Focused • Clear • Ready™
     </a>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="method.html" aria-current="page">The Method</a>
-      <a href="whole-life.html">Whole-Life Leadership</a>
-      <a href="business-leadership.html">Business Leadership</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+
+    <nav
+      class="nav"
+      aria-label="Primary navigation"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a
+        href="method.html"
+        aria-current="page"
+      >
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a href="business-leadership.html">
+        Business Leadership
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
 
       <a
         class="cta-button"
@@ -677,817 +867,426 @@
       >
         Book a Clarity Call
       </a>
+
     </nav>
 
   </div>
+
 </header>
+
 
 
 <main>
 
-  <!-- HERO -->
-  <section class="fcr-hero">
-    <div class="fcr-hero-inner">
 
-      <div class="fcr-hero-copy">
-        <p class="eyebrow">A self-leadership framework</p>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        <h1>
-          The Focused • Clear • Ready™ Method
-        </h1>
+<section class="method-page-hero">
 
-        <p class="hero-lead">
-          A practical framework for developing awareness, gaining clarity,
-          making aligned decisions, and moving through life and leadership
-          with greater intention.
-        </p>
-
-        <div class="button-row">
-          <a
-            class="primary-button"
-            href="https://form.jotform.com/222217613216143"
-            target="_blank"
-            rel="noopener"
-          >
-            Take the Clarity Assessment
-          </a>
-
-          <a
-            class="secondary-button"
-            href="#four-phases"
-          >
-            Explore the Four Phases
-          </a>
-        </div>
-      </div>
-
-      <div class="fcr-hero-visual" aria-hidden="true">
-        <div class="hero-orbit hero-orbit-one"></div>
-        <div class="hero-orbit hero-orbit-two"></div>
-
-        <div class="method-hero-mark">
-          <p>
-            Begin Within.<br>
-            Lead With Ease.™
-          </p>
-        </div>
-
-        <p>
-          Awareness.<br>
-          Clarity. Alignment.
-        </p>
-      </div>
-
-    </div>
-  </section>
+  <div class="method-page-hero-inner">
 
 
-  <!-- PHILOSOPHY -->
-  <section class="section">
-    <div class="container">
-
-      <div class="editorial-intro">
-        <p class="eyebrow">Why the framework exists</p>
-
-        <p class="large-statement">
-          Most people do not struggle because they lack intelligence,
-          ambition, discipline, or motivation.
-        </p>
-
-        <p class="supporting-copy">
-          They struggle because they are trying to make meaningful decisions
-          while disconnected from their own needs, values, capacity, emotions,
-          and direction.
-        </p>
-
-        <p class="supporting-copy">
-          The Focused • Clear • Ready™ Method creates a structured pause
-          between what happens and how you respond. That pause gives you room
-          to notice what is true, understand what matters, and choose your next
-          step with greater intention.
-        </p>
-      </div>
-
-    </div>
-  </section>
+    <div class="method-page-copy">
 
 
-  <!-- THE CYCLE -->
-  <section class="section cycle-section">
-    <div class="container">
+      <p class="eyebrow">
+        The Focused • Clear • Ready™ Method
+      </p>
 
-      <div class="section-heading centered">
-        <p class="eyebrow">The pattern many people experience</p>
 
-        <h2>
-          Without awareness, pressure can quickly become a repeating cycle.
-        </h2>
+      <h1>
+        Begin Within.<br>
+        Lead With Ease.
+      </h1>
 
-        <p>
-          A situation occurs. You react before fully understanding what is
-          happening. You overthink the response, exhaust yourself trying to
-          manage the outcome, and repeat the same pattern the next time
-          pressure appears.
-        </p>
-      </div>
 
-      <div class="reaction-cycle" aria-label="Reaction cycle">
-        <div class="cycle-item">Trigger</div>
-        <div class="cycle-arrow" aria-hidden="true">→</div>
+      <p class="method-intro">
+        The Focused • Clear • Ready™ Method is a self-leadership
+        framework that helps you intentionally consider yourself
+        before responding to life’s demands, responsibilities,
+        obligations, and important decisions.
+      </p>
 
-        <div class="cycle-item">Reaction</div>
-        <div class="cycle-arrow" aria-hidden="true">→</div>
 
-        <div class="cycle-item">Overthinking</div>
-        <div class="cycle-arrow" aria-hidden="true">→</div>
+      <p class="method-intro">
+        From that foundation, you gain clarity about what matters
+        most and move forward with greater steadiness, purposeful
+        direction, and ease.
+      </p>
 
-        <div class="cycle-item">Exhaustion</div>
-        <div class="cycle-arrow" aria-hidden="true">→</div>
 
-        <div class="cycle-item">Repeat</div>
-      </div>
-
-      <p class="cycle-interrupt">
-        The method interrupts this cycle by placing awareness before action.
+      <p class="method-page-signature">
+        BEGIN WITHIN. LEAD WITH EASE.™
       </p>
 
     </div>
-  </section>
 
 
-  <!-- FOUR PHASES -->
-  <section class="section" id="four-phases">
-    <div class="container">
 
-      <div class="section-heading centered">
-        <p class="eyebrow">The four phases</p>
+    <div
+      class="method-motion"
+      aria-hidden="true"
+    >
 
-        <h2>
-          A repeatable process for moving from automatic reaction to
-          intentional leadership.
-        </h2>
-
-        <p>
-          Each phase supports the next. Together, they create a flexible
-          thinking process that can be used across decisions, transitions,
-          relationships, leadership challenges, and everyday life.
-        </p>
-      </div>
-
-      <div class="phase-list">
-
-        <!-- PHASE 1 -->
-        <article class="phase-card">
-
-          <div class="phase-number-wrap">
-            <div class="phase-number">01</div>
-            <span>Awareness</span>
-          </div>
-
-          <div class="phase-content">
-            <h3>Begin Within™</h3>
-
-            <p class="phase-tagline">
-              Understand yourself before trying to solve the situation.
-            </p>
-
-            <p>
-              Begin Within™ creates the pause required for awareness. Before
-              making a decision or responding to outside pressure, you examine
-              what is happening internally.
-            </p>
-
-            <p>
-              This phase helps you notice your thoughts, emotions, needs,
-              assumptions, capacity, fears, and expectations without
-              immediately judging or fixing them.
-            </p>
-
-            <div class="phase-details">
-
-              <div class="phase-detail">
-                <h4>Practical application</h4>
-
-                <ul>
-                  <li>Pause before reacting.</li>
-                  <li>Name what you are feeling.</li>
-                  <li>Identify your current capacity.</li>
-                  <li>Separate facts from assumptions.</li>
-                </ul>
-              </div>
-
-              <div class="phase-detail">
-                <h4>Coaching questions</h4>
-
-                <ul>
-                  <li>What is happening within me right now?</li>
-                  <li>What am I assuming?</li>
-                  <li>What do I need to acknowledge?</li>
-                  <li>What am I available for?</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-        </article>
+      <div class="method-orbit one"></div>
 
 
-        <!-- PHASE 2 -->
-        <article class="phase-card">
+      <div class="method-orbit two">
 
-          <div class="phase-number-wrap">
-            <div class="phase-number">02</div>
-            <span>Understanding</span>
-          </div>
-
-          <div class="phase-content">
-            <h3>Clarify</h3>
-
-            <p class="phase-tagline">
-              Understand what the situation is actually asking of you.
-            </p>
-
-            <p>
-              Clarity comes from identifying the real question, challenge,
-              need, decision, or desired outcome beneath the immediate noise.
-            </p>
-
-            <p>
-              In this phase, you examine what matters most, what belongs to
-              you, what does not, and which factors should shape your response.
-            </p>
-
-            <div class="phase-details">
-
-              <div class="phase-detail">
-                <h4>Practical application</h4>
-
-                <ul>
-                  <li>Define the real issue.</li>
-                  <li>Identify the desired outcome.</li>
-                  <li>Determine what matters most.</li>
-                  <li>Distinguish urgency from importance.</li>
-                </ul>
-              </div>
-
-              <div class="phase-detail">
-                <h4>Coaching questions</h4>
-
-                <ul>
-                  <li>What decision am I actually making?</li>
-                  <li>What matters most in this situation?</li>
-                  <li>What is within my control?</li>
-                  <li>What would clarity make possible?</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-        </article>
-
-
-        <!-- PHASE 3 -->
-        <article class="phase-card">
-
-          <div class="phase-number-wrap">
-            <div class="phase-number">03</div>
-            <span>Alignment</span>
-          </div>
-
-          <div class="phase-content">
-            <h3>Become Focused • Clear • Ready™</h3>
-
-            <p class="phase-tagline">
-              Align your choices with what you now understand.
-            </p>
-
-            <p>
-              Once you understand yourself and the situation more clearly, you
-              can begin organizing your priorities, options, boundaries,
-              resources, and next steps.
-            </p>
-
-            <p>
-              This phase turns reflection into preparation. It helps you move
-              from scattered thoughts or competing demands toward an aligned
-              decision.
-            </p>
-
-            <div class="phase-details">
-
-              <div class="phase-detail">
-                <h4>Practical application</h4>
-
-                <ul>
-                  <li>Choose a clear priority.</li>
-                  <li>Evaluate available options.</li>
-                  <li>Establish necessary boundaries.</li>
-                  <li>Define a realistic next step.</li>
-                </ul>
-              </div>
-
-              <div class="phase-detail">
-                <h4>Coaching questions</h4>
-
-                <ul>
-                  <li>What deserves my focus?</li>
-                  <li>Which choice is most aligned?</li>
-                  <li>What boundary or support is needed?</li>
-                  <li>What would make me ready to move?</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-        </article>
-
-
-        <!-- PHASE 4 -->
-        <article class="phase-card">
-
-          <div class="phase-number-wrap">
-            <div class="phase-number">04</div>
-            <span>Action</span>
-          </div>
-
-          <div class="phase-content">
-            <h3>Lead With Ease™</h3>
-
-            <p class="phase-tagline">
-              Move forward with intention, steadiness, and flexibility.
-            </p>
-
-            <p>
-              Leading With Ease™ does not mean that every decision becomes
-              simple or that discomfort disappears.
-            </p>
-
-            <p>
-              It means you are no longer relying only on urgency, pressure, or
-              automatic reaction. You are acting from greater awareness,
-              clarity, preparation, and trust in yourself.
-            </p>
-
-            <div class="phase-details">
-
-              <div class="phase-detail">
-                <h4>Practical application</h4>
-
-                <ul>
-                  <li>Take the next aligned action.</li>
-                  <li>Communicate clearly.</li>
-                  <li>Observe the outcome.</li>
-                  <li>Adjust without abandoning yourself.</li>
-                </ul>
-              </div>
-
-              <div class="phase-detail">
-                <h4>Coaching questions</h4>
-
-                <ul>
-                  <li>What action reflects my clarity?</li>
-                  <li>How do I want to communicate this?</li>
-                  <li>What can I release after acting?</li>
-                  <li>What will help me remain steady?</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-        </article>
+        <span class="method-orbit-dot"></span>
 
       </div>
 
-    </div>
-  </section>
 
+      <div class="method-motion-center">
 
-  <!-- FRAMEWORK VISUAL -->
-  <section class="section framework-visual-section">
-    <div class="container">
-
-      <div class="section-heading centered">
-        <p class="eyebrow">A continuous practice</p>
-
-        <h2>
-          The method is a cycle, not a one-time checklist.
-        </h2>
-
-        <p>
-          Life changes, new information appears, and your capacity shifts. The
-          framework gives you a way to return to awareness and move through
-          each new situation intentionally.
-        </p>
-      </div>
-
-      <div
-        class="framework-circle"
-        aria-label="Circular Focused Clear Ready framework"
-      >
-
-        <div class="framework-center">
-          <span>
-            Focused<br>
-            • Clear •<br>
-            Ready™
-          </span>
-        </div>
-
-        <div class="framework-point top">
-          <span>Begin Within™</span>
-        </div>
-
-        <div class="framework-point right">
-          <span>Clarify</span>
-        </div>
-
-        <div class="framework-point bottom">
-          <span>Lead With Ease™</span>
-        </div>
-
-        <div class="framework-point left">
-          <span>Align and Prepare</span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- PRINCIPLES -->
-  <section class="section">
-    <div class="container">
-
-      <div class="section-heading centered">
-        <p class="eyebrow">Guiding principles</p>
-
-        <h2>
-          The method is supported by a set of beliefs about meaningful and
-          sustainable change.
-        </h2>
-      </div>
-
-      <div class="principles-grid">
-
-        <article class="principle-card">
-          <span aria-hidden="true">✦</span>
-          <h3>Awareness before action.</h3>
-        </article>
-
-        <article class="principle-card">
-          <span aria-hidden="true">✦</span>
-          <h3>Curiosity over judgment.</h3>
-        </article>
-
-        <article class="principle-card">
-          <span aria-hidden="true">✦</span>
-          <h3>Alignment over performance.</h3>
-        </article>
-
-        <article class="principle-card">
-          <span aria-hidden="true">✦</span>
-          <h3>Consistency over perfection.</h3>
-        </article>
-
-        <article class="principle-card">
-          <span aria-hidden="true">✦</span>
-          <h3>Reflection creates clarity.</h3>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- WHY IT WORKS -->
-  <section class="section light">
-    <div class="container">
-
-      <div class="section-heading centered">
-        <p class="eyebrow">Why it works</p>
-
-        <h2>
-          The framework connects internal awareness with practical leadership.
-        </h2>
-
-        <p>
-          Insight alone is not enough. Action without awareness is not enough
-          either. The method brings both together.
-        </p>
-      </div>
-
-      <div class="why-it-works-grid">
-
-        <article class="why-panel">
-          <p class="eyebrow">Internal foundation</p>
-
-          <h3>How you understand yourself</h3>
-
-          <p>
-            The method supports the reflective and cognitive processes behind
-            meaningful decisions.
-          </p>
-
-          <ul class="principles-list">
-            <li>Self-awareness</li>
-            <li>Emotional recognition</li>
-            <li>Reflective thinking</li>
-            <li>Values clarification</li>
-            <li>Decision-making</li>
-            <li>Pattern recognition</li>
-          </ul>
-        </article>
-
-        <article class="why-panel featured">
-          <p class="eyebrow">External application</p>
-
-          <h3>How you lead and respond</h3>
-
-          <p>
-            Internal clarity changes how you communicate, choose, organize,
-            relate, and act.
-          </p>
-
-          <ul class="principles-list">
-            <li>Leadership presence</li>
-            <li>Clear communication</li>
-            <li>Healthier boundaries</li>
-            <li>Confident action</li>
-            <li>Sustainable habits</li>
-            <li>Greater adaptability</li>
-          </ul>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- APPLICATIONS -->
-  <section class="section">
-    <div class="container">
-
-      <div class="section-heading centered">
-        <p class="eyebrow">Everyday applications</p>
-
-        <h2>
-          One method. Many areas of life.
-        </h2>
-
-        <p>
-          The framework is designed to support real decisions and experiences,
-          not only formal coaching conversations.
-        </p>
-      </div>
-
-      <div class="application-grid">
-
-        <article class="application-card">
-          <span aria-hidden="true">01</span>
-          <h3>Career</h3>
-          <p>
-            Evaluate opportunities, transitions, priorities, and professional
-            direction.
-          </p>
-        </article>
-
-        <article class="application-card">
-          <span aria-hidden="true">02</span>
-          <h3>Relationships</h3>
-          <p>
-            Strengthen boundaries, communication, honesty, and intentional
-            connection.
-          </p>
-        </article>
-
-        <article class="application-card">
-          <span aria-hidden="true">03</span>
-          <h3>Transitions</h3>
-          <p>
-            Navigate change while maintaining a stronger sense of identity and
-            direction.
-          </p>
-        </article>
-
-        <article class="application-card">
-          <span aria-hidden="true">04</span>
-          <h3>Leadership</h3>
-          <p>
-            Respond to responsibility, conflict, growth, and uncertainty with
-            greater clarity.
-          </p>
-        </article>
-
-        <article class="application-card">
-          <span aria-hidden="true">05</span>
-          <h3>Family</h3>
-          <p>
-            Create more thoughtful expectations, rhythms, communication, and
-            shared responsibility.
-          </p>
-        </article>
-
-        <article class="application-card">
-          <span aria-hidden="true">06</span>
-          <h3>Well-Being</h3>
-          <p>
-            Make decisions that account for your physical, emotional, and
-            mental capacity.
-          </p>
-        </article>
-
-        <article class="application-card">
-          <span aria-hidden="true">07</span>
-          <h3>Purpose</h3>
-          <p>
-            Reconnect your daily choices with your values, meaning, and desired
-            direction.
-          </p>
-        </article>
-
-        <article class="application-card">
-          <span aria-hidden="true">08</span>
-          <h3>Money</h3>
-          <p>
-            Approach financial decisions with clearer priorities, boundaries,
-            and long-term intention.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- COACHING EXPERIENCE -->
-  <section class="section light">
-    <div class="container">
-
-      <div class="experience-definition">
-        <p class="eyebrow">The coaching experience</p>
-
-        <h2>
-          Coaching is a collaborative thinking process.
-        </h2>
-
-        <p>
-          It creates structured space to slow down, explore what is happening,
-          clarify what matters, identify patterns, and determine your own
-          aligned way forward.
-        </p>
-      </div>
-
-      <div class="not-this-grid">
-
-        <article class="not-this-card">
-          <div class="cross" aria-hidden="true">×</div>
-
-          <h3>Not Therapy</h3>
-
-          <p>
-            Coaching does not diagnose or treat mental health conditions.
-          </p>
-        </article>
-
-        <article class="not-this-card">
-          <div class="cross" aria-hidden="true">×</div>
-
-          <h3>Not Consulting</h3>
-
-          <p>
-            The coach does not take over your decisions or prescribe a single
-            correct strategy.
-          </p>
-        </article>
-
-        <article class="not-this-card">
-          <div class="cross" aria-hidden="true">×</div>
-
-          <h3>Not Advice Alone</h3>
-
-          <p>
-            The process is not centered on simply telling you what to do.
-          </p>
-        </article>
-
-        <article class="not-this-card">
-          <div class="cross" aria-hidden="true">×</div>
-
-          <h3>Not Accountability Alone</h3>
-
-          <p>
-            Action matters, but sustainable action begins with understanding
-            and alignment.
-          </p>
-        </article>
-
-      </div>
-
-      <div class="coaching-summary">
-        <p>
-          Coaching helps you access your own insight, strengthen your
-          self-leadership, and create decisions you understand, trust, and can
-          realistically carry forward.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- QUOTE -->
-  <section class="method-quote-section">
-    <div class="container">
-
-      <blockquote>
-        Better decisions begin with better awareness.
         <span>
-          When you become focused, clear, and ready, change begins from the
-          inside out.
+          Focused<br>
+          • Clear •<br>
+          Ready™
         </span>
-      </blockquote>
+
+      </div>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- FINAL CTA -->
-  <section class="final-cta-section">
-    <div class="container">
 
-      <p class="eyebrow">Begin with clarity</p>
+<!-- =====================================================
+     METHOD DEFINITION
+===================================================== -->
+
+<section class="section">
+
+  <div class="container">
+
+
+    <div class="method-definition">
+
+
+      <p class="eyebrow">
+        A Four-Part Self-Leadership Framework
+      </p>
+
 
       <h2>
-        Experience the method in your own life or leadership.
+        Consider yourself first.
+        Clarify what matters.
+        Create alignment.
+        Lead with ease.
       </h2>
 
+
       <p>
-        Start with the Clarity Assessment, or schedule a complimentary call to
-        explore your current season and the support that may be most useful.
+        The Focused • Clear • Ready™ Method helps you move
+        through life with greater intention by beginning with
+        yourself before responding to what is happening around you.
       </p>
 
-      <div class="button-row centered-buttons">
+    </div>
 
-        <a
-          class="primary-button"
-          href="https://form.jotform.com/222217613216143"
-          target="_blank"
-          rel="noopener"
-        >
-          Take the Clarity Assessment
-        </a>
+  </div>
 
-        <a
-          class="secondary-button"
-          href="https://calendly.com/fcrlife-info/30min"
-          target="_blank"
-          rel="noopener"
-        >
-          Book a Complimentary Clarity Call
-        </a>
+</section>
 
-      </div>
+
+
+<!-- =====================================================
+     FOUR METHOD STAGES
+===================================================== -->
+
+<section
+  class="section method-stage-section"
+  id="four-phases"
+>
+
+  <div class="container">
+
+
+    <div class="section-heading centered">
+
+
+      <p class="eyebrow">
+        The Focused • Clear • Ready™ Method
+      </p>
+
+
+      <h2>
+        Four stages for building a more considered life.
+      </h2>
 
     </div>
-  </section>
+
+
+
+    <div class="method-stage-grid">
+
+
+      <!-- STAGE 1 -->
+
+      <article class="method-stage">
+
+
+        <div class="method-stage-number">
+          1
+        </div>
+
+
+        <h3>
+          Begin Within™
+        </h3>
+
+
+        <p class="method-stage-tagline">
+          Pause before responding.
+        </p>
+
+
+        <p>
+          Become aware of what’s happening within you by observing
+          your thoughts, emotions, and current circumstances.
+          As you learn to regulate your nervous system and interrupt
+          automatic patterns, you become better able to intentionally
+          consider yourself before making decisions or taking action.
+        </p>
+
+      </article>
+
+
+
+      <!-- STAGE 2 -->
+
+      <article class="method-stage">
+
+
+        <div class="method-stage-number">
+          2
+        </div>
+
+
+        <h3>
+          Clarify
+        </h3>
+
+
+        <p class="method-stage-tagline">
+          Discover what matters most.
+        </p>
+
+
+        <p>
+          Clarify your values, priorities, responsibilities, and
+          direction within this season of your life. As your thinking
+          becomes clearer, your decisions begin reflecting what truly
+          matters rather than simply responding to what feels most
+          urgent.
+        </p>
+
+      </article>
+
+
+
+      <!-- STAGE 3 -->
+
+      <article class="method-stage">
+
+
+        <div class="method-stage-number">
+          3
+        </div>
+
+
+        <h3>
+          Become Focused • Clear • Ready™
+        </h3>
+
+
+        <p class="method-stage-tagline">
+          Create alignment.
+        </p>
+
+
+        <p>
+          Bring your decisions, priorities, habits, boundaries,
+          and daily rhythms into alignment with what matters most.
+          As your internal clarity becomes reflected in the way you
+          live and lead, you build greater capacity, confidence,
+          and sustainability.
+        </p>
+
+      </article>
+
+
+
+      <!-- STAGE 4 -->
+
+      <article class="method-stage">
+
+
+        <div class="method-stage-number">
+          4
+        </div>
+
+
+        <h3>
+          Lead With Ease™
+        </h3>
+
+
+        <p class="method-stage-tagline">
+          Live what you’ve created.
+        </p>
+
+
+        <p>
+          Self-leadership becomes more than something you practice.
+          It becomes how you naturally move through life. You continue
+          making intentional decisions, responding thoughtfully to
+          challenges, and creating sustainable rhythms that support
+          both your well-being and everything you’ve been called
+          to lead.
+        </p>
+
+      </article>
+
+    </div>
+
+
+
+    <div
+      class="method-path"
+      aria-hidden="true"
+    >
+
+      <div class="method-path-line"></div>
+
+      <span class="method-path-dot"></span>
+      <span class="method-path-dot"></span>
+      <span class="method-path-dot"></span>
+      <span class="method-path-dot"></span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLOSING
+===================================================== -->
+
+<section class="method-closing">
+
+  <div class="container">
+
+
+    <p class="eyebrow">
+      Focused • Clear • Ready™
+    </p>
+
+
+    <h2>
+      A more intentional way to lead yourself through life.
+    </h2>
+
+
+    <p>
+      The Focused • Clear • Ready™ Method is the practical
+      application of self-leadership, helping you intentionally
+      consider yourself before responding so your decisions,
+      relationships, and daily life increasingly reflect what
+      matters most to you.
+    </p>
+
+
+    <p class="method-closing-brand">
+      BEGIN WITHIN. LEAD WITH EASE.™
+    </p>
+
+  </div>
+
+</section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
+
   <div class="footer-container">
 
+
     <div class="footer-brand">
-      <p class="footer-logo">Focused • Clear • Ready™</p>
-      <p>Begin Within. Lead With Ease.™</p>
+
+
+      <p class="footer-logo">
+        Focused • Clear • Ready™
+      </p>
+
+
+      <p style="font-style: normal;">
+        Begin Within. Lead With Ease.™
+      </p>
+
     </div>
 
+
+
     <nav aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="method.html">The Method</a>
-      <a href="whole-life.html">Whole-Life Leadership</a>
-      <a href="business-leadership.html">Business Leadership</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="method.html">
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a href="business-leadership.html">
+        Business Leadership
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
     </nav>
+
+
 
     <p class="copyright">
       © 2026 Focused • Clear • Ready™. All rights reserved.
     </p>
 
   </div>
+
 </footer>
 
 
+
 <script src="js/main.js"></script>
+
 
 </body>
 </html>
