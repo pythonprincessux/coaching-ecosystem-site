@@ -10,40 +10,781 @@
 
   <meta
     name="description"
-    content="Business and Professional Leadership helps women entrepreneurs and professionals lead with clarity, alignment, confidence, and sustainable effectiveness."
+    content="Business & Professional Leadership is a self-leadership framework for women entrepreneurs and professionals who want greater clarity, alignment, and sustainability in the way they lead and build."
   >
 
-  <title>Business &amp; Professional Leadership | Focused • Clear • Ready™</title>
+  <title>
+    Business &amp; Professional Leadership | Focused • Clear • Ready™
+  </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+
+    /* =====================================================
+       BUSINESS LEADERSHIP PAGE ONLY
+    ===================================================== */
+
+    .leadership-hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+
+      padding: 105px 0 90px;
+
+      background:
+        radial-gradient(
+          circle at 78% 30%,
+          rgba(197, 155, 98, 0.15),
+          transparent 26%
+        ),
+        linear-gradient(
+          135deg,
+          var(--ivory),
+          var(--cream)
+        );
+    }
+
+    .leadership-hero-inner {
+      width:
+        min(
+          var(--max-width),
+          calc(100% - 48px)
+        );
+
+      margin-inline: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 0.7fr);
+
+      align-items: center;
+
+      gap: 70px;
+    }
+
+    .leadership-hero-copy {
+      max-width: 760px;
+    }
+
+    .leadership-hero-copy .eyebrow {
+      margin-bottom: 13px;
+    }
+
+    .leadership-hero-copy h1 {
+      margin-bottom: 18px;
+
+      color: var(--brown-deep);
+
+      font-size:
+        clamp(
+          3.5rem,
+          6vw,
+          6rem
+        );
+
+      line-height: 0.98;
+
+      letter-spacing: -0.05em;
+    }
+
+    .leadership-tagline {
+      margin-bottom: 8px;
+
+      color: var(--gold-dark) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size:
+        clamp(
+          1.05rem,
+          2.3vw,
+          1.35rem
+        ) !important;
+
+      font-weight: 800;
+
+      line-height: 1.45 !important;
+    }
+
+    .leadership-tagline-secondary {
+      margin-bottom: 27px;
+
+      color: var(--brown-deep) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 1.08rem !important;
+
+      font-weight: 800;
+
+      line-height: 1.55 !important;
+    }
+
+    .leadership-hero-copy p:not(.eyebrow):not(.leadership-tagline):not(.leadership-tagline-secondary) {
+      max-width: 700px;
+
+      color: var(--text);
+
+      font-size: 1.04rem;
+
+      line-height: 1.84;
+    }
+
+    .leadership-hero-copy p + p {
+      margin-top: 18px;
+    }
+
+
+    /* =====================================================
+       MOTION GRAPHIC
+    ===================================================== */
+
+    .leadership-motion {
+      min-height: 420px;
+
+      position: relative;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .leadership-motion-center {
+      width: 185px;
+      height: 185px;
+
+      position: relative;
+      z-index: 3;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 50%;
+
+      background:
+        rgba(251, 248, 243, 0.88);
+
+      box-shadow:
+        0 0 0 20px rgba(197, 155, 98, 0.06),
+        0 24px 55px rgba(76, 57, 48, 0.13);
+
+      backdrop-filter: blur(5px);
+    }
+
+    .leadership-motion-center span {
+      color: var(--brown);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.7rem;
+
+      font-weight: 600;
+    }
+
+    .leadership-orbit {
+      position: absolute;
+
+      border:
+        1px solid
+        rgba(167, 121, 66, 0.4);
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .leadership-orbit.one {
+      width: 285px;
+      height: 285px;
+
+      animation:
+        business-orbit-reverse
+        58s
+        linear
+        infinite;
+    }
+
+    .leadership-orbit.two {
+      width: 365px;
+      height: 365px;
+
+      border-style: dashed;
+
+      animation:
+        business-orbit
+        36s
+        linear
+        infinite;
+    }
+
+    .leadership-orbit-dot {
+      width: 11px;
+      height: 11px;
+
+      position: absolute;
+
+      top: 18px;
+      left: 50%;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 18px
+        rgba(197, 155, 98, 0.5);
+
+      transform: translateX(-50%);
+    }
+
+    @keyframes business-orbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes business-orbit-reverse {
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .leadership-content {
+      max-width: 980px;
+
+      margin-inline: auto;
+    }
+
+    .leadership-block {
+      padding: 75px 0;
+
+      border-bottom:
+        1px solid
+        var(--line-gold);
+    }
+
+    .leadership-block:last-child {
+      border-bottom: 0;
+    }
+
+    .leadership-block h2 {
+      margin-bottom: 25px;
+
+      color: var(--brown-deep);
+
+      font-size:
+        clamp(
+          2.25rem,
+          4vw,
+          3.6rem
+        );
+
+      line-height: 1.06;
+    }
+
+    .leadership-block > p {
+      max-width: 870px;
+
+      color: var(--text-soft);
+
+      font-size: 1rem;
+
+      line-height: 1.82;
+    }
+
+    .leadership-block > p + p {
+      margin-top: 17px;
+    }
+
+
+    /* =====================================================
+       INTRO / BRAND STATEMENTS
+    ===================================================== */
+
+    .business-intro {
+      text-align: center;
+    }
+
+    .business-intro > p {
+      margin-inline: auto;
+    }
+
+    .business-intro-lead {
+      max-width: 790px !important;
+
+      color: var(--brown-deep) !important;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.35rem,
+          2.8vw,
+          1.85rem
+        ) !important;
+
+      line-height: 1.55 !important;
+    }
+
+    .business-emphasis {
+      max-width: 780px !important;
+
+      margin-inline: auto;
+
+      color: var(--brown-deep) !important;
+
+      font-size: 1.08rem !important;
+
+      font-weight: 800;
+    }
+
+    .business-gold-line {
+      width: 86px;
+      height: 1px;
+
+      margin:
+        30px
+        auto;
+
+      background:
+        var(--gold);
+    }
+
+
+    /* =====================================================
+       LISTS
+    ===================================================== */
+
+    .leadership-list {
+      margin-top: 27px;
+
+      display: grid;
+
+      gap: 14px;
+
+      list-style: none;
+    }
+
+    .leadership-list li {
+      position: relative;
+
+      padding:
+        17px
+        20px
+        17px
+        50px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius-sm);
+
+      background:
+        rgba(255, 255, 255, 0.7);
+
+      color:
+        var(--text-soft);
+
+      line-height: 1.66;
+    }
+
+    .leadership-list li::before {
+      position: absolute;
+
+      top: 18px;
+      left: 18px;
+
+      color: var(--gold-dark);
+
+      content: "•";
+
+      font-size: 1.4rem;
+
+      line-height: 1;
+    }
+
+
+    /* =====================================================
+       HELPS YOU DO CARDS
+    ===================================================== */
+
+    .business-benefits {
+      margin-top: 32px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 18px;
+    }
+
+    .business-benefit {
+      min-height: 230px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius-lg);
+
+      padding: 30px;
+
+      background:
+        rgba(255, 255, 255, 0.82);
+
+      box-shadow:
+        var(--shadow-card);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .business-benefit:nth-child(2n) {
+      background: var(--blush-soft);
+    }
+
+    .business-benefit:nth-child(3) {
+      background: var(--champagne-soft);
+    }
+
+    .business-benefit:hover {
+      border-color:
+        rgba(197, 155, 98, 0.65);
+
+      box-shadow:
+        0 20px 42px
+        rgba(76, 57, 48, 0.1);
+
+      transform:
+        translateY(-5px);
+    }
+
+    .business-benefit-number {
+      width: 42px;
+      height: 42px;
+
+      margin-bottom: 19px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 50%;
+
+      color: var(--brown);
+
+      font-size: 0.78rem;
+
+      font-weight: 800;
+    }
+
+    .business-benefit h3 {
+      margin-bottom: 11px;
+
+      color: var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.35rem;
+    }
+
+    .business-benefit p {
+      color: var(--text-soft);
+
+      font-size: 0.92rem;
+
+      line-height: 1.72;
+    }
+
+
+    /* =====================================================
+       OUTCOME
+    ===================================================== */
+
+    .outcome-panel {
+      position: relative;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        var(--line-gold);
+
+      border-radius:
+        var(--radius-xl);
+
+      padding: 50px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(239, 220, 220, 0.4)
+        );
+
+      box-shadow:
+        var(--shadow-soft);
+    }
+
+    .outcome-panel::after {
+      width: 220px;
+      height: 220px;
+
+      position: absolute;
+
+      right: -100px;
+      bottom: -120px;
+
+      border:
+        1px solid
+        rgba(197, 155, 98, 0.25);
+
+      border-radius: 50%;
+
+      content: "";
+    }
+
+    .outcome-panel h2 {
+      max-width: 760px;
+    }
+
+    .outcome-panel p {
+      max-width: 830px;
+    }
+
+
+    /* =====================================================
+       WORK WITH ME
+    ===================================================== */
+
+    .leadership-cta {
+      text-align: center;
+    }
+
+    .leadership-cta h2 {
+      max-width: 770px;
+
+      margin-inline: auto;
+    }
+
+    .leadership-cta p {
+      max-width: 720px;
+
+      margin-inline: auto;
+    }
+
+    .leadership-cta .button-row {
+      justify-content: center;
+    }
+
+    .leadership-signature {
+      margin-top: 30px !important;
+
+      color:
+        var(--brown) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
+
+      font-size: 0.9rem !important;
+
+      font-weight: 800;
+
+      letter-spacing: 0.05em;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .leadership-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-motion {
+        min-height: 360px;
+      }
+
+      .business-benefits {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (max-width: 680px) {
+
+      .leadership-hero {
+        padding:
+          72px
+          0
+          58px;
+      }
+
+      .leadership-hero-inner {
+        width:
+          min(
+            100% - 28px,
+            var(--max-width)
+          );
+      }
+
+      .leadership-hero-copy h1 {
+        font-size:
+          clamp(
+            3rem,
+            15vw,
+            4.2rem
+          );
+      }
+
+      .leadership-motion {
+        min-height: 315px;
+      }
+
+      .leadership-motion-center {
+        width: 145px;
+        height: 145px;
+      }
+
+      .leadership-motion-center span {
+        font-size: 1.35rem;
+      }
+
+      .leadership-orbit.one {
+        width: 225px;
+        height: 225px;
+      }
+
+      .leadership-orbit.two {
+        width: 280px;
+        height: 280px;
+      }
+
+      .leadership-block {
+        padding:
+          58px
+          0;
+      }
+
+      .outcome-panel {
+        padding: 30px;
+      }
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .leadership-orbit {
+        animation: none !important;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="site-header">
+
   <div class="nav-container">
 
-    <a class="logo" href="index.html" aria-label="Focused Clear Ready home">
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="Focused Clear Ready home"
+    >
       Focused • Clear • Ready™
     </a>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="method.html">The Method</a>
-      <a href="whole-life.html">Whole-Life Leadership</a>
-      <a href="business-leadership.html" aria-current="page">
+
+    <nav
+      class="nav"
+      aria-label="Primary navigation"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="method.html">
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a
+        href="business-leadership.html"
+        aria-current="page"
+      >
         Business Leadership
       </a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
 
       <a
         class="cta-button"
@@ -53,657 +794,525 @@
       >
         Book a Clarity Call
       </a>
+
     </nav>
 
   </div>
+
 </header>
+
+
 
 <main>
 
-  <!-- HERO -->
-  <section class="fcr-hero">
-    <div class="fcr-hero-inner">
 
-      <div class="fcr-hero-copy">
-        <p class="eyebrow">Business &amp; Professional Leadership</p>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        <h1>
-          Lead your work with clarity, alignment, and sustainable effectiveness.
-        </h1>
+<section class="leadership-hero">
 
-        <p class="hero-lead">
-          For women entrepreneurs and professionals who want to make clearer
-          decisions, strengthen how they lead, and build success without
-          constantly operating from pressure, urgency, or exhaustion.
-        </p>
+  <div class="leadership-hero-inner">
 
-        <div class="button-row">
-          <a
-            class="primary-button"
-            href="https://form.jotform.com/222217613216143"
-            target="_blank"
-            rel="noopener"
-          >
-            Take the Leadership Assessment
-          </a>
 
-          <a
-            class="secondary-button"
-            href="https://calendly.com/fcrlife-info/30min"
-            target="_blank"
-            rel="noopener"
-          >
-            Book a Clarity Call
-          </a>
-        </div>
+    <div class="leadership-hero-copy">
+
+      <p class="eyebrow">
+        Business &amp; Professional Leadership
+      </p>
+
+
+      <h1>
+        Learn More
+      </h1>
+
+
+      <p class="leadership-tagline">
+        Build the woman who builds the business.
+      </p>
+
+
+      <p class="leadership-tagline-secondary">
+        You are the most important factor in all you build.
+      </p>
+
+
+      <p>
+        When you consider yourself first, you lead with greater
+        intention, make better decisions, and build a business
+        that’s sustainable.
+      </p>
+
+    </div>
+
+
+
+    <div
+      class="leadership-motion"
+      aria-hidden="true"
+    >
+
+      <div class="leadership-orbit one"></div>
+
+
+      <div class="leadership-orbit two">
+        <span class="leadership-orbit-dot"></span>
       </div>
 
-      <div class="fcr-hero-visual" aria-hidden="true">
-        <div class="hero-orbit hero-orbit-one"></div>
-        <div class="hero-orbit hero-orbit-two"></div>
 
-        <div class="hero-mark">
-          <span>B</span>
-          <span>P</span>
-          <span>L</span>
-        </div>
-
-        <p>
-          Lead Clearly.<br>
-          Build Sustainably.
-        </p>
+      <div class="leadership-motion-center">
+        <span>BPL</span>
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- INTRO -->
-  <section class="section life-section">
-    <div class="container">
 
-      <div class="section-heading centered">
-        <p class="eyebrow">A different approach to leadership</p>
+<!-- =====================================================
+     BUSINESS LEADERSHIP INTRO
+===================================================== -->
 
-        <h2>
-          Your work is shaped by more than strategy. It is shaped by how you
-          lead yourself.
-        </h2>
+<section class="section light">
 
-        <p>
-          Business growth and professional leadership require decisions,
-          visibility, responsibility, communication, and consistent action.
-          Without a strong internal foundation, even meaningful success can
-          begin to feel overwhelming or disconnected.
-        </p>
-      </div>
+  <div class="container leadership-content">
 
-      <div class="comparison-grid">
 
-        <article class="comparison-card">
-          <div class="card-icon" aria-hidden="true">○</div>
+    <div class="leadership-block business-intro">
 
-          <h3>Leading From Pressure</h3>
+      <p>
+        Too often, women invest their best thinking, energy, and
+        care into building their business, career, and the people
+        they lead while quietly placing themselves last.
+      </p>
 
-          <p>
-            When urgency becomes your normal operating mode, decisions may be
-            driven by fear, outside expectations, comparison, or the need to
-            keep everything moving.
-          </p>
 
-          <p>
-            You may remain productive while feeling scattered, depleted,
-            reactive, or uncertain about whether your work still reflects what
-            matters most.
-          </p>
-        </article>
+      <div class="business-gold-line"></div>
 
-        <article class="comparison-card featured">
-          <div class="card-icon" aria-hidden="true">✦</div>
 
-          <h3>Leading From Clarity</h3>
+      <p class="business-intro-lead">
+        Self-leadership begins by putting yourself back into
+        the equation.
+      </p>
 
-          <p>
-            Clear leadership begins with understanding your values, priorities,
-            capacity, responsibilities, and direction.
-          </p>
 
-          <p>
-            From that foundation, you can make stronger decisions, communicate
-            more effectively, and build success in a way that is both
-            intentional and sustainable.
-          </p>
-        </article>
+      <p>
+        Here, you become the first consideration because when
+        you begin to consider yourself with the same intention
+        you bring to everything else, everything you do becomes
+        more aligned.
+      </p>
 
-      </div>
 
-      <div class="insight-banner">
-        <p>
-          The goal is not to remove ambition. It is to create a way of leading
-          that allows ambition, well-being, integrity, and effectiveness to
-          work together.
-        </p>
-      </div>
+      <p class="business-emphasis">
+        That’s how you lead with ease, not pressure.
+      </p>
+
+
+      <div class="business-gold-line"></div>
+
+
+      <p>
+        Our framework strengthens the woman behind the business
+        or professional role.
+      </p>
+
+
+      <!-- Allegra's later requested insertion -->
+
+      <p>
+        We also help you clarify and strengthen the practical
+        areas of your business, including strategy, visibility,
+        systems, decision-making, and sustainable growth.
+      </p>
+
+
+      <p>
+        Together, we’ll help you cultivate greater self-leadership,
+        clarity, alignment, and intentional decision-making so you
+        can move forward in your business, career, and life with
+        greater steadiness, purposeful direction, and ease.
+      </p>
+
+
+      <p>
+        As you strengthen your foundation, the way you think,
+        decide, communicate, prioritize, and lead naturally begins
+        to change. Your business or professional work becomes a
+        reflection of that stronger foundation.
+      </p>
 
     </div>
-  </section>
 
 
-  <!-- WHO THIS IS FOR -->
-  <section class="section light audience-section">
-    <div class="container">
 
-      <div class="section-heading">
-        <p class="eyebrow">Who this is for</p>
+    <!-- =================================================
+         WHEN THIS PATH MAY BE RIGHT FOR YOU
+    ================================================== -->
 
-        <h2>
-          For women ready to lead their business, career, or professional life
-          from a stronger foundation.
-        </h2>
+    <div class="leadership-block">
 
-        <p>
-          This work supports entrepreneurs, professionals, executives, and
-          emerging leaders navigating responsibility, growth, change, or
-          increased visibility.
-        </p>
-      </div>
+      <p class="eyebrow">
+        Business &amp; Professional Leadership
+      </p>
 
-      <ul class="check-list">
+
+      <h2>
+        When This Path May Be Right for You
+      </h2>
+
+
+      <p>
+        You may recognize yourself here if:
+      </p>
+
+
+      <ul class="leadership-list">
+
         <li>
-          You are carrying significant responsibility and want to lead without
-          feeling consumed by it.
+          You rarely consider yourself before making decisions,
+          and self-neglect has quietly become your normal.
         </li>
 
         <li>
-          You are making important business or career decisions and want
-          greater clarity about your next move.
+          You carry the weight of everything, feeling responsible
+          for holding it all together.
         </li>
 
         <li>
-          Your work is growing, but your current habits, systems, or boundaries
-          are no longer supporting that growth.
+          Your days are driven by urgency, deadlines, and other
+          people’s needs rather than deliberate choices.
         </li>
 
         <li>
-          You want to communicate with greater confidence and make decisions
-          without constant second-guessing.
+          You’ve become disconnected from what you need, what you
+          value most, and what your current capacity allows.
         </li>
 
         <li>
-          You feel pulled between professional demands and the other areas of
-          your life that matter.
+          You realize something needs to change, even if you
+          can’t yet define what that change looks like.
         </li>
 
-        <li>
-          You want your success to reflect your values instead of only outside
-          expectations.
-        </li>
       </ul>
 
     </div>
-  </section>
 
 
-  <!-- LEADERSHIP OUTCOMES -->
-  <section class="section method-overview-section">
-    <div class="container">
 
-      <div class="section-heading centered">
-        <p class="eyebrow">What becomes possible</p>
+    <!-- =================================================
+         WHAT BUSINESS LEADERSHIP HELPS YOU DO
+    ================================================== -->
 
-        <h2>
-          Clearer leadership creates stronger decisions, healthier systems,
-          and more sustainable results.
-        </h2>
+    <div class="leadership-block">
 
-        <p>
-          The Focused • Clear • Ready™ Method helps you strengthen the way you
-          think, decide, communicate, and act within your professional life.
-        </p>
-      </div>
-
-      <div class="method-grid">
-
-        <article class="method-card">
-          <span class="method-number">1</span>
-
-          <h3>Strategic Clarity</h3>
-
-          <p class="method-tagline">
-            Know what matters now.
-          </p>
-
-          <p>
-            Identify the priorities, opportunities, and decisions that deserve
-            your attention instead of treating everything as equally urgent.
-          </p>
-        </article>
-
-        <article class="method-card">
-          <span class="method-number">2</span>
-
-          <h3>Confident Decisions</h3>
-
-          <p class="method-tagline">
-            Move without constant doubt.
-          </p>
-
-          <p>
-            Evaluate options from a grounded understanding of your goals,
-            values, capacity, and current business or professional reality.
-          </p>
-        </article>
-
-        <article class="method-card">
-          <span class="method-number">3</span>
-
-          <h3>Aligned Leadership</h3>
-
-          <p class="method-tagline">
-            Lead in a way that fits.
-          </p>
-
-          <p>
-            Strengthen your communication, expectations, boundaries, and
-            leadership presence without performing a version of leadership
-            that feels disconnected from you.
-          </p>
-        </article>
-
-        <article class="method-card">
-          <span class="method-number">4</span>
-
-          <h3>Sustainable Success</h3>
-
-          <p class="method-tagline">
-            Build beyond urgency.
-          </p>
-
-          <p>
-            Create systems, rhythms, and ways of working that support growth
-            without requiring constant overextension.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- AREAS OF APPLICATION -->
-  <section class="section light focus-section">
-    <div class="container">
-
-      <div class="section-heading centered">
-        <p class="eyebrow">Professional application</p>
-
-        <h2>
-          Apply self-leadership wherever your work requires clarity,
-          responsibility, and influence.
-        </h2>
-      </div>
-
-      <div class="resource-preview-grid">
-
-        <article class="resource-preview-card">
-          <h3>Business Direction</h3>
-
-          <p>
-            Clarify what you are building, why it matters, and which priorities
-            will move it forward.
-          </p>
-        </article>
-
-        <article class="resource-preview-card">
-          <h3>Decision-Making</h3>
-
-          <p>
-            Navigate competing options, uncertainty, and risk with a stronger
-            internal decision process.
-          </p>
-        </article>
-
-        <article class="resource-preview-card">
-          <h3>Leadership Presence</h3>
-
-          <p>
-            Communicate expectations, boundaries, direction, and feedback with
-            greater steadiness and confidence.
-          </p>
-        </article>
-
-        <article class="resource-preview-card">
-          <h3>Capacity and Growth</h3>
-
-          <p>
-            Expand your impact while creating structures that account for your
-            energy, responsibilities, and well-being.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- COMMON LEADERSHIP CHALLENGES -->
-  <section class="section">
-    <div class="container">
-
-      <div class="section-heading centered">
-        <p class="eyebrow">What may be getting in the way</p>
-
-        <h2>
-          Strong leaders can still become caught in patterns that make their
-          work harder than it needs to be.
-        </h2>
-      </div>
-
-      <div class="focus-grid">
-
-        <article class="focus-card">
-          <div class="focus-icon" aria-hidden="true">01</div>
-
-          <p class="focus-label">The urgency pattern</p>
-
-          <h3>Everything feels immediate.</h3>
-
-          <p>
-            When every request, problem, opportunity, or idea receives the same
-            level of urgency, your attention becomes fragmented and strategic
-            thinking becomes difficult.
-          </p>
-        </article>
-
-        <article class="focus-card">
-          <div class="focus-icon" aria-hidden="true">02</div>
-
-          <p class="focus-label">The overfunctioning pattern</p>
-
-          <h3>You carry more than your role requires.</h3>
-
-          <p>
-            Taking responsibility for everything may keep work moving in the
-            short term while creating exhaustion, unclear ownership, and
-            dependence on you.
-          </p>
-        </article>
-
-        <article class="focus-card">
-          <div class="focus-icon" aria-hidden="true">03</div>
-
-          <p class="focus-label">The hesitation pattern</p>
-
-          <h3>You know a decision is needed, but remain stuck.</h3>
-
-          <p>
-            Overthinking, fear of making the wrong choice, or concern about how
-            others will respond can delay meaningful action.
-          </p>
-        </article>
-
-        <article class="focus-card">
-          <div class="focus-icon" aria-hidden="true">04</div>
-
-          <p class="focus-label">The misalignment pattern</p>
-
-          <h3>Your success no longer feels fully connected to you.</h3>
-
-          <p>
-            You may be meeting expectations and achieving results while
-            realizing that your current path, pace, or priorities need to be
-            reconsidered.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- METHOD APPLICATION -->
-  <section class="section build-section">
-    <div class="container">
-
-      <div class="build-layout">
-
-        <div class="build-copy">
-          <p class="eyebrow">How the method supports leadership</p>
-
-          <h2>
-            Strengthen the process behind your decisions, priorities, and
-            professional actions.
-          </h2>
-
-          <p>
-            Leadership challenges often appear external, but the way you
-            respond begins internally.
-          </p>
-
-          <p>
-            The Focused • Clear • Ready™ Method helps you pause before reacting,
-            assess what matters, align your next move, and lead from a position
-            of greater steadiness.
-          </p>
-        </div>
-
-        <div class="framework-list">
-
-          <article class="framework-step">
-            <span class="step-number">01</span>
-
-            <div>
-              <h3>Begin Within™</h3>
-
-              <p>
-                Pause before responding to pressure, conflict, opportunity, or
-                uncertainty.
-              </p>
-            </div>
-          </article>
-
-          <article class="framework-step">
-            <span class="step-number">02</span>
-
-            <div>
-              <h3>Clarify</h3>
-
-              <p>
-                Identify the real issue, desired outcome, relevant priorities,
-                and factors shaping the decision.
-              </p>
-            </div>
-          </article>
-
-          <article class="framework-step">
-            <span class="step-number">03</span>
-
-            <div>
-              <h3>Become Focused • Clear • Ready™</h3>
-
-              <p>
-                Align your time, energy, communication, boundaries, and
-                resources with what matters most.
-              </p>
-            </div>
-          </article>
-
-          <article class="framework-step">
-            <span class="step-number">04</span>
-
-            <div>
-              <h3>Lead With Ease™</h3>
-
-              <p>
-                Take strategic action, communicate clearly, evaluate results,
-                and adjust without returning to constant urgency.
-              </p>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-
-      <div class="signature-statement">
-        <p>
-          Effective leadership is not only about how much you can carry. It is
-          about how clearly and intentionally you choose what to carry.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- SUPPORT OPTIONS -->
-  <section class="section philosophy-section">
-    <div class="container">
-
-      <div class="split-layout">
-
-        <article class="content-panel">
-          <p class="eyebrow">Professional coaching support</p>
-
-          <h2>
-            A strategic space to think clearly and lead intentionally.
-          </h2>
-
-          <p>
-            Coaching provides room to step outside the immediate pressure of
-            your work and examine the decisions, patterns, priorities, and
-            leadership challenges shaping your current experience.
-          </p>
-
-          <p>
-            The process combines reflection with practical application so that
-            insights become clearer decisions, stronger communication, and
-            aligned action.
-          </p>
-
-          <ul class="principles-list">
-            <li>Clarify business or career priorities.</li>
-            <li>Strengthen decision-making.</li>
-            <li>Navigate transitions and growth.</li>
-            <li>Improve boundaries and communication.</li>
-            <li>Create sustainable professional rhythms.</li>
-          </ul>
-        </article>
-
-        <article class="content-panel highlighted-panel">
-          <p class="eyebrow">Begin with a clarity call</p>
-
-          <h2>
-            Explore what your leadership requires now.
-          </h2>
-
-          <p>
-            Your complimentary Clarity Call is an opportunity to discuss your
-            current business, career, or leadership season and identify where
-            greater clarity may support your next step.
-          </p>
-
-          <p>
-            Together, you can explore what is working, what feels difficult,
-            what matters most, and whether coaching is an appropriate fit.
-          </p>
-
-          <div class="button-row">
-            <a
-              class="primary-button"
-              href="https://calendly.com/fcrlife-info/30min"
-              target="_blank"
-              rel="noopener"
-            >
-              Schedule a Clarity Call
-            </a>
-
-            <a
-              class="secondary-button"
-              href="https://form.jotform.com/222217613216143"
-              target="_blank"
-              rel="noopener"
-            >
-              Take the Assessment
-            </a>
-          </div>
-
-          <p class="signature-line">
-            Begin Within. Lead With Ease.™<br>
-            <span>Allegra</span>
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta-section">
-    <div class="container">
-
-      <p class="eyebrow">Business &amp; Professional Leadership</p>
-
-      <h2>
-        Build success from a foundation you can continue standing on.
-      </h2>
-
-      <p>
-        Lead with greater clarity, make stronger decisions, and create
-        professional success that reflects what matters most.
+      <p class="eyebrow">
+        This Path Helps You
       </p>
 
-      <div class="button-row centered-buttons">
+
+      <h2>
+        What Business &amp; Professional Leadership Helps You Do
+      </h2>
+
+
+      <p>
+        Through the Focused • Clear • Ready™ Method,
+        you’ll learn to:
+      </p>
+
+
+      <div class="business-benefits">
+
+
+        <article class="business-benefit">
+
+          <span class="business-benefit-number">
+            01
+          </span>
+
+
+          <h3>
+            Reconnect With Yourself
+          </h3>
+
+
+          <p>
+            Reconnect with yourself before responding to the
+            demands around you.
+          </p>
+
+        </article>
+
+
+
+        <article class="business-benefit">
+
+          <span class="business-benefit-number">
+            02
+          </span>
+
+
+          <h3>
+            Clarify What Needs Attention
+          </h3>
+
+
+          <p>
+            Clarify what needs attention in your business or
+            professional work, including strategy, visibility,
+            systems, offers, operations, and growth, so your
+            decisions reflect your values, priorities, and vision.
+          </p>
+
+        </article>
+
+
+
+        <article class="business-benefit">
+
+          <span class="business-benefit-number">
+            03
+          </span>
+
+
+          <h3>
+            Lead With Greater Intention
+          </h3>
+
+
+          <p>
+            Lead with greater intention instead of constantly
+            reacting to what comes next.
+          </p>
+
+        </article>
+
+
+
+        <article class="business-benefit">
+
+          <span class="business-benefit-number">
+            04
+          </span>
+
+
+          <h3>
+            Build Sustainably
+          </h3>
+
+
+          <p>
+            Build in ways that honor your capacity while creating
+            meaningful, sustainable progress.
+          </p>
+
+        </article>
+
+
+
+        <article class="business-benefit">
+
+          <span class="business-benefit-number">
+            05
+          </span>
+
+
+          <h3>
+            Create Alignment
+          </h3>
+
+
+          <p>
+            Create a way of leading and growing that feels aligned,
+            sustainable, and true to who you are.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         THE OUTCOME
+    ================================================== -->
+
+    <div class="leadership-block">
+
+      <article class="outcome-panel">
+
+        <p class="eyebrow">
+          The Outcome
+        </p>
+
+
+        <h2>
+          Consider yourself first so you can lead your work
+          with greater intention, sustainability, and ease.
+        </h2>
+
+
+        <p>
+          Business &amp; Professional Leadership is about
+          considering yourself first, so you can lead your
+          business or professional work with greater intention,
+          sustainability, and ease.
+        </p>
+
+
+        <p>
+          As you begin to consider yourself before your
+          responsibilities, your decisions become clearer,
+          your priorities become more intentional, and your
+          work becomes a more authentic reflection of your
+          values, vision, and purpose.
+        </p>
+
+
+        <p>
+          Instead of building from constant pressure or obligation,
+          you begin to build from clarity, alignment, and a way of
+          leading that is sustainable over time.
+        </p>
+
+      </article>
+
+    </div>
+
+
+
+    <!-- =================================================
+         WORK WITH ME
+    ================================================== -->
+
+    <div class="leadership-block leadership-cta">
+
+      <p class="eyebrow">
+        Work With Me
+      </p>
+
+
+      <h2>
+        Discover what your next chapter can look like.
+      </h2>
+
+
+      <p>
+        If you’re ready to move forward with greater steadiness,
+        purposeful direction, and ease, I’d love to help you
+        discover what your next chapter can look like.
+      </p>
+
+
+      <div class="button-row">
+
         <a
           class="primary-button"
+          href="resources.html#assessments"
+        >
+          Take the Business &amp; Professional Leadership Assessment
+        </a>
+
+
+        <a
+          class="secondary-button"
           href="https://calendly.com/fcrlife-info/30min"
           target="_blank"
           rel="noopener"
         >
-          Book Your Complimentary Clarity Call
+          Book a Clarity Call
         </a>
 
-        <a class="secondary-button" href="method.html">
-          Explore the Method
-        </a>
       </div>
 
+
+      <p class="leadership-signature">
+        Begin Within. Lead With Ease.™
+      </p>
+
     </div>
-  </section>
+
+  </div>
+
+</section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
+
   <div class="footer-container">
 
+
     <div class="footer-brand">
-      <p class="footer-logo">Focused • Clear • Ready™</p>
-      <p>Begin Within. Lead With Ease.™</p>
+
+      <p class="footer-logo">
+        Focused • Clear • Ready™
+      </p>
+
+
+      <p style="font-style: normal;">
+        Begin Within. Lead With Ease.™
+      </p>
+
     </div>
 
+
+
     <nav aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="method.html">The Method</a>
-      <a href="whole-life.html">Whole-Life Leadership</a>
-      <a href="business-leadership.html">Business Leadership</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="method.html">
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a href="business-leadership.html">
+        Business Leadership
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
     </nav>
+
+
 
     <p class="copyright">
       © 2026 Focused • Clear • Ready™. All rights reserved.
     </p>
 
   </div>
+
 </footer>
 
+
+
 <script src="js/main.js"></script>
+
 
 </body>
 </html>

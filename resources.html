@@ -2,221 +2,2010 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources — Focused • Clear • Ready™</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore Focused • Clear • Ready™ assessments, reflection guides, publications, workshops, programs, and practical tools for self-leadership."
+  >
+
+  <title>
+    Resources | Focused • Clear • Ready™
+  </title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="css/styles.css">
+
+
+  <style>
+
+    /* =====================================================
+       RESOURCES PAGE ONLY
+    ===================================================== */
+
+    .resources-hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+
+      padding:
+        110px
+        0
+        95px;
+
+      background:
+        radial-gradient(
+          circle at 82% 34%,
+          rgba(197, 155, 98, 0.16),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          var(--ivory),
+          var(--cream)
+        );
+    }
+
+
+    .resources-hero-inner {
+      width:
+        min(
+          var(--max-width),
+          calc(100% - 48px)
+        );
+
+      margin-inline: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 0.72fr);
+
+      align-items: center;
+
+      gap: 72px;
+    }
+
+
+    .resources-hero-copy h1 {
+      margin-bottom: 25px;
+
+      color: var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          4rem,
+          7vw,
+          6.7rem
+        );
+
+      font-weight: 500;
+
+      line-height: 0.96;
+
+      letter-spacing: -0.05em;
+    }
+
+
+    .resources-hero-copy .resources-lead {
+      max-width: 720px;
+
+      color: var(--text);
+
+      font-size: 1.08rem;
+
+      line-height: 1.84;
+    }
+
+
+    .resources-season {
+      margin-top: 23px !important;
+
+      color: var(--gold-dark) !important;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.2rem,
+          2.6vw,
+          1.65rem
+        ) !important;
+
+      line-height: 1.5 !important;
+    }
+
+
+    /* =====================================================
+       HERO MOTION
+    ===================================================== */
+
+    .resources-motion {
+      min-height: 420px;
+
+      position: relative;
+
+      display: grid;
+      place-items: center;
+    }
+
+
+    .resources-motion-center {
+      width: 188px;
+      height: 188px;
+
+      position: relative;
+      z-index: 3;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 50%;
+
+      background:
+        rgba(251, 248, 243, 0.9);
+
+      box-shadow:
+        0 0 0 20px rgba(197, 155, 98, 0.06),
+        0 24px 55px rgba(76, 57, 48, 0.13);
+
+      text-align: center;
+    }
+
+
+    .resources-motion-center span {
+      color: var(--brown);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.45rem;
+
+      font-weight: 600;
+
+      line-height: 1.35;
+    }
+
+
+    .resources-orbit {
+      position: absolute;
+
+      border:
+        1px solid
+        rgba(167, 121, 66, 0.4);
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+
+    .resources-orbit.one {
+      width: 285px;
+      height: 285px;
+
+      animation:
+        resources-orbit-reverse
+        58s
+        linear
+        infinite;
+    }
+
+
+    .resources-orbit.two {
+      width: 370px;
+      height: 370px;
+
+      border-style: dashed;
+
+      animation:
+        resources-orbit
+        36s
+        linear
+        infinite;
+    }
+
+
+    .resources-orbit-dot {
+      width: 11px;
+      height: 11px;
+
+      position: absolute;
+
+      top: 19px;
+      left: 50%;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 18px
+        rgba(197, 155, 98, 0.5);
+
+      transform: translateX(-50%);
+    }
+
+
+    @keyframes resources-orbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    @keyframes resources-orbit-reverse {
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+
+    /* =====================================================
+       ASSESSMENTS
+    ===================================================== */
+
+    .assessment-section {
+      background:
+        var(--ivory);
+    }
+
+
+    .assessment-grid {
+      max-width: 1050px;
+
+      margin:
+        46px
+        auto
+        0;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr;
+
+      gap: 24px;
+    }
+
+
+    .assessment-card {
+      position: relative;
+
+      overflow: hidden;
+
+      display: grid;
+
+      grid-template-columns:
+        155px
+        minmax(0, 1fr);
+
+      align-items: center;
+
+      gap: 32px;
+
+      border:
+        1px solid
+        var(--line-gold);
+
+      border-radius:
+        var(--radius-xl);
+
+      padding:
+        35px;
+
+      background:
+        rgba(255, 255, 255, 0.88);
+
+      box-shadow:
+        var(--shadow-card);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+
+    .assessment-card:nth-child(2) {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.94),
+          var(--blush-soft)
+        );
+    }
+
+
+    .assessment-card:hover {
+      border-color: var(--gold);
+
+      box-shadow:
+        0 22px 48px
+        rgba(76, 57, 48, 0.11);
+
+      transform:
+        translateY(-5px);
+    }
+
+
+    .assessment-icon {
+      width: 130px;
+      height: 130px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 50%;
+
+      background:
+        var(--cream);
+
+      color:
+        var(--brown);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.25rem;
+
+      font-weight: 600;
+
+      text-align: center;
+    }
+
+
+    .assessment-card h3 {
+      margin-bottom: 11px;
+
+      color:
+        var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.75rem,
+          3vw,
+          2.5rem
+        );
+
+      line-height: 1.12;
+    }
+
+
+    .assessment-card p {
+      max-width: 690px;
+
+      color:
+        var(--text-soft);
+
+      line-height: 1.75;
+    }
+
+
+    .assessment-card .button-row {
+      margin-top: 21px;
+    }
+
+
+    /* =====================================================
+       RESOURCE CATEGORY
+    ===================================================== */
+
+    .resource-category {
+      padding:
+        95px
+        0;
+
+      border-top:
+        1px solid
+        var(--line);
+    }
+
+
+    .resource-category.light {
+      background:
+        var(--cream);
+    }
+
+
+    .category-heading {
+      max-width: 1000px;
+
+      margin-bottom: 42px;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(260px, 0.78fr)
+        minmax(0, 1.22fr);
+
+      align-items: center;
+
+      gap: 55px;
+    }
+
+
+    .category-title-wrap {
+      display: flex;
+
+      align-items: center;
+
+      gap: 20px;
+    }
+
+
+    .category-icon {
+      width: 68px;
+      height: 68px;
+
+      flex: 0 0 auto;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 50%;
+
+      background:
+        var(--blush-soft);
+
+      color:
+        var(--brown);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.15rem;
+
+      font-weight: 600;
+    }
+
+
+    .category-heading h2 {
+      color:
+        var(--brown-deep);
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.35rem
+        );
+
+      line-height: 1.08;
+    }
+
+
+    .category-heading > p {
+      color:
+        var(--text-soft);
+
+      font-size: 1rem;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       PDF GUIDES
+    ===================================================== */
+
+    .guide-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0, 1fr)
+        );
+
+      gap: 22px;
+    }
+
+
+    .guide-card {
+      position: relative;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius-lg);
+
+      background:
+        var(--white);
+
+      box-shadow:
+        var(--shadow-card);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+
+    .guide-card:nth-child(2) {
+      background:
+        var(--blush-soft);
+    }
+
+
+    .guide-card:nth-child(3) {
+      background:
+        var(--champagne-soft);
+    }
+
+
+    .guide-card:hover {
+      border-color:
+        var(--gold);
+
+      box-shadow:
+        0 22px 46px
+        rgba(76, 57, 48, 0.1);
+
+      transform:
+        translateY(-6px);
+    }
+
+
+    .guide-preview {
+      height: 370px;
+
+      overflow: hidden;
+
+      border-bottom:
+        1px solid
+        var(--line);
+
+      background:
+        #f2ede7;
+    }
+
+
+    .guide-preview iframe {
+      width: 100%;
+      height: 100%;
+
+      border: 0;
+
+      pointer-events: none;
+    }
+
+
+    .guide-content {
+      padding: 27px;
+    }
+
+
+    .guide-content h3 {
+      margin-bottom: 11px;
+
+      color:
+        var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.48rem;
+
+      line-height: 1.2;
+    }
+
+
+    .guide-content p {
+      color:
+        var(--text-soft);
+
+      font-size: 0.91rem;
+
+      line-height: 1.72;
+    }
+
+
+    .guide-actions {
+      margin-top: 22px;
+
+      display: flex;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+    }
+
+
+    /* =====================================================
+       PUBLICATIONS
+    ===================================================== */
+
+    .publication-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 24px;
+    }
+
+
+    .publication-card {
+      min-height: 350px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+      border:
+        1px solid
+        var(--line-gold);
+
+      border-radius:
+        var(--radius-xl);
+
+      padding:
+        40px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.96),
+          rgba(246,239,231,0.9)
+        );
+
+      box-shadow:
+        var(--shadow-soft);
+    }
+
+
+    .publication-card:nth-child(2) {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.96),
+          var(--blush-soft)
+        );
+    }
+
+
+    .publication-card::before {
+      width: 210px;
+      height: 210px;
+
+      position: absolute;
+
+      top: -115px;
+      right: -75px;
+
+      border:
+        1px solid
+        rgba(197, 155, 98, 0.27);
+
+      border-radius: 50%;
+
+      content: "";
+    }
+
+
+    .publication-label {
+      margin-bottom: 14px;
+
+      color:
+        var(--gold-dark);
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+    }
+
+
+    .publication-card h3 {
+      margin-bottom: 13px;
+
+      color:
+        var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          2rem,
+          3.6vw,
+          3rem
+        );
+
+      line-height: 1.05;
+    }
+
+
+    .publication-card p {
+      max-width: 560px;
+
+      color:
+        var(--text-soft);
+
+      line-height: 1.75;
+    }
+
+
+    /* =====================================================
+       PROGRAMS
+    ===================================================== */
+
+    .program-panel {
+      max-width: 1000px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        var(--line-gold);
+
+      border-radius:
+        var(--radius-xl);
+
+      padding:
+        50px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--champagne-soft),
+          var(--blush-soft)
+        );
+
+      box-shadow:
+        var(--shadow-soft);
+    }
+
+
+    .program-panel h3 {
+      margin-bottom: 17px;
+
+      color:
+        var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          2.1rem,
+          4vw,
+          3.4rem
+        );
+    }
+
+
+    .program-panel p {
+      max-width: 760px;
+
+      color:
+        var(--text-soft);
+
+      line-height: 1.8;
+    }
+
+
+    .coming-soon {
+      display: inline-block;
+
+      margin-top: 22px;
+
+      border:
+        1px solid
+        var(--gold-dark);
+
+      border-radius: 999px;
+
+      padding:
+        8px
+        14px;
+
+      color:
+        var(--brown);
+
+      font-size: 0.71rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       PODCAST
+    ===================================================== */
+
+    .podcast-strip {
+      position: relative;
+
+      overflow: hidden;
+
+      padding:
+        70px
+        0;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--brown-deep),
+          #594339
+        );
+    }
+
+
+    .podcast-strip .container {
+      display: grid;
+
+      grid-template-columns:
+        90px
+        minmax(0, 1fr)
+        auto;
+
+      align-items: center;
+
+      gap: 30px;
+    }
+
+
+    .podcast-icon {
+      width: 74px;
+      height: 74px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-light);
+
+      border-radius: 50%;
+
+      color:
+        var(--gold-light);
+
+      font-size: 1.5rem;
+    }
+
+
+    .podcast-strip h2 {
+      margin-bottom: 5px;
+
+      color: var(--white);
+
+      font-size:
+        clamp(
+          1.8rem,
+          3vw,
+          2.8rem
+        );
+    }
+
+
+    .podcast-strip p {
+      color:
+        rgba(255,255,255,0.7);
+    }
+
+
+    .podcast-badge {
+      border:
+        1px solid
+        rgba(231,207,170,0.55);
+
+      border-radius: 999px;
+
+      padding:
+        10px
+        16px;
+
+      color:
+        var(--gold-light);
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       CLOSING
+    ===================================================== */
+
+    .resources-closing {
+      padding:
+        74px
+        0;
+
+      background:
+        var(--ivory);
+
+      text-align: center;
+    }
+
+
+    .resources-closing p {
+      color:
+        var(--brown);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.94rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.07em;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 980px) {
+
+      .resources-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+
+      .resources-motion {
+        min-height: 350px;
+      }
+
+
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .guide-preview {
+        height: 520px;
+      }
+
+
+      .category-heading {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+      }
+
+    }
+
+
+    @media (max-width: 760px) {
+
+      .resources-hero {
+        padding:
+          75px
+          0
+          60px;
+      }
+
+
+      .resources-hero-inner {
+        width:
+          min(
+            100% - 28px,
+            var(--max-width)
+          );
+      }
+
+
+      .resources-hero-copy h1 {
+        font-size:
+          clamp(
+            3.5rem,
+            17vw,
+            5rem
+          );
+      }
+
+
+      .assessment-card {
+        grid-template-columns: 1fr;
+
+        padding: 28px;
+      }
+
+
+      .assessment-icon {
+        width: 95px;
+        height: 95px;
+      }
+
+
+      .publication-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .publication-card {
+        min-height: 310px;
+
+        padding: 30px;
+      }
+
+
+      .program-panel {
+        padding: 32px;
+      }
+
+
+      .podcast-strip .container {
+        grid-template-columns:
+          70px
+          1fr;
+      }
+
+
+      .podcast-badge {
+        grid-column:
+          1 / -1;
+
+        width: fit-content;
+      }
+
+    }
+
+
+    @media (max-width: 560px) {
+
+      .resources-motion {
+        min-height: 300px;
+      }
+
+
+      .resources-motion-center {
+        width: 140px;
+        height: 140px;
+      }
+
+
+      .resources-motion-center span {
+        font-size: 1.1rem;
+      }
+
+
+      .resources-orbit.one {
+        width: 215px;
+        height: 215px;
+      }
+
+
+      .resources-orbit.two {
+        width: 270px;
+        height: 270px;
+      }
+
+
+      .guide-preview {
+        height: 410px;
+      }
+
+
+      .guide-actions {
+        flex-direction: column;
+      }
+
+
+      .guide-actions a {
+        width: 100%;
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .resources-orbit {
+        animation: none !important;
+      }
+
+    }
+
+  </style>
 </head>
+
+
 <body>
 
-<header class="site-header">
-  <div class="nav-container">
-    <h1 class="logo">Focused • Clear • Ready™</h1>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="method.html">FCR Method</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+  <div class="nav-container">
+
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="Focused Clear Ready home"
+    >
+      Focused • Clear • Ready™
+    </a>
+
+
+    <nav
+      class="nav"
+      aria-label="Primary navigation"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="method.html">
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a href="business-leadership.html">
+        Business Leadership
+      </a>
+
+      <a
+        href="resources.html"
+        aria-current="page"
+      >
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a
+        class="cta-button"
+        href="https://calendly.com/fcrlife-info/30min"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Clarity Call
+      </a>
+
     </nav>
+
   </div>
+
 </header>
 
-<section class="page-hero">
-  <div class="page-hero-text">
-    <h1>Resources</h1>
 
-    <p class="page-hero-subheadline">
-      A collection of thoughtful tools, reflections, and publications designed to support your clarity, growth, and next steps.
-    </p>
 
-    <p class="page-hero-intro">
-      Help yourself feel welcome to explore at your own pace and return when needed.
-    </p>
+<main>
 
-    <div class="button-row">
-      <a class="primary-button" href="https://form.jotform.com/222217613216143" target="_blank" rel="noopener">
-        FCR Clarity Assessment
-      </a>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="resources-hero">
+
+  <div class="resources-hero-inner">
+
+
+    <div class="resources-hero-copy">
+
+      <p class="eyebrow">
+        Focused • Clear • Ready™
+      </p>
+
+
+      <h1>
+        Resources
+      </h1>
+
+
+      <p class="resources-lead">
+        Whether you’re seeking greater clarity, practical guidance,
+        or continued growth, these resources are designed to support
+        your next step.
+      </p>
+
+
+      <p class="resources-season">
+        Explore what best fits your current season.
+      </p>
+
     </div>
+
+
+
+    <div
+      class="resources-motion"
+      aria-hidden="true"
+    >
+
+      <div class="resources-orbit one"></div>
+
+
+      <div class="resources-orbit two">
+
+        <span class="resources-orbit-dot"></span>
+
+      </div>
+
+
+      <div class="resources-motion-center">
+
+        <span>
+          Begin<br>
+          Within.
+        </span>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="page-hero-image">
-    <img src="images/homepage-3.png" alt="Professional portrait">
-  </div>
 </section>
 
-<section class="section light">
+
+
+<!-- =====================================================
+     FCR CLARITY ASSESSMENTS
+===================================================== -->
+
+<section
+  class="section assessment-section"
+  id="assessments"
+>
+
   <div class="container">
-    <h2>FCR Reflection Guides and Tools</h2>
 
-    <p>
-      Simple, thoughtful resources to help you slow down, process where you are, and reconnect with what matters most.
-    </p>
 
-    <p>
-      These guides are designed to support clarity without overwhelm.
-    </p>
+    <div class="section-heading centered">
 
-    <div class="method-grid three-up">
+      <p class="eyebrow">
+        Begin Here
+      </p>
+
+
+      <h2>
+        FCR Clarity Assessments
+      </h2>
+
+
+      <p>
+        Choose the assessment that best reflects your current focus.
+      </p>
+
+    </div>
+
+
+
+    <div class="assessment-grid">
+
+
+      <!-- WHOLE-LIFE -->
+
+      <article class="assessment-card">
+
+
+        <div
+          class="assessment-icon"
+          aria-hidden="true"
+        >
+          WL
+        </div>
+
+
+        <div>
+
+          <h3>
+            Whole-Life Assessment
+          </h3>
+
+
+          <p>
+            Designed for women seeking greater clarity,
+            alignment, and intention in their personal lives.
+          </p>
+
+
+          <div class="button-row">
+
+            <a
+              class="primary-button"
+              href="https://form.jotform.com/222217613216143"
+              target="_blank"
+              rel="noopener"
+            >
+              Take the Whole-Life Clarity Assessment
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- BUSINESS -->
+
+      <article class="assessment-card">
+
+
+        <div
+          class="assessment-icon"
+          aria-hidden="true"
+        >
+          BP
+        </div>
+
+
+        <div>
+
+          <h3>
+            Business &amp; Professional Assessment
+          </h3>
+
+
+          <p>
+            Designed for women entrepreneurs and professionals
+            seeking greater clarity, alignment, and sustainability
+            in the way they lead and build.
+          </p>
+
+
+          <div class="button-row">
+
+            <!--
+              Replace this URL with Allegra's dedicated
+              Business & Professional Assessment link
+              once she provides it.
+            -->
+
+            <a
+              class="primary-button"
+              href="https://form.jotform.com/222217613216143"
+              target="_blank"
+              rel="noopener"
+            >
+              Take the Business &amp; Professional Assessment
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REFLECTION GUIDES & TOOLS
+===================================================== -->
+
+<section class="resource-category light">
+
+  <div class="container">
+
+
+    <div class="category-heading">
+
+
+      <div class="category-title-wrap">
+
+        <div
+          class="category-icon"
+          aria-hidden="true"
+        >
+          RG
+        </div>
+
+
+        <h2>
+          Reflection Guides &amp; Tools
+        </h2>
+
+      </div>
+
+
+      <p>
+        Simple, practical resources designed to help you pause,
+        reflect, consider yourself, and clarify what matters most.
+      </p>
+
+    </div>
+
+
+
+    <div class="guide-grid">
+
 
       <!-- OVERWHELMED -->
-      <div class="method-card">
-        <h3>If You’re Feeling Overwhelmed</h3>
 
-        <div class="pdf-preview">
-          <iframe 
-            src="pdfs/overwhelmed.pdf#view=FitH"
-            width="100%" 
-            height="300"
-            style="border:none;">
-          </iframe>
+      <article class="guide-card">
+
+
+        <div class="guide-preview">
+
+          <iframe
+            src="pdfs/overwhelmed.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            title="If You're Feeling Overwhelmed preview"
+            loading="lazy"
+          ></iframe>
+
         </div>
 
-        <div class="button-row">
-          <a class="primary-button" href="pdfs/overwhelmed.pdf" target="_blank">Open Full</a>
-          <a class="cta-button" href="pdfs/overwhelmed.pdf" download>Download</a>
+
+        <div class="guide-content">
+
+          <h3>
+            If You’re Feeling Overwhelmed
+          </h3>
+
+
+          <p>
+            A practical resource designed to help you understand
+            overwhelm, reconnect with yourself, and return to clarity.
+          </p>
+
+
+          <div class="guide-actions">
+
+            <a
+              class="primary-button"
+              href="pdfs/overwhelmed.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              View Guide
+            </a>
+
+
+            <a
+              class="secondary-button"
+              href="pdfs/overwhelmed.pdf"
+              download
+            >
+              Download
+            </a>
+
+          </div>
+
         </div>
-      </div>
+
+      </article>
+
+
 
       <!-- BEFORE YOUR DAY -->
-      <div class="method-card">
-        <h3>Before You Start Your Day</h3>
 
-        <div class="pdf-preview">
-          <iframe 
-            src="pdfs/before-your-day.pdf#view=FitH"
-            width="100%" 
-            height="300"
-            style="border:none;">
-          </iframe>
+      <article class="guide-card">
+
+
+        <div class="guide-preview">
+
+          <iframe
+            src="pdfs/before-your-day.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            title="Before You Start Your Day preview"
+            loading="lazy"
+          ></iframe>
+
         </div>
 
-        <div class="button-row">
-          <a class="primary-button" href="pdfs/before-your-day.pdf" target="_blank">Open Full</a>
-          <a class="cta-button" href="pdfs/before-your-day.pdf" download>Download</a>
+
+        <div class="guide-content">
+
+          <h3>
+            Before You Start Your Day
+          </h3>
+
+
+          <p>
+            A grounding guide for beginning your day by checking
+            in with yourself before responding to everything
+            waiting for your attention.
+          </p>
+
+
+          <div class="guide-actions">
+
+            <a
+              class="primary-button"
+              href="pdfs/before-your-day.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              View Guide
+            </a>
+
+
+            <a
+              class="secondary-button"
+              href="pdfs/before-your-day.pdf"
+              download
+            >
+              Download
+            </a>
+
+          </div>
+
         </div>
-      </div>
+
+      </article>
+
+
 
       <!-- DAILY CAPACITY -->
-      <div class="method-card">
-        <h3>Daily Capacity Check-In</h3>
 
-        <div class="pdf-preview">
-          <iframe 
-            src="pdfs/daily-capacity.pdf#view=FitH"
-            width="100%" 
-            height="300"
-            style="border:none;">
-          </iframe>
+      <article class="guide-card">
+
+
+        <div class="guide-preview">
+
+          <iframe
+            src="pdfs/daily-capacity.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            title="Daily Capacity Check-In preview"
+            loading="lazy"
+          ></iframe>
+
         </div>
 
-        <div class="button-row">
-          <a class="primary-button" href="pdfs/daily-capacity.pdf" target="_blank">Open Full</a>
-          <a class="cta-button" href="pdfs/daily-capacity.pdf" download>Download</a>
+
+        <div class="guide-content">
+
+          <h3>
+            Daily Capacity Check-In
+          </h3>
+
+
+          <p>
+            A practical framework for considering your current
+            capacity and choosing how to move through your day
+            with greater awareness and intention.
+          </p>
+
+
+          <div class="guide-actions">
+
+            <a
+              class="primary-button"
+              href="pdfs/daily-capacity.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              View Guide
+            </a>
+
+
+            <a
+              class="secondary-button"
+              href="pdfs/daily-capacity.pdf"
+              download
+            >
+              Download
+            </a>
+
+          </div>
+
         </div>
-      </div>
+
+      </article>
 
     </div>
+
   </div>
+
 </section>
 
-<section class="section">
+
+
+<!-- =====================================================
+     PUBLICATIONS
+===================================================== -->
+
+<section class="resource-category">
+
   <div class="container">
-    <h2>Ways to Go Deeper</h2>
 
-    <p>
-      If you’re ready for more structured support, here are a few ways to continue your journey.
-    </p>
 
-    <div class="method-grid">
-      <div class="method-card">
-        <h3>Private Coaching</h3>
+    <div class="category-heading">
+
+
+      <div class="category-title-wrap">
+
+        <div
+          class="category-icon"
+          aria-hidden="true"
+        >
+          P
+        </div>
+
+
+        <h2>
+          Publications
+        </h2>
+
+      </div>
+
+
+      <p>
+        Thoughtful publications created to encourage
+        self-leadership, intentional living, and sustainable growth.
+      </p>
+
+    </div>
+
+
+
+    <div class="publication-grid">
+
+
+      <!-- FCR MAGAZINE -->
+
+      <article class="publication-card">
+
+        <span class="publication-label">
+          Publication
+        </span>
+
+
+        <h3>
+          FCR Magazine
+        </h3>
+
+
         <p>
-          Personalized guidance to help you move forward with clarity and ease.
+          Conversations, reflections, and practical insights
+          designed to support self-leadership, clarity,
+          and intentional growth.
         </p>
 
+
         <div class="button-row">
-          <a class="primary-button" href="https://calendly.com/fcrlife-info/30min" target="_blank">
-            Book a Clarity Session
+
+          <a
+            class="primary-button"
+            href="https://custommade.fcrprosvc.com/pvYWJT4Vv1C6dRAIu85Gjh"
+            target="_blank"
+            rel="noopener"
+          >
+            View Magazine
           </a>
-        </div>
-      </div>
 
-      <div class="method-card">
-        <h3>Programs &amp; Workshops</h3>
+        </div>
+
+      </article>
+
+
+
+      <!-- CH@H -->
+
+      <article class="publication-card">
+
+        <span class="publication-label">
+          Lifestyle Publication
+        </span>
+
+
+        <h3>
+          Create Heaven at Home
+        </h3>
+
+
         <p>
-          Structured experiences for deeper reflection, learning, and growth.
+          A lifestyle and inspiration publication that brings
+          thoughtful, intentional living into your home and
+          everyday life.
         </p>
 
+
         <div class="button-row">
-          <a class="primary-button" href="#">View Offerings</a>
+
+          <a
+            class="primary-button"
+            href="https://custommade.fcrprosvc.com/chhsummer221"
+            target="_blank"
+            rel="noopener"
+          >
+            View CH@H
+          </a>
+
         </div>
-      </div>
+
+      </article>
+
     </div>
+
   </div>
+
 </section>
 
-<section class="section light">
+
+
+<!-- =====================================================
+     WORKSHOPS & PROGRAMS
+===================================================== -->
+
+<section class="resource-category light">
+
   <div class="container">
-    <h2>Explore &amp; Be Inspired</h2>
+
+
+    <div class="category-heading">
+
+
+      <div class="category-title-wrap">
+
+        <div
+          class="category-icon"
+          aria-hidden="true"
+        >
+          WP
+        </div>
+
+
+        <h2>
+          Workshops &amp; Programs
+        </h2>
+
+      </div>
+
+
+      <p>
+        Seasonal workshops, guided learning experiences,
+        and signature programs.
+      </p>
+
+    </div>
+
+
+
+    <article class="program-panel">
+
+
+      <p class="eyebrow">
+        Focused • Clear • Ready™
+      </p>
+
+
+      <h3>
+        Guided experiences for deeper growth.
+      </h3>
+
+
+      <p>
+        Workshops and programs will provide opportunities to
+        explore the Focused • Clear • Ready™ Method in greater
+        depth through structured reflection, practical application,
+        and intentional learning.
+      </p>
+
+
+      <span class="coming-soon">
+        Coming Soon
+      </span>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PODCAST
+===================================================== -->
+
+<section class="podcast-strip">
+
+  <div class="container">
+
+
+    <div
+      class="podcast-icon"
+      aria-hidden="true"
+    >
+      ◉
+    </div>
+
+
+    <div>
+
+      <h2>
+        Podcast
+      </h2>
+
+
+      <p>
+        Conversations about self-leadership, clarity,
+        intentional living, and sustainable growth.
+      </p>
+
+    </div>
+
+
+    <span class="podcast-badge">
+      Coming Soon
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BRAND CLOSING
+===================================================== -->
+
+<section class="resources-closing">
+
+  <div class="container">
 
     <p>
-      Thoughtful publications to inspire clarity, peace, and intentional living.
+      BEGIN WITHIN. LEAD WITH EASE.™
     </p>
 
-    <div class="method-grid">
-      <div class="method-card">
-        <h3>FCR Magazine</h3>
-        <p>
-          A digital publication offering insight, perspective, and practical guidance for building a life and work that feel aligned and meaningful.
-        </p>
-
-        <div class="button-row">
-          <a class="primary-button" href="https://custommade.fcrprosvc.com/pvYWJT4Vv1C6dRAIu85Gjh" target="_blank">View Magazine</a>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <h3>Create Heaven at Home</h3>
-        <p>
-          A lifestyle and reflective living publication centered on peace, atmosphere, and thoughtful home-centered inspiration.
-        </p>
-
-        <div class="button-row">
-          <a class="primary-button" href="https://custommade.fcrprosvc.com/chhsummer221" target="_blank">View CH@H</a>
-        </div>
-      </div>
-    </div>
   </div>
+
 </section>
 
-<section class="section signature">
-  <div class="container">
-    <h2>If you’re not sure where to start, begin with a simple step toward clarity.</h2>
 
-    <div class="button-row" style="justify-content:center;">
-      <a class="primary-button" href="https://form.jotform.com/222217613216143" target="_blank">
-        FCR Clarity Assessment
-      </a>
-    </div>
-  </div>
-</section>
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="site-footer">
-  <div class="footer-container">
-    <p>© Focused • Clear • Ready™</p>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="method.html">FCR Method</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+  <div class="footer-container">
+
+
+    <div class="footer-brand">
+
+
+      <p class="footer-logo">
+        Focused • Clear • Ready™
+      </p>
+
+
+      <p style="font-style: normal;">
+        Begin Within. Lead With Ease.™
+      </p>
+
+    </div>
+
+
+
+    <nav aria-label="Footer navigation">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="method.html">
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a href="business-leadership.html">
+        Business Leadership
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
     </nav>
+
+
+
+    <p class="copyright">
+      © 2026 Focused • Clear • Ready™. All rights reserved.
+    </p>
+
   </div>
+
 </footer>
+
+
+
+<script src="js/main.js"></script>
+
 
 </body>
 </html>

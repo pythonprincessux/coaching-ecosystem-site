@@ -10,38 +10,566 @@
 
   <meta
     name="description"
-    content="Focused • Clear • Ready™ is a self-leadership framework helping women consider themselves, gain clarity, and move forward with greater intention and ease."
+    content="Focused • Clear • Ready™ is a self-leadership framework that helps women intentionally consider themselves, gain clarity, and move forward with greater intention and ease."
   >
 
-  <title>Focused • Clear • Ready™ | Begin Within. Lead With Ease.</title>
+  <title>
+    Focused • Clear • Ready™ | Begin Within. Lead With Ease.
+  </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+
+    /* =====================================================
+       HOMEPAGE ONLY
+       Original FCR look + subtle premium motion
+    ===================================================== */
+
+    .homepage-hero {
+      min-height: 720px;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+    }
+
+    .homepage-hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: -4;
+    }
+
+    .homepage-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      animation: hero-image-breathe 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes hero-image-breathe {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.045);
+      }
+    }
+
+    .homepage-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(251, 248, 243, 0.97) 0%,
+          rgba(251, 248, 243, 0.92) 43%,
+          rgba(251, 248, 243, 0.55) 68%,
+          rgba(251, 248, 243, 0.2) 100%
+        );
+    }
+
+    .homepage-hero-glow {
+      width: 600px;
+      height: 600px;
+
+      position: absolute;
+      z-index: -2;
+
+      top: 50%;
+      right: -130px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(197, 155, 98, 0.14),
+          transparent 68%
+        );
+
+      transform: translateY(-50%);
+    }
+
+    .homepage-hero-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+
+      margin-inline: auto;
+
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 700px)
+        minmax(260px, 1fr);
+
+      align-items: center;
+
+      gap: 55px;
+
+      padding: 95px 0;
+    }
+
+    .homepage-hero-copy {
+      position: relative;
+      z-index: 3;
+    }
+
+    .homepage-hero-copy .hero-kicker {
+      margin-bottom: 22px;
+
+      color: var(--gold-dark);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.35rem,
+          2.5vw,
+          2rem
+        );
+
+      font-weight: 500;
+
+      line-height: 1.3;
+
+      text-transform: uppercase;
+    }
+
+    .homepage-hero-copy h1 {
+      margin-bottom: 26px;
+
+      color: var(--brown-deep);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          3rem,
+          5.8vw,
+          5.6rem
+        );
+
+      font-weight: 600;
+
+      line-height: 1.04;
+
+      letter-spacing: -0.04em;
+    }
+
+    .homepage-hero-copy .hero-description {
+      max-width: 660px;
+
+      color: var(--text);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.13rem;
+
+      line-height: 1.8;
+    }
+
+    .homepage-hero-signature {
+      margin-top: 31px;
+
+      color: var(--brown);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.94rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.05em;
+    }
+
+
+    /* =====================================================
+       HERO MOTION
+    ===================================================== */
+
+    .homepage-motion {
+      min-height: 430px;
+
+      position: relative;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .homepage-motion-center {
+      width: 188px;
+      height: 188px;
+
+      position: relative;
+      z-index: 3;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--gold-dark);
+
+      border-radius: 50%;
+
+      background:
+        rgba(251, 248, 243, 0.86);
+
+      box-shadow:
+        0 0 0 20px rgba(197, 155, 98, 0.06),
+        0 24px 55px rgba(76, 57, 48, 0.13);
+
+      backdrop-filter: blur(5px);
+    }
+
+    .homepage-motion-center span {
+      color: var(--brown);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 2rem;
+
+      font-weight: 600;
+
+      letter-spacing: 0.05em;
+    }
+
+    .homepage-orbit {
+      position: absolute;
+
+      border:
+        1px solid
+        rgba(167, 121, 66, 0.4);
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .homepage-orbit.one {
+      width: 290px;
+      height: 290px;
+
+      animation:
+        homepage-orbit-reverse
+        55s
+        linear
+        infinite;
+    }
+
+    .homepage-orbit.two {
+      width: 375px;
+      height: 375px;
+
+      border-style: dashed;
+
+      animation:
+        homepage-orbit
+        34s
+        linear
+        infinite;
+    }
+
+    .homepage-orbit-dot {
+      width: 12px;
+      height: 12px;
+
+      position: absolute;
+
+      top: 19px;
+      left: 50%;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 20px
+        rgba(197, 155, 98, 0.5);
+
+      transform: translateX(-50%);
+    }
+
+    @keyframes homepage-orbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes homepage-orbit-reverse {
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+
+    /* =====================================================
+       HOME SUPPORTING STYLES
+    ===================================================== */
+
+    .section-number {
+      width: 42px;
+      height: 42px;
+
+      margin: 0 auto 18px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--gold-dark);
+
+      border-radius: 50%;
+
+      background: var(--blush-soft);
+
+      color: var(--brown);
+
+      font-size: 0.8rem;
+
+      font-weight: 800;
+    }
+
+    .plain-brand-line {
+      margin-top: 34px !important;
+
+      color: var(--brown) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
+
+      font-size: 0.9rem !important;
+
+      font-style: normal !important;
+
+      font-weight: 800;
+
+      letter-spacing: 0.045em;
+    }
+
+    .resources-coming-soon {
+      margin-top: 12px;
+
+      color: var(--gold-dark) !important;
+
+      font-size: 0.8rem !important;
+
+      font-weight: 700;
+
+      letter-spacing: 0.04em;
+    }
+
+    .home-closing {
+      padding: 52px 20px;
+
+      border-top:
+        1px solid
+        rgba(197, 155, 98, 0.35);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blush-soft),
+          var(--cream)
+        );
+
+      text-align: center;
+    }
+
+    .home-closing p {
+      color: var(--brown);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.96rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.07em;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .homepage-hero {
+        min-height: auto;
+      }
+
+      .homepage-hero-overlay {
+        background:
+          linear-gradient(
+            rgba(251, 248, 243, 0.88),
+            rgba(251, 248, 243, 0.94)
+          );
+      }
+
+      .homepage-hero-inner {
+        grid-template-columns: 1fr;
+
+        padding:
+          75px
+          0
+          55px;
+      }
+
+      .homepage-motion {
+        min-height: 370px;
+      }
+    }
+
+
+    @media (max-width: 680px) {
+
+      .homepage-hero-inner {
+        width:
+          min(
+            100% - 28px,
+            var(--max-width)
+          );
+      }
+
+      .homepage-hero-copy .hero-kicker {
+        font-size: 1.25rem;
+      }
+
+      .homepage-hero-copy h1 {
+        font-size:
+          clamp(
+            2.8rem,
+            14vw,
+            4rem
+          );
+      }
+
+      .homepage-hero-copy .hero-description {
+        font-size: 1rem;
+      }
+
+      .homepage-motion {
+        min-height: 320px;
+      }
+
+      .homepage-motion-center {
+        width: 150px;
+        height: 150px;
+      }
+
+      .homepage-motion-center span {
+        font-size: 1.6rem;
+      }
+
+      .homepage-orbit.one {
+        width: 235px;
+        height: 235px;
+      }
+
+      .homepage-orbit.two {
+        width: 290px;
+        height: 290px;
+      }
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .homepage-hero-image img,
+      .homepage-orbit {
+        animation: none !important;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="site-header">
+
   <div class="nav-container">
 
-    <a class="logo" href="index.html" aria-label="Focused Clear Ready home">
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="Focused Clear Ready home"
+    >
       Focused • Clear • Ready™
     </a>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="method.html">The Method</a>
-      <a href="whole-life.html">Whole-Life Leadership</a>
-      <a href="business-leadership.html">Business Leadership</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+
+    <nav
+      class="nav"
+      aria-label="Primary navigation"
+    >
+
+      <a
+        href="index.html"
+        aria-current="page"
+      >
+        Home
+      </a>
+
+      <a href="method.html">
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a href="business-leadership.html">
+        Business Leadership
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
 
       <a
         class="cta-button"
@@ -51,480 +579,952 @@
       >
         Book a Clarity Call
       </a>
+
     </nav>
 
   </div>
+
 </header>
+
+
 
 <main>
 
-  <!-- HERO -->
-  <section class="fcr-hero" id="home">
-    <div class="fcr-hero-inner">
 
-      <div class="fcr-hero-copy">
-        <p class="eyebrow">When it’s time to do something differently</p>
+<!-- =====================================================
+     SECTION 1
+     HERO
+===================================================== -->
 
-        <h1>
-          Pause, consider yourself, and move forward with alignment and ease.
-        </h1>
+<section
+  class="homepage-hero"
+  id="home"
+>
 
-        <p class="hero-lead">
-          Focused • Clear • Ready™ is a self-leadership framework that helps
-          women entrepreneurs and professionals reconnect with themselves,
-          identify what matters most, and respond to life’s demands with
-          greater clarity and intention.
+  <div class="homepage-hero-image">
+
+    <img
+      src="images/homepage-2.png"
+      alt=""
+    >
+
+  </div>
+
+
+  <div class="homepage-hero-overlay"></div>
+
+  <div class="homepage-hero-glow"></div>
+
+
+  <div class="homepage-hero-inner">
+
+
+    <div class="homepage-hero-copy">
+
+      <p class="hero-kicker">
+        When It’s Time to<br>
+        Do Something Different
+      </p>
+
+
+      <h1>
+        FCR helps women entrepreneurs and professionals pause,
+        consider themselves, and move forward in alignment and ease.
+      </h1>
+
+
+      <p class="hero-description">
+        Focused • Clear • Ready™ is a self-leadership framework
+        that helps you reconnect with yourself by intentionally
+        considering yourself and what’s most important for your
+        well-being and advancement before responding to life’s
+        demands.
+      </p>
+
+
+      <p class="homepage-hero-signature">
+        Begin Within. Lead With Ease.™
+      </p>
+
+    </div>
+
+
+
+    <div
+      class="homepage-motion"
+      aria-hidden="true"
+    >
+
+      <div class="homepage-orbit one"></div>
+
+
+      <div class="homepage-orbit two">
+
+        <span class="homepage-orbit-dot"></span>
+
+      </div>
+
+
+      <div class="homepage-motion-center">
+
+        <span>FCR</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 2
+     THE LIFE YOU'RE BUILDING MATTERS
+===================================================== -->
+
+<section class="section life-section">
+
+  <div class="container">
+
+
+    <div class="section-heading centered">
+
+      <div class="section-number">
+        2
+      </div>
+
+
+      <p class="eyebrow">
+        The Life You’re Building Matters
+      </p>
+
+
+      <h2>
+        The question isn’t whether you’re building.
+        The question is how you’re building.
+      </h2>
+
+    </div>
+
+
+
+    <div class="life-intro">
+
+      <p>
+        Every day, you’re building a life through the decisions
+        you make, the responsibilities you carry, and the way
+        you respond to what’s placed before you.
+      </p>
+
+    </div>
+
+
+
+    <div class="comparison-grid">
+
+
+      <article class="comparison-card">
+
+        <div
+          class="card-icon"
+          aria-hidden="true"
+        >
+          ○
+        </div>
+
+
+        <h3>
+          The Unconsidered Life
+        </h3>
+
+
+        <p>
+          At Focused • Clear • Ready™, we define the Unconsidered
+          Life as building a life where you repeatedly respond to
+          life’s demands, responsibilities, obligations, and
+          expectations without consistently considering yourself.
         </p>
 
-        <div class="button-row">
-          <a class="primary-button" href="#choose-your-focus">
-            Choose Your Focus
+
+        <p>
+          Over time, this way of living can quietly lead to burnout,
+          chronic overwhelm, unfulfillment, strained relationships,
+          declining well-being, or success that no longer feels
+          like your own.
+        </p>
+
+      </article>
+
+
+
+      <article class="comparison-card featured">
+
+        <div
+          class="card-icon"
+          aria-hidden="true"
+        >
+          ◈
+        </div>
+
+
+        <h3>
+          The Considered Life
+        </h3>
+
+
+        <p>
+          A Considered Life is intentionally built by consistently
+          considering yourself before responding to life’s demands,
+          responsibilities, obligations, and important decisions.
+        </p>
+
+
+        <p>
+          It isn’t about doing less or caring less about others.
+          It’s about no longer leaving yourself out of the decisions
+          that shape your life.
+        </p>
+
+
+        <p>
+          Through the daily practice of self-leadership, you build
+          a life that increasingly reflects what matters most to you.
+        </p>
+
+      </article>
+
+    </div>
+
+
+
+    <div class="insight-banner">
+
+      <p>
+        Whether you’re hoping to avoid an Unconsidered Life or
+        you’re ready to strengthen a foundation that no longer
+        feels sustainable, the Focused • Clear • Ready™ Method
+        helps you move toward a Considered Life through the
+        practice of self-leadership.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 3
+     CHOOSE YOUR FOCUS
+===================================================== -->
+
+<section
+  class="section light focus-section"
+  id="choose-your-focus"
+>
+
+  <div class="container">
+
+
+    <div class="section-heading centered">
+
+      <div class="section-number">
+        3
+      </div>
+
+
+      <p class="eyebrow">
+        Choose Your Focus
+      </p>
+
+
+      <h2>
+        Choose the path that best reflects your current focus.
+      </h2>
+
+    </div>
+
+
+
+    <div class="focus-grid">
+
+
+      <!-- WHOLE-LIFE -->
+
+      <article class="focus-card">
+
+
+        <div
+          class="focus-icon"
+          aria-hidden="true"
+        >
+          ✦
+        </div>
+
+
+        <h3>
+          Whole-Life Leadership
+        </h3>
+
+
+        <p>
+          For women seeking greater clarity, confidence, and ease
+          in life, relationships, decisions, and personal growth.
+        </p>
+
+
+        <div class="focus-actions">
+
+
+          <a
+            class="primary-button"
+            href="whole-life.html"
+          >
+            Learn More
           </a>
+
 
           <a
             class="secondary-button"
-            href="https://calendly.com/fcrlife-info/30min"
-            target="_blank"
-            rel="noopener"
+            href="resources.html#assessments"
           >
-            Book a Clarity Call
+            Take Assessment
           </a>
-        </div>
-      </div>
 
-      <div class="fcr-hero-visual" aria-hidden="true">
-        <div class="hero-orbit hero-orbit-one"></div>
-        <div class="hero-orbit hero-orbit-two"></div>
-
-        <div class="hero-mark">
-          <span>F</span>
-          <span>C</span>
-          <span>R</span>
         </div>
 
-        <p>Begin Within.<br>Lead With Ease.</p>
-      </div>
+      </article>
+
+
+
+      <!-- BUSINESS -->
+
+      <article class="focus-card">
+
+
+        <div
+          class="focus-icon"
+          aria-hidden="true"
+        >
+          ▣
+        </div>
+
+
+        <h3>
+          Business &amp; Professional Leadership
+        </h3>
+
+
+        <p>
+          For women seeking greater clarity, alignment, and
+          effectiveness in their business, career, or
+          professional leadership.
+        </p>
+
+
+        <div class="focus-actions">
+
+
+          <a
+            class="primary-button"
+            href="business-leadership.html"
+          >
+            Learn More
+          </a>
+
+
+          <a
+            class="secondary-button"
+            href="resources.html#assessments"
+          >
+            Take Assessment
+          </a>
+
+        </div>
+
+      </article>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- THE LIFE YOU ARE BUILDING -->
-  <section class="section life-section">
-    <div class="container">
 
-      <div class="section-heading centered">
-        <p class="eyebrow">The life you’re building matters</p>
+<!-- =====================================================
+     SECTION 4
+     A DIFFERENT WAY TO BUILD
+===================================================== -->
 
-        <h2>
-          The question is not whether you’re building.
-          The question is how you’re building.
-        </h2>
-      </div>
+<section class="section build-section">
 
-      <div class="life-intro">
-        <p>
-          Every day, you’re building a life through the decisions you make,
-          the responsibilities you carry, and the way you respond to what is
-          placed before you.
+  <div class="container">
+
+
+    <div class="build-layout">
+
+
+      <div class="build-copy">
+
+
+        <div class="section-number">
+          4
+        </div>
+
+
+        <p class="eyebrow">
+          A Different Way to Build
         </p>
-      </div>
 
-      <div class="comparison-grid">
 
-        <article class="comparison-card">
-          <div class="card-icon" aria-hidden="true">○</div>
-
-          <h3>The Unconsidered Life</h3>
-
-          <p>
-            The Unconsidered Life is built through repeatedly responding to
-            life’s demands, responsibilities, obligations, and expectations
-            without consistently considering yourself.
-          </p>
-
-          <p>
-            Over time, this way of living can quietly lead to burnout,
-            chronic overwhelm, unfulfillment, strained relationships,
-            declining well-being, or success that no longer feels like your own.
-          </p>
-        </article>
-
-        <article class="comparison-card featured">
-          <div class="card-icon" aria-hidden="true">◈</div>
-
-          <h3>The Considered Life</h3>
-
-          <p>
-            A Considered Life is intentionally built by consistently
-            considering yourself before responding to life’s demands,
-            responsibilities, obligations, and important decisions.
-          </p>
-
-          <p>
-            It is not about doing less or caring less about others. It is about
-            no longer leaving yourself out of the decisions that shape your life.
-          </p>
-
-          <p>
-            Through the daily practice of self-leadership, you build a life that
-            increasingly reflects what matters most to you.
-          </p>
-        </article>
-
-      </div>
-
-      <div class="insight-banner">
         <p>
-          Whether you are hoping to avoid an Unconsidered Life or strengthen
-          a foundation that no longer feels sustainable, the Focused • Clear •
-          Ready™ Method helps you move toward a Considered Life through the
-          practice of self-leadership.
+          Most approaches focus on changing what you do.
+          The Focused • Clear • Ready™ Method begins by changing
+          how you lead yourself before responding to the demands
+          and opportunities in the life you’re building.
         </p>
+
+
+        <p>
+          It begins by helping you pause, reconnect with yourself,
+          and consider what’s most important, so you can build a
+          life and business from a stronger foundation before solving
+          problems or taking action.
+        </p>
+
+
+        <p>
+          When you strengthen your self-leadership, clarity follows.
+        </p>
+
+
+        <p>
+          And when your decisions align with what matters most,
+          you stop reacting to life and begin leading it with
+          greater confidence and ease.
+        </p>
+
       </div>
 
-    </div>
-  </section>
 
 
-  <!-- CHOOSE YOUR FOCUS -->
-  <section class="section light focus-section" id="choose-your-focus">
-    <div class="container">
+      <div class="framework-list">
 
-      <div class="section-heading centered">
-        <p class="eyebrow">Choose your focus</p>
 
-        <h2>Choose the path that best reflects your current focus.</h2>
-      </div>
+        <article class="framework-step">
 
-      <div class="focus-grid">
+          <span class="step-number">
+            01
+          </span>
 
-        <article class="focus-card">
-          <div class="focus-icon" aria-hidden="true">✦</div>
 
-          <p class="focus-label">Personal Growth</p>
+          <div>
 
-          <h3>Whole-Life Leadership</h3>
+            <h3>
+              Begin Within.
+            </h3>
 
-          <p>
-            For women seeking greater clarity, confidence, and ease in life,
-            relationships, decisions, transitions, and personal growth.
-          </p>
 
-          <div class="focus-actions">
-            <a class="primary-button" href="whole-life.html">
-              Learn More
-            </a>
+            <p>
+              Pause, regulate your nervous system, and intentionally
+              consider yourself before responding to life’s demands.
+            </p>
 
-            <a
-              class="secondary-button"
-              href="resources.html#assessments"
-            >
-              Take Assessment
-            </a>
           </div>
+
         </article>
 
-        <article class="focus-card">
-          <div class="focus-icon" aria-hidden="true">▣</div>
 
-          <p class="focus-label">Leadership and Business</p>
 
-          <h3>Business &amp; Professional Leadership</h3>
+        <article class="framework-step">
 
-          <p>
-            For women entrepreneurs and professionals seeking greater clarity,
-            alignment, and effectiveness in their business, career, or
-            professional leadership.
-          </p>
+          <span class="step-number">
+            02
+          </span>
 
-          <div class="focus-actions">
-            <a class="primary-button" href="business-leadership.html">
-              Learn More
-            </a>
 
-            <a
-              class="secondary-button"
-              href="resources.html#assessments"
-            >
-              Take Assessment
-            </a>
+          <div>
+
+            <h3>
+              Clarify.
+            </h3>
+
+
+            <p>
+              Get clear on what matters most right now so your
+              decisions reflect your values, priorities, and direction.
+            </p>
+
           </div>
+
+        </article>
+
+
+
+        <article class="framework-step">
+
+          <span class="step-number">
+            03
+          </span>
+
+
+          <div>
+
+            <h3>
+              Become Focused • Clear • Ready™.
+            </h3>
+
+
+            <p>
+              Simplify your focus, align your energy, and create
+              structure that supports what matters most.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="framework-step">
+
+          <span class="step-number">
+            04
+          </span>
+
+
+          <div>
+
+            <h3>
+              Lead With Ease™.
+            </h3>
+
+
+            <p>
+              Take aligned action, build supportive rhythms, and
+              create sustainable results.
+            </p>
+
+          </div>
+
         </article>
 
       </div>
 
     </div>
-  </section>
 
 
-  <!-- A DIFFERENT WAY TO BUILD -->
-  <section class="section build-section">
-    <div class="container">
 
-      <div class="build-layout">
-
-        <div class="build-copy">
-          <p class="eyebrow">A different way to build</p>
-
-          <h2>
-            Strengthen how you lead yourself before responding to what life
-            asks of you.
-          </h2>
-
-          <p>
-            Most approaches focus on changing what you do. The Focused • Clear •
-            Ready™ Method begins by changing how you lead yourself before
-            responding to the demands and opportunities in the life you are building.
-          </p>
-
-          <p>
-            It begins by helping you pause, reconnect with yourself, and
-            consider what is most important, so you can build a life and
-            business from a stronger foundation.
-          </p>
-
-          <p>
-            When you strengthen your self-leadership, clarity follows.
-          </p>
-
-          <p>
-            When your decisions align with what matters most, you stop reacting
-            to life and begin leading it with greater confidence and ease.
-          </p>
-        </div>
-
-        <div class="framework-list">
-
-          <article class="framework-step">
-            <span class="step-number">01</span>
-
-            <div>
-              <h3>Begin Within™</h3>
-              <p>
-                Pause, regulate your nervous system, and intentionally consider
-                yourself before responding to life’s demands.
-              </p>
-            </div>
-          </article>
-
-          <article class="framework-step">
-            <span class="step-number">02</span>
-
-            <div>
-              <h3>Clarify</h3>
-              <p>
-                Get clear on what matters most right now so your decisions
-                reflect your values, priorities, and direction.
-              </p>
-            </div>
-          </article>
-
-          <article class="framework-step">
-            <span class="step-number">03</span>
-
-            <div>
-              <h3>Become Focused • Clear • Ready™</h3>
-              <p>
-                Simplify your focus, align your energy, and create structure
-                that supports what matters most.
-              </p>
-            </div>
-          </article>
-
-          <article class="framework-step">
-            <span class="step-number">04</span>
-
-            <div>
-              <h3>Lead With Ease™</h3>
-              <p>
-                Take aligned action, build supportive rhythms, and create
-                sustainable results.
-              </p>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-
-      <div class="signature-statement">
-        <p>
-          A Considered Life isn’t found. It’s built. And it begins with you.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- WHO THIS IS FOR -->
-  <section class="section light audience-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="eyebrow">Who this is for</p>
-
-        <h2>
-          For women ready to approach life differently by considering
-          themselves with the same intention they bring to everything else
-          that matters.
-        </h2>
-      </div>
+    <div class="signature-statement">
 
       <p>
-        Life does not have to be falling apart for you to recognize that
-        something needs to change. You may have built a meaningful career,
-        care deeply for those around you, and continue meeting every
-        responsibility while quietly realizing that the way you have been
-        operating is no longer the way you want to live.
+        A Considered Life isn’t found. It’s built.
+        And it begins with you.
       </p>
 
-      <p><strong>You may recognize yourself here if:</strong></p>
+    </div>
 
-      <ul class="check-list">
-        <li>
-          You feel pulled in many directions and want to make decisions with
-          greater clarity and intention.
-        </li>
+  </div>
 
-        <li>
-          You have been giving so much to others that you have lost sight of
-          your own needs, priorities, or capacity.
-        </li>
+</section>
 
-        <li>
-          You are carrying significant responsibilities and want a way of
-          living that feels more sustainable.
-        </li>
 
-        <li>
-          You recognize that the way you lead yourself influences every area
-          of your life, work, relationships, and future.
-        </li>
-      </ul>
+
+<!-- =====================================================
+     SECTION 5
+     WHO THIS IS FOR
+===================================================== -->
+
+<section class="section light audience-section">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+
+      <div class="section-number">
+        5
+      </div>
+
+
+      <p class="eyebrow">
+        Who This Is For
+      </p>
+
+
+      <h2>
+        This is for women who are ready to begin approaching
+        life differently by considering themselves with the
+        same intention they’ve used to build everything else
+        that matters.
+      </h2>
 
     </div>
-  </section>
 
 
-  <!-- METHOD -->
-  <section class="section method-overview-section">
-    <div class="container">
 
-      <div class="section-heading centered">
-        <p class="eyebrow">The Focused • Clear • Ready™ Method</p>
+    <p>
+      Life doesn’t have to be falling apart for you to recognize
+      that something needs to change. You may have built a
+      meaningful career, care deeply for those around you, and
+      continue meeting every responsibility while quietly
+      realizing that the way you’ve been operating is no longer
+      the way you want to live.
+    </p>
 
-        <h2>
-          A self-leadership framework for greater steadiness, purposeful
-          direction, and ease.
-        </h2>
+
+
+    <p>
+      <strong>
+        You may recognize yourself here if:
+      </strong>
+    </p>
+
+
+
+    <ul class="check-list">
+
+
+      <li>
+        You feel pulled in many directions and want to make
+        decisions with greater clarity and intention.
+      </li>
+
+
+      <li>
+        You’ve been giving so much to others that you’ve lost
+        sight of your own needs, priorities, or capacity.
+      </li>
+
+
+      <li>
+        You’re carrying significant responsibilities and want
+        a way of living that feels more sustainable.
+      </li>
+
+
+      <li>
+        You’re ready to move beyond self-doubt and limiting
+        beliefs that have kept you from pursuing what you want.
+      </li>
+
+
+      <li>
+        You’re realizing that the way you lead yourself
+        influences every area of your life, work, relationships,
+        and future.
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 6
+     THE FCR METHOD
+===================================================== -->
+
+<section class="section method-overview-section">
+
+  <div class="container">
+
+
+    <div class="section-heading centered">
+
+
+      <div class="section-number">
+        6
+      </div>
+
+
+      <p class="eyebrow">
+        The Focused • Clear • Ready™ Method
+      </p>
+
+
+      <p>
+        The Focused • Clear • Ready™ Method is a self-leadership
+        framework that helps you intentionally consider yourself
+        before responding to life’s demands, responsibilities,
+        obligations, and important decisions. From that
+        foundation, you gain clarity about what matters most
+        and move forward with greater steadiness, purposeful
+        direction, and ease.
+      </p>
+
+    </div>
+
+
+
+    <div class="method-grid">
+
+
+      <article class="method-card">
+
+
+        <span class="method-number">
+          1
+        </span>
+
+
+        <h3>
+          Begin Within™
+        </h3>
+
+
+        <p class="method-tagline">
+          Pause before responding.
+        </p>
+
 
         <p>
-          The method helps you intentionally consider yourself before
-          responding to life’s demands, responsibilities, obligations, and
-          important decisions.
+          Become aware of what’s happening within you by observing
+          your thoughts, emotions, and current circumstances. As
+          you learn to regulate your nervous system and interrupt
+          automatic patterns, you become better able to
+          intentionally consider yourself before making decisions
+          or taking action.
         </p>
-      </div>
 
-      <div class="method-grid">
+      </article>
 
-        <article class="method-card">
-          <span class="method-number">1</span>
-          <h3>Begin Within™</h3>
-          <p class="method-tagline">Pause before responding.</p>
 
-          <p>
-            Become aware of what is happening within you by observing your
-            thoughts, emotions, and current circumstances.
-          </p>
-        </article>
 
-        <article class="method-card">
-          <span class="method-number">2</span>
-          <h3>Clarify</h3>
-          <p class="method-tagline">Discover what matters most.</p>
+      <article class="method-card">
 
-          <p>
-            Clarify your values, priorities, responsibilities, and direction
-            within this season of your life.
-          </p>
-        </article>
 
-        <article class="method-card">
-          <span class="method-number">3</span>
-          <h3>Become Focused • Clear • Ready™</h3>
-          <p class="method-tagline">Create alignment.</p>
+        <span class="method-number">
+          2
+        </span>
 
-          <p>
-            Bring your decisions, priorities, habits, boundaries, and daily
-            rhythms into alignment with what matters most.
-          </p>
-        </article>
 
-        <article class="method-card">
-          <span class="method-number">4</span>
-          <h3>Lead With Ease™</h3>
-          <p class="method-tagline">Live what you have created.</p>
+        <h3>
+          Clarify
+        </h3>
 
-          <p>
-            Continue making intentional decisions, responding thoughtfully to
-            challenges, and creating sustainable rhythms.
-          </p>
-        </article>
 
-      </div>
+        <p class="method-tagline">
+          Discover what matters most.
+        </p>
 
-      <div class="button-row centered-buttons">
-        <a class="primary-button" href="method.html">
-          Explore the Full Method
-        </a>
-      </div>
+
+        <p>
+          Clarify your values, priorities, responsibilities, and
+          direction within this season of your life. As your
+          thinking becomes clearer, your decisions begin
+          reflecting what truly matters rather than simply
+          responding to what feels most urgent.
+        </p>
+
+      </article>
+
+
+
+      <article class="method-card">
+
+
+        <span class="method-number">
+          3
+        </span>
+
+
+        <h3>
+          Become Focused • Clear • Ready™
+        </h3>
+
+
+        <p class="method-tagline">
+          Create alignment.
+        </p>
+
+
+        <p>
+          Bring your decisions, priorities, habits, boundaries,
+          and daily rhythms into alignment with what matters most.
+          As your internal clarity becomes reflected in the way
+          you live and lead, you build greater capacity,
+          confidence, and sustainability.
+        </p>
+
+      </article>
+
+
+
+      <article class="method-card">
+
+
+        <span class="method-number">
+          4
+        </span>
+
+
+        <h3>
+          Lead With Ease™
+        </h3>
+
+
+        <p class="method-tagline">
+          Live what you’ve created.
+        </p>
+
+
+        <p>
+          Self-leadership becomes more than something you practice.
+          It becomes how you naturally move through life. You
+          continue making intentional decisions, responding
+          thoughtfully to challenges, and creating sustainable
+          rhythms that support both your well-being and everything
+          you’ve been called to lead.
+        </p>
+
+      </article>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- PHILOSOPHY AND WORK WITH ME -->
-  <section class="section light philosophy-section">
-    <div class="container">
 
-      <div class="split-layout">
+<!-- =====================================================
+     SECTION 7 + 8
+     LIVING THE PHILOSOPHY / WORK WITH ME
+===================================================== -->
 
-        <article class="content-panel">
-          <p class="eyebrow">Living the philosophy</p>
+<section class="section light philosophy-section">
 
-          <h2>Self-leadership is meant to be lived.</h2>
+  <div class="container">
 
-          <p>
-            The Focused • Clear • Ready™ philosophy is a practical approach to
-            self-leadership that helps you intentionally consider yourself
-            before responding.
-          </p>
 
-          <ul class="principles-list">
-            <li>Self-leadership begins by considering yourself and what matters most.</li>
-            <li>Clarity changes how you move through challenges.</li>
-            <li>Considering your capacity helps create sustainable success.</li>
-            <li>When your life reflects what matters most, alignment and ease follow.</li>
-          </ul>
-        </article>
+    <div class="split-layout">
 
-        <article class="content-panel highlighted-panel">
-          <p class="eyebrow">Work with me</p>
 
-          <h2>Begin your next chapter with greater clarity.</h2>
+      <!-- SECTION 7 -->
 
-          <p>
-            If what you have read resonates with you and you are ready to begin
-            approaching life differently, Allegra would be honored to support you.
-          </p>
+      <article class="content-panel">
 
-          <p>
-            Your complimentary Clarity Call is an opportunity to explore where
-            you are today, what you are experiencing, what matters most to you,
-            and how the Focused • Clear • Ready™ Method can support your next step.
-          </p>
+
+        <div class="section-number">
+          7
+        </div>
+
+
+        <p class="eyebrow">
+          Living the Philosophy
+        </p>
+
+
+        <h2>
+          The Focused • Clear • Ready™ philosophy is meant
+          to be lived, not simply understood.
+        </h2>
+
+
+        <p>
+          It is a practical approach to self-leadership that helps
+          you intentionally consider yourself before responding
+          so your decisions, relationships, and daily life
+          increasingly reflect what matters most to you.
+        </p>
+
+
+        <p>
+          <strong>
+            Core Principles
+          </strong>
+        </p>
+
+
+        <ul class="principles-list">
+
+
+          <li>
+            Self-leadership begins by considering yourself and
+            what matters most.
+          </li>
+
+
+          <li>
+            Clarity changes how you move through challenge.
+          </li>
+
+
+          <li>
+            Considering your capacity helps create sustainable
+            success.
+          </li>
+
+
+          <li>
+            When your life reflects what matters most, greater
+            alignment and ease naturally follow.
+          </li>
+
+        </ul>
+
+
+        <p>
+          The Focused • Clear • Ready™ Method is the practical
+          application of this philosophy, providing a clear path
+          for living these principles in your everyday life.
+        </p>
+
+      </article>
+
+
+
+      <!-- SECTION 8 -->
+
+      <article class="content-panel highlighted-panel">
+
+
+        <div class="section-number">
+          8
+        </div>
+
+
+        <p class="eyebrow">
+          Work With Me
+        </p>
+
+
+        <p>
+          If what you’ve read resonates with you and you’re ready
+          to begin approaching life differently, I’d be honored
+          to support you.
+        </p>
+
+
+        <p>
+          Your Complimentary Clarity Call is an opportunity for
+          us to explore where you are today, what you’re
+          experiencing, what matters most to you, and how the
+          Focused • Clear • Ready™ Method can best support your
+          next step.
+        </p>
+
+
+        <p>
+          Whether you’re navigating a life transition, feeling
+          stretched by the demands of life, growing a business,
+          or simply longing for a more sustainable way to live,
+          you’ll leave with greater clarity about where you are
+          and your next best step.
+        </p>
+
+
+        <div class="button-row">
 
           <a
             class="primary-button"
@@ -535,128 +1535,216 @@
             Schedule Your Complimentary Clarity Call
           </a>
 
-          <p class="signature-line">
-            Begin Within. Lead With Ease.™<br>
-            <span>Allegra</span>
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
+        </div>
 
 
-  <!-- RESOURCES -->
-  <section class="section resources-preview-section">
-    <div class="container">
-
-      <div class="section-heading centered">
-        <p class="eyebrow">Resources</p>
-
-        <h2>
-          Continue your self-leadership journey with practical tools.
-        </h2>
-
-        <p>
-          Explore resources designed to help you apply the Focused • Clear •
-          Ready™ Method in your everyday life.
+        <p class="plain-brand-line">
+          Begin Within. Lead With Ease.™<br>
+          Allegra
         </p>
-      </div>
 
-      <div class="resource-preview-grid">
-
-        <article class="resource-preview-card">
-          <h3>Self-Leadership Assessments</h3>
-          <p>Choose the assessment that reflects your current focus.</p>
-        </article>
-
-        <article class="resource-preview-card">
-          <h3>Reflection Guides</h3>
-          <p>Pause, reflect, consider yourself, and clarify what matters most.</p>
-        </article>
-
-        <article class="resource-preview-card">
-          <h3>Publications</h3>
-          <p>Explore thoughtful content for intentional living and growth.</p>
-        </article>
-
-        <article class="resource-preview-card">
-          <h3>Workshops &amp; Programs</h3>
-          <p>Seasonal workshops, guided learning experiences, and programs.</p>
-        </article>
-
-      </div>
-
-      <div class="button-row centered-buttons">
-        <a class="primary-button" href="resources.html">
-          Explore Resources
-        </a>
-      </div>
+      </article>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- FINAL CTA -->
-  <section class="final-cta-section">
-    <div class="container">
-      <p class="eyebrow">Begin within</p>
 
-      <h2>
-        The quality of your life is shaped by how consistently you consider yourself.
-      </h2>
+<!-- =====================================================
+     SECTION 9
+     RESOURCES
+===================================================== -->
 
-      <p>
-        Build your life, leadership, and work from a foundation that reflects
-        what matters most.
+<section class="section resources-preview-section">
+
+  <div class="container">
+
+
+    <div class="section-heading centered">
+
+
+      <div class="section-number">
+        9
+      </div>
+
+
+      <p class="eyebrow">
+        Resources
       </p>
 
-      <div class="button-row centered-buttons">
-        <a
-          class="primary-button"
-          href="https://calendly.com/fcrlife-info/30min"
-          target="_blank"
-          rel="noopener"
-        >
-          Book a Clarity Call
-        </a>
 
-        <a class="secondary-button" href="#choose-your-focus">
-          Choose Your Path
-        </a>
-      </div>
+      <p>
+        Continue your self-leadership journey with practical
+        tools designed to help you apply the
+        Focused • Clear • Ready™ Method.
+      </p>
+
     </div>
-  </section>
+
+
+
+    <div class="resource-preview-grid">
+
+
+      <article class="resource-preview-card">
+
+        <h3>
+          Self-Leadership Assessments
+        </h3>
+
+      </article>
+
+
+
+      <article class="resource-preview-card">
+
+        <h3>
+          Business &amp; Professional Leadership Assessment
+        </h3>
+
+      </article>
+
+
+
+      <article class="resource-preview-card">
+
+        <h3>
+          Reflection Guide
+        </h3>
+
+      </article>
+
+
+
+      <article class="resource-preview-card">
+
+        <h3>
+          Publications
+        </h3>
+
+      </article>
+
+
+
+      <article class="resource-preview-card">
+
+        <h3>
+          Podcast
+        </h3>
+
+        <p class="resources-coming-soon">
+          Coming Soon!
+        </p>
+
+      </article>
+
+    </div>
+
+
+
+    <div class="button-row centered-buttons">
+
+      <a
+        class="primary-button"
+        href="resources.html"
+      >
+        Explore Resources
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BRAND CLOSING
+===================================================== -->
+
+<section class="home-closing">
+
+  <p>
+    BEGIN WITHIN. LEAD WITH EASE.™
+  </p>
+
+</section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
+
   <div class="footer-container">
 
+
     <div class="footer-brand">
-      <p class="footer-logo">Focused • Clear • Ready™</p>
-      <p>Begin Within. Lead With Ease.™</p>
+
+      <p class="footer-logo">
+        Focused • Clear • Ready™
+      </p>
+
+
+      <p style="font-style: normal;">
+        Begin Within. Lead With Ease.™
+      </p>
+
     </div>
 
+
+
     <nav aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="method.html">The Method</a>
-      <a href="whole-life.html">Whole-Life Leadership</a>
-      <a href="business-leadership.html">Business Leadership</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="method.html">
+        The Method
+      </a>
+
+      <a href="whole-life.html">
+        Whole-Life Leadership
+      </a>
+
+      <a href="business-leadership.html">
+        Business Leadership
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
     </nav>
+
+
 
     <p class="copyright">
       © 2026 Focused • Clear • Ready™. All rights reserved.
     </p>
 
   </div>
+
 </footer>
 
+
+
 <script src="js/main.js"></script>
+
 
 </body>
 </html>
