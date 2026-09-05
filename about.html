@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -18,282 +19,148 @@
   </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/styles.css">
-
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  >
 
   <style>
 
     /* =====================================================
-       ABOUT PAGE ONLY
+       ABOUT V1 RESTORATION
     ===================================================== */
 
-    .about-page {
-      background:
-        linear-gradient(
-          135deg,
-          var(--ivory),
-          var(--cream)
-        );
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .about-hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-
-      padding:
-        100px
-        0
-        90px;
-
-      background:
-        radial-gradient(
-          circle at 80% 30%,
-          rgba(197, 155, 98, 0.14),
-          transparent 28%
-        ),
-        linear-gradient(
-          135deg,
-          var(--ivory),
-          var(--cream)
-        );
-    }
-
-
-    .about-hero::before {
-      width: 520px;
-      height: 520px;
-
-      position: absolute;
-
-      top: -260px;
-      right: -90px;
-
-      border:
-        1px solid
-        rgba(197, 155, 98, 0.24);
-
-      border-radius: 50%;
-
-      content: "";
-
-      pointer-events: none;
-    }
-
-
-    .about-hero-inner {
+    .about-v1-hero {
       width:
         min(
           var(--max-width),
           calc(100% - 48px)
         );
 
-      margin-inline: auto;
-    }
-
-
-    .about-title {
-      margin-bottom: 62px;
-
-      text-align: center;
-    }
-
-
-    .about-title-mark {
-      width: 50px;
-      height: 50px;
-
       margin:
-        0
+        38px
         auto
-        18px;
-
-      position: relative;
-
-      display: grid;
-      place-items: center;
-    }
-
-
-    .about-title-mark::before,
-    .about-title-mark::after {
-      width: 25px;
-      height: 38px;
-
-      position: absolute;
+        34px;
 
       border:
         1px solid
-        var(--gold-dark);
+        var(--line);
 
-      border-radius:
-        60% 60% 50% 50%;
+      border-radius: 34px;
 
-      content: "";
+      padding:
+        52px;
+
+      background:
+        rgba(255, 255, 255, 0.34);
+
+      box-shadow:
+        var(--shadow-soft);
     }
 
-
-    .about-title-mark::before {
-      left: 5px;
-
-      transform:
-        rotate(-32deg);
+    .about-v1-title {
+      margin-bottom: 42px;
     }
 
+    .about-v1-title p {
+      margin-bottom: 8px;
 
-    .about-title-mark::after {
-      right: 5px;
-
-      transform:
-        rotate(32deg);
-    }
-
-
-    .about-title h1 {
-      color:
-        var(--brown-deep);
+      color: var(--text);
 
       font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
-      font-size:
-        clamp(
-          4rem,
-          8vw,
-          7rem
-        );
+      font-size: 0.8rem;
 
-      font-weight: 500;
+      font-weight: 800;
 
-      line-height: 0.95;
-
-      letter-spacing: -0.045em;
+      letter-spacing: 0.13em;
 
       text-transform: uppercase;
     }
 
+    .about-v1-title h1 {
+      color: var(--text);
 
-    .about-title-line {
-      width:
-        min(
-          830px,
-          88%
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size:
+        clamp(
+          3.2rem,
+          6.5vw,
+          5.5rem
         );
 
-      height: 1px;
+      font-weight: 800;
 
-      margin:
-        24px
-        auto
-        0;
+      line-height: 0.98;
 
-      position: relative;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          var(--gold),
-          var(--gold),
-          transparent
-        );
+      letter-spacing: -0.045em;
     }
 
-
-    .about-title-line::after {
-      width: 9px;
-      height: 9px;
-
-      position: absolute;
-
-      top: 50%;
-      left: 50%;
-
-      border-radius: 50%;
-
-      background:
-        var(--gold);
-
-      content: "";
-
-      transform:
-        translate(
-          -50%,
-          -50%
-        );
-    }
-
-
-    /* =====================================================
-       MEET ALLEGRA
-    ===================================================== */
-
-    .about-intro-grid {
+    .about-v1-grid {
       display: grid;
 
       grid-template-columns:
-        minmax(260px, 0.72fr)
-        minmax(0, 1.28fr);
+        minmax(300px, 0.85fr)
+        minmax(0, 1.15fr);
 
       align-items: center;
 
-      gap: 60px;
+      gap: 50px;
     }
 
-
-    .about-photo-wrap {
-      max-width: 370px;
-
-      position: relative;
+    .about-v1-photo-wrap {
+      max-width: 430px;
 
       margin-inline: auto;
     }
 
-
-    .about-photo-frame {
-      aspect-ratio:
-        0.82 / 1;
-
+    .about-v1-photo-frame {
       position: relative;
 
       overflow: hidden;
 
+      aspect-ratio: 0.82 / 1;
+
       border:
-        2px solid
-        var(--gold-dark);
+        1px solid
+        rgba(255, 255, 255, 0.65);
 
-      border-radius: 50%;
+      border-radius: 34px;
 
-      background:
-        var(--champagne-soft);
+      background: #6b4f3a;
 
       box-shadow:
-        0 26px 60px
-        rgba(76, 57, 48, 0.15);
+        0 16px 38px
+        rgba(63, 45, 36, 0.12);
     }
 
-
-    .about-photo-frame img {
+    .about-v1-photo-frame img {
       width: 100%;
       height: 100%;
 
       display: block;
 
       object-fit: cover;
+
       object-position: center top;
 
       transition:
@@ -302,635 +169,280 @@
         ease-in-out;
     }
 
-
-    .about-photo-frame:hover img {
+    .about-v1-photo-frame:hover img {
       transform:
         scale(1.035);
     }
 
-
-    .about-photo-orbit {
-      width: 108%;
-      height: 108%;
-
-      position: absolute;
-
-      top: -4%;
-      left: -4%;
-
-      border:
-        1px dashed
-        rgba(197, 155, 98, 0.38);
-
-      border-radius: 50%;
-
-      animation:
-        about-orbit
-        42s
-        linear
-        infinite;
-
-      pointer-events: none;
-    }
-
-
-    .about-photo-orbit::after {
-      width: 10px;
-      height: 10px;
-
-      position: absolute;
-
-      top: 23px;
-      left: 50%;
-
-      border-radius: 50%;
-
-      background:
-        var(--gold);
-
-      box-shadow:
-        0 0 15px
-        rgba(197, 155, 98, 0.45);
-
-      content: "";
-
-      transform:
-        translateX(-50%);
-    }
-
-
-    @keyframes about-orbit {
-      to {
-        transform:
-          rotate(360deg);
-      }
-    }
-
-
-    .about-intro-copy h2 {
+    .about-v1-copy h2 {
       margin-bottom: 8px;
 
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          2.8rem,
-          5vw,
-          4.6rem
-        );
-
-      line-height: 1;
-    }
-
-
-    .about-role {
-      margin-bottom: 24px;
-
-      color:
-        var(--gold-dark) !important;
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          1.2rem,
-          2.4vw,
-          1.6rem
-        ) !important;
-
-      line-height: 1.45 !important;
-    }
-
-
-    .about-intro-copy p:not(.about-role) {
-      max-width: 770px;
-
-      color:
-        var(--text-soft);
-
-      font-size: 1rem;
-
-      line-height: 1.82;
-    }
-
-
-    .about-intro-copy p + p {
-      margin-top: 16px;
-    }
-
-
-    .about-emphasis {
-      color:
-        var(--brown-deep) !important;
-
-      font-weight: 800;
-    }
-
-
-    /* =====================================================
-       DIVIDER
-    ===================================================== */
-
-    .about-divider {
-      width:
-        min(
-          900px,
-          calc(100% - 40px)
-        );
-
-      height: 1px;
-
-      margin-inline: auto;
-
-      position: relative;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          var(--gold),
-          var(--gold),
-          transparent
-        );
-    }
-
-
-    .about-divider::after {
-      width: 9px;
-      height: 9px;
-
-      position: absolute;
-
-      top: 50%;
-      left: 50%;
-
-      border-radius: 50%;
-
-      background:
-        var(--gold);
-
-      content: "";
-
-      transform:
-        translate(
-          -50%,
-          -50%
-        );
-    }
-
-
-    /* =====================================================
-       WHOLE-LIFE SELF-LEADERSHIP
-    ===================================================== */
-
-    .about-section {
-      padding:
-        90px
-        0;
-    }
-
-
-    .about-section-inner {
-      width:
-        min(
-          960px,
-          calc(100% - 48px)
-        );
-
-      margin-inline: auto;
-
-      text-align: center;
-    }
-
-
-    .about-section h2 {
-      margin-bottom: 17px;
-
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          2.6rem,
-          5vw,
-          4.4rem
-        );
-
-      line-height: 1;
-    }
-
-
-    .about-section-lead {
-      max-width: 850px;
-
-      margin:
-        0
-        auto
-        30px;
-
-      color:
-        var(--gold-dark) !important;
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          1.25rem,
-          2.7vw,
-          1.75rem
-        ) !important;
-
-      line-height: 1.55 !important;
-    }
-
-
-    .about-section p:not(.about-section-lead) {
-      max-width: 850px;
-
-      margin-inline: auto;
-
-      color:
-        var(--text-soft);
-
-      font-size: 1rem;
-
-      line-height: 1.82;
-    }
-
-
-    .about-section p + p {
-      margin-top: 18px;
-    }
-
-
-    /* =====================================================
-       FCR PHILOSOPHY
-    ===================================================== */
-
-    .philosophy-section {
-      position: relative;
-
-      overflow: hidden;
-
-      padding:
-        90px
-        0
-        100px;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--cream),
-          var(--blush-soft)
-        );
-    }
-
-
-    .philosophy-section::before {
-      width: 480px;
-      height: 480px;
-
-      position: absolute;
-
-      right: -280px;
-      bottom: -250px;
-
-      border:
-        1px solid
-        rgba(197, 155, 98, 0.2);
-
-      border-radius: 50%;
-
-      content: "";
-
-      pointer-events: none;
-    }
-
-
-    .philosophy-inner {
-      width:
-        min(
-          950px,
-          calc(100% - 48px)
-        );
-
-      margin-inline: auto;
-
-      position: relative;
-
-      z-index: 2;
-
-      text-align: center;
-    }
-
-
-    .philosophy-inner h2 {
-      margin-bottom: 6px;
-
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          2.7rem,
-          5vw,
-          4.6rem
-        );
-
-      line-height: 1;
-    }
-
-
-    .philosophy-tagline {
-      margin-bottom: 25px;
-
-      color:
-        var(--gold-dark) !important;
-
-      font-family:
-        "Libre Franklin",
-        Arial,
-        sans-serif !important;
-
-      font-size:
-        clamp(
-          1.05rem,
-          2vw,
-          1.3rem
-        ) !important;
-
-      font-weight: 800;
-
-      line-height: 1.5 !important;
-    }
-
-
-    .philosophy-inner > p:not(.philosophy-tagline) {
-      max-width: 830px;
-
-      margin-inline: auto;
-
-      color:
-        var(--text-soft);
-
-      line-height: 1.82;
-    }
-
-
-    .philosophy-statement {
-      max-width: 780px;
-
-      margin:
-        38px
-        auto;
-
-      display: grid;
-
-      grid-template-columns:
-        90px
-        minmax(0, 1fr);
-
-      align-items: center;
-
-      gap: 28px;
-
-      border:
-        1px solid
-        var(--line-gold);
-
-      border-radius:
-        var(--radius-lg);
-
-      padding:
-        26px
-        32px;
-
-      background:
-        rgba(255, 255, 255, 0.76);
-
-      box-shadow:
-        var(--shadow-card);
-
-      text-align: left;
-    }
-
-
-    .philosophy-statement-icon {
-      width: 72px;
-      height: 72px;
-
-      display: grid;
-      place-items: center;
-
-      border:
-        1px solid
-        var(--gold-dark);
-
-      border-radius: 50%;
-
-      color:
-        var(--brown);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size: 1.15rem;
-
-      font-weight: 600;
-    }
-
-
-    .philosophy-statement strong {
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          1.4rem,
-          2.7vw,
-          2rem
-        );
-
-      line-height: 1.35;
-    }
-
-
-    .philosophy-ending {
-      color:
-        var(--brown-deep) !important;
-
-      font-weight: 800;
-    }
-
-
-    /* =====================================================
-       BRAND CLOSING
-    ===================================================== */
-
-    .about-closing {
-      padding:
-        54px
-        20px;
-
-      background:
-        var(--ivory);
-
-      text-align: center;
-    }
-
-
-    .about-closing p {
-      color:
-        var(--brown);
+      color: var(--text);
 
       font-family:
         "Libre Franklin",
         Arial,
         sans-serif;
 
-      font-size: 0.94rem;
+      font-size:
+        clamp(
+          2.3rem,
+          4.5vw,
+          3.8rem
+        );
 
       font-weight: 800;
 
-      letter-spacing: 0.07em;
+      line-height: 1.02;
+
+      letter-spacing: -0.04em;
     }
 
+    .about-v1-role {
+      margin-bottom: 22px;
 
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
+      color: var(--text) !important;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif !important;
+
+      font-size:
+        clamp(
+          1.1rem,
+          2.3vw,
+          1.45rem
+        ) !important;
+
+      line-height: 1.5 !important;
+    }
+
+    .about-v1-copy p:not(.about-v1-role) {
+      color: var(--muted);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1rem;
+
+      line-height: 1.82;
+    }
+
+    .about-v1-copy p + p {
+      margin-top: 16px;
+    }
+
+    .about-v1-emphasis {
+      color: var(--text) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
+
+      font-weight: 800;
+    }
+
+    .about-content-v1 {
+      max-width: 900px;
+    }
+
+    .about-content-v1 h2 {
+      margin-bottom: 18px;
+    }
+
+    .about-content-v1 p {
+      max-width: 820px;
+    }
+
+    .about-lead-v1 {
+      color: var(--text) !important;
+
+      font-size:
+        clamp(
+          1.2rem,
+          2.5vw,
+          1.6rem
+        ) !important;
+
+      line-height: 1.55 !important;
+    }
+
+    .philosophy-v1 {
+      text-align: center;
+    }
+
+    .philosophy-v1 h2 {
+      margin-bottom: 10px;
+    }
+
+    .philosophy-tagline-v1 {
+      margin-bottom: 22px;
+
+      color: var(--text) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
+
+      font-size: 0.9rem !important;
+
+      font-weight: 800;
+
+      letter-spacing: 0.06em;
+    }
+
+    .philosophy-v1 > p {
+      max-width: 820px !important;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .philosophy-statement-v1 {
+      max-width: 760px;
+
+      margin:
+        32px
+        auto;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.65);
+
+      border-radius: 22px;
+
+      padding:
+        28px;
+
+      background: #f3dedd;
+
+      box-shadow:
+        var(--shadow-card);
+    }
+
+    .philosophy-statement-v1 strong {
+      color: var(--text);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.35rem,
+          2.8vw,
+          1.95rem
+        );
+
+      line-height: 1.4;
+    }
+
+    .philosophy-ending-v1 {
+      margin-top: 22px !important;
+
+      color: var(--text) !important;
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
+
+      font-weight: 800;
+    }
+
+    .about-closing-v1 {
+      padding:
+        40px
+        20px
+        55px;
+
+      text-align: center;
+    }
+
+    .about-closing-v1 p {
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.9rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.065em;
+    }
 
     @media (max-width: 850px) {
 
-      .about-intro-grid {
+      .about-v1-grid {
         grid-template-columns: 1fr;
       }
 
+      .about-v1-photo-wrap {
+        width: 100%;
 
-      .about-photo-wrap {
-        max-width: 330px;
+        max-width: 520px;
       }
 
     }
 
+    @media (max-width: 760px) {
 
-    @media (max-width: 620px) {
-
-      .about-hero {
-        padding:
-          72px
-          0
-          65px;
-      }
-
-
-      .about-hero-inner {
+      .about-v1-hero {
         width:
           min(
-            100% - 28px,
-            var(--max-width)
+            var(--max-width),
+            calc(100% - 28px)
           );
+
+        margin-top: 24px;
+
+        padding: 30px;
       }
 
-
-      .about-title {
-        margin-bottom: 48px;
+      .about-v1-title {
+        margin-bottom: 30px;
       }
 
-
-      .about-title h1 {
+      .about-v1-title h1 {
         font-size:
           clamp(
-            3.7rem,
-            20vw,
-            5.4rem
+            3rem,
+            15vw,
+            4.5rem
           );
       }
 
-
-      .about-intro-grid {
-        gap: 45px;
+      .about-v1-grid {
+        gap: 34px;
       }
 
+      .about-v1-photo-frame {
+        border-radius: 28px;
+      }
 
-      .about-intro-copy h2 {
+      .about-v1-copy h2 {
         font-size:
           clamp(
-            2.6rem,
-            13vw,
-            3.8rem
+            2.2rem,
+            11vw,
+            3.4rem
           );
-      }
-
-
-      .about-section,
-      .philosophy-section {
-        padding:
-          70px
-          0;
-      }
-
-
-      .about-section-inner,
-      .philosophy-inner {
-        width:
-          min(
-            100% - 28px,
-            960px
-          );
-      }
-
-
-      .philosophy-statement {
-        grid-template-columns: 1fr;
-
-        padding: 27px;
-
-        text-align: center;
-      }
-
-
-      .philosophy-statement-icon {
-        margin-inline: auto;
       }
 
     }
-
 
     @media (prefers-reduced-motion: reduce) {
 
-      .about-photo-orbit,
-      .about-photo-frame img {
-        animation: none !important;
+      .about-v1-photo-frame img {
         transition: none !important;
       }
 
@@ -943,14 +455,9 @@
 <body class="about-page">
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header class="site-header">
 
   <div class="nav-container">
-
 
     <a
       class="logo"
@@ -1013,109 +520,78 @@
 <main>
 
 
-<!-- =====================================================
-     ABOUT / MEET ALLEGRA
-===================================================== -->
+<!-- ABOUT HERO -->
 
-<section class="about-hero">
+<section class="about-v1-hero">
 
-  <div class="about-hero-inner">
+  <div class="about-v1-title">
 
+    <p>
+      Focused • Clear • Ready™
+    </p>
 
-    <div class="about-title">
+    <h1>
+      About
+    </h1>
 
-
-      <div
-        class="about-title-mark"
-        aria-hidden="true"
-      ></div>
-
-
-      <h1>
-        About
-      </h1>
+  </div>
 
 
-      <div
-        class="about-title-line"
-        aria-hidden="true"
-      ></div>
+  <div class="about-v1-grid">
+
+
+    <div class="about-v1-photo-wrap">
+
+      <div class="about-v1-photo-frame">
+
+        <img
+          src="images/allegra-bey.jpg"
+          alt="Allegra Bey"
+          onerror="
+            if (!this.dataset.fallback) {
+              this.dataset.fallback = 'true';
+              this.src = 'images/auntie-home.png';
+            }
+          "
+        >
+
+      </div>
 
     </div>
 
 
+    <div class="about-v1-copy">
 
-    <div class="about-intro-grid">
+      <h2>
+        Meet Allegra Bey
+      </h2>
 
+      <p class="about-v1-role">
+        Creator of the Focused • Clear • Ready™ Framework
+      </p>
 
-      <div class="about-photo-wrap">
+      <p>
+        For more than 30 years, Allegra Bey has helped women
+        navigate seasons of growth, transition, and change.
+      </p>
 
+      <p>
+        Through decades of working with women and navigating
+        her own seasons of growth and change, Allegra discovered
+        that lasting transformation doesn’t begin with doing more.
+      </p>
 
-        <div
-          class="about-photo-orbit"
-          aria-hidden="true"
-        ></div>
+      <p class="about-v1-emphasis">
+        It begins with considering yourself first.
+      </p>
 
-
-        <div class="about-photo-frame">
-
-          <img
-            src="images/allegra-bey.jpg"
-            alt="Allegra Bey"
-            onerror="
-              if (!this.dataset.fallback) {
-                this.dataset.fallback = 'true';
-                this.src = 'images/auntie-home.png';
-              }
-            "
-          >
-
-        </div>
-
-      </div>
-
-
-
-      <div class="about-intro-copy">
-
-
-        <h2>
-          Meet Allegra Bey
-        </h2>
-
-
-        <p class="about-role">
-          Creator of the Focused • Clear • Ready™ Framework
-        </p>
-
-
-        <p>
-          For more than 30 years, Allegra Bey has helped women
-          navigate seasons of growth, transition, and change.
-        </p>
-
-
-        <p>
-          Through decades of working with women and navigating
-          her own seasons of growth and change, Allegra discovered
-          that lasting transformation doesn’t begin with doing more.
-        </p>
-
-
-        <p class="about-emphasis">
-          It begins with considering yourself first.
-        </p>
-
-
-        <p>
-          That discovery became the foundation of the
-          Focused • Clear • Ready™ Framework, a self-leadership
-          framework that helps women intentionally consider
-          themselves, gain clarity about what matters most,
-          and move forward with greater intention.
-        </p>
-
-      </div>
+      <p>
+        That discovery became the foundation of the
+        Focused • Clear • Ready™ Framework, a self-leadership
+        framework that helps women intentionally consider
+        themselves, gain clarity about what matters most,
+        and move forward with greater intention.
+      </p>
 
     </div>
 
@@ -1125,33 +601,21 @@
 
 
 
-<div
-  class="about-divider"
-  aria-hidden="true"
-></div>
+<!-- WHOLE-LIFE SELF-LEADERSHIP -->
 
+<section class="section light">
 
-
-<!-- =====================================================
-     WHOLE-LIFE SELF-LEADERSHIP
-===================================================== -->
-
-<section class="about-section">
-
-  <div class="about-section-inner">
-
+  <div class="container about-content-v1">
 
     <h2>
       Whole-Life Self-Leadership
     </h2>
 
-
-    <p class="about-section-lead">
+    <p class="about-lead-v1">
       Whole-life self-leadership is the practice of intentionally
       considering yourself before responding to the demands
       and decisions of your life.
     </p>
-
 
     <p>
       Whether you’re navigating a life transition, growing in
@@ -1159,7 +623,6 @@
       relationships, or simply sensing that something needs to
       change, how you lead yourself shapes every part of your life.
     </p>
-
 
     <p>
       The Focused • Clear • Ready™ Framework helps women begin
@@ -1173,31 +636,19 @@
 
 
 
-<div
-  class="about-divider"
-  aria-hidden="true"
-></div>
+<!-- FCR PHILOSOPHY -->
 
+<section class="section">
 
-
-<!-- =====================================================
-     FCR PHILOSOPHY
-===================================================== -->
-
-<section class="philosophy-section">
-
-  <div class="philosophy-inner">
-
+  <div class="container philosophy-v1">
 
     <h2>
       The FCR Philosophy
     </h2>
 
-
-    <p class="philosophy-tagline">
-      Begin Within. Lead With Ease.™
+    <p class="philosophy-tagline-v1">
+      BEGIN WITHIN. LEAD WITH EASE.™
     </p>
-
 
     <p>
       At the heart of Allegra’s work is the belief that a
@@ -1207,17 +658,7 @@
     </p>
 
 
-
-    <div class="philosophy-statement">
-
-
-      <div
-        class="philosophy-statement-icon"
-        aria-hidden="true"
-      >
-        FCR
-      </div>
-
+    <div class="philosophy-statement-v1">
 
       <strong>
         The quality of your life is shaped by how consistently
@@ -1225,7 +666,6 @@
       </strong>
 
     </div>
-
 
 
     <p>
@@ -1237,7 +677,7 @@
     </p>
 
 
-    <p class="philosophy-ending">
+    <p class="philosophy-ending-v1">
       Because lasting change doesn’t begin with what you do.
       It begins with how you consider yourself.
     </p>
@@ -1248,11 +688,7 @@
 
 
 
-<!-- =====================================================
-     BRAND CLOSING
-===================================================== -->
-
-<section class="about-closing">
+<section class="about-closing-v1">
 
   <p>
     BEGIN WITHIN. LEAD WITH EASE.™
@@ -1265,28 +701,17 @@
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer class="site-footer">
 
   <div class="footer-container">
 
+    <div>
 
-    <div class="footer-brand">
-
-      <p class="footer-logo">
-        Focused • Clear • Ready™
-      </p>
-
-
-      <p style="font-style: normal;">
-        Begin Within. Lead With Ease.™
+      <p>
+        © 2026 Focused • Clear • Ready™
       </p>
 
     </div>
-
 
 
     <nav aria-label="Footer navigation">
@@ -1317,20 +742,14 @@
 
     </nav>
 
-
-
-    <p class="copyright">
-      © 2026 Focused • Clear • Ready™. All rights reserved.
-    </p>
-
   </div>
 
 </footer>
-
 
 
 <script src="js/main.js"></script>
 
 
 </body>
+
 </html>
