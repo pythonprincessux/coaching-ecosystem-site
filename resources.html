@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -18,107 +19,130 @@
   </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/styles.css">
-
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  >
 
   <style>
 
     /* =====================================================
-       RESOURCES PAGE ONLY
+       RESOURCES V1 RESTORATION
     ===================================================== */
 
-    .resources-hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-
-      padding:
-        110px
-        0
-        95px;
-
-      background:
-        radial-gradient(
-          circle at 82% 34%,
-          rgba(197, 155, 98, 0.16),
-          transparent 28%
-        ),
-        linear-gradient(
-          135deg,
-          var(--ivory),
-          var(--cream)
-        );
-    }
-
-
-    .resources-hero-inner {
+    .resources-v1-hero {
       width:
         min(
           var(--max-width),
           calc(100% - 48px)
         );
 
-      margin-inline: auto;
+      margin:
+        38px
+        auto
+        34px;
 
       display: grid;
 
       grid-template-columns:
-        minmax(0, 1fr)
-        minmax(300px, 0.72fr);
+        minmax(0, 1.05fr)
+        minmax(320px, 0.95fr);
 
       align-items: center;
 
-      gap: 72px;
+      gap: 46px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 34px;
+
+      padding: 58px;
+
+      background:
+        rgba(255, 255, 255, 0.34);
+
+      box-shadow:
+        var(--shadow-soft);
+
+      overflow: hidden;
     }
 
+    .resources-v1-copy h1 {
+      margin-bottom: 22px;
 
-    .resources-hero-copy h1 {
-      margin-bottom: 25px;
+      color: var(--text);
 
-      color: var(--brown-deep);
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size:
+        clamp(
+          3.2rem,
+          6.5vw,
+          5.5rem
+        );
+
+      font-weight: 800;
+
+      line-height: 0.98;
+
+      letter-spacing: -0.045em;
+    }
+
+    .resources-v1-kicker {
+      margin-bottom: 14px;
+
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.82rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+    }
+
+    .resources-v1-lead {
+      max-width: 700px;
+
+      color: var(--muted);
 
       font-family:
         "Playfair Display",
         Georgia,
         serif;
 
-      font-size:
-        clamp(
-          4rem,
-          7vw,
-          6.7rem
-        );
+      font-size: 1.05rem;
 
-      font-weight: 500;
-
-      line-height: 0.96;
-
-      letter-spacing: -0.05em;
+      line-height: 1.82;
     }
 
-
-    .resources-hero-copy .resources-lead {
-      max-width: 720px;
+    .resources-v1-season {
+      margin-top: 18px;
 
       color: var(--text);
-
-      font-size: 1.08rem;
-
-      line-height: 1.84;
-    }
-
-
-    .resources-season {
-      margin-top: 23px !important;
-
-      color: var(--gold-dark) !important;
 
       font-family:
         "Playfair Display",
@@ -129,19 +153,14 @@
         clamp(
           1.2rem,
           2.6vw,
-          1.65rem
-        ) !important;
+          1.55rem
+        );
 
-      line-height: 1.5 !important;
+      line-height: 1.5;
     }
 
-
-    /* =====================================================
-       HERO MOTION
-    ===================================================== */
-
-    .resources-motion {
-      min-height: 420px;
+    .resources-v1-motion {
+      min-height: 360px;
 
       position: relative;
 
@@ -149,10 +168,9 @@
       place-items: center;
     }
 
-
-    .resources-motion-center {
-      width: 188px;
-      height: 188px;
+    .resources-v1-center {
+      width: 170px;
+      height: 170px;
 
       position: relative;
       z-index: 3;
@@ -162,510 +180,113 @@
 
       border:
         1px solid
-        var(--gold-dark);
+        rgba(90, 70, 61, 0.4);
 
       border-radius: 50%;
 
       background:
-        rgba(251, 248, 243, 0.9);
+        rgba(246, 239, 232, 0.9);
 
       box-shadow:
-        0 0 0 20px rgba(197, 155, 98, 0.06),
-        0 24px 55px rgba(76, 57, 48, 0.13);
+        0 14px 35px
+        rgba(63, 45, 36, 0.08);
 
       text-align: center;
     }
 
-
-    .resources-motion-center span {
-      color: var(--brown);
+    .resources-v1-center span {
+      color: var(--text);
 
       font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
-      font-size: 1.45rem;
+      font-size: 1.15rem;
 
-      font-weight: 600;
+      font-weight: 800;
 
       line-height: 1.35;
     }
 
-
-    .resources-orbit {
+    .resources-v1-orbit {
       position: absolute;
 
       border:
         1px solid
-        rgba(167, 121, 66, 0.4);
+        rgba(90, 70, 61, 0.22);
 
       border-radius: 50%;
 
       pointer-events: none;
     }
 
-
-    .resources-orbit.one {
-      width: 285px;
-      height: 285px;
+    .resources-v1-orbit.one {
+      width: 260px;
+      height: 260px;
 
       animation:
-        resources-orbit-reverse
+        resources-v1-spin-reverse
         58s
         linear
         infinite;
     }
 
-
-    .resources-orbit.two {
-      width: 370px;
-      height: 370px;
+    .resources-v1-orbit.two {
+      width: 330px;
+      height: 330px;
 
       border-style: dashed;
 
       animation:
-        resources-orbit
+        resources-v1-spin
         36s
         linear
         infinite;
     }
 
-
-    .resources-orbit-dot {
-      width: 11px;
-      height: 11px;
+    .resources-v1-orbit-dot {
+      width: 10px;
+      height: 10px;
 
       position: absolute;
 
-      top: 19px;
+      top: 17px;
       left: 50%;
 
       border-radius: 50%;
 
-      background: var(--gold);
+      background: #8a7063;
 
       box-shadow:
-        0 0 18px
-        rgba(197, 155, 98, 0.5);
+        0 0 14px
+        rgba(90, 70, 61, 0.2);
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
     }
 
-
-    @keyframes resources-orbit {
+    @keyframes resources-v1-spin {
       to {
         transform: rotate(360deg);
       }
     }
 
-
-    @keyframes resources-orbit-reverse {
+    @keyframes resources-v1-spin-reverse {
       to {
         transform: rotate(-360deg);
       }
     }
 
-
-    /* =====================================================
-       ASSESSMENTS
-    ===================================================== */
-
-    .assessment-section {
-      background:
-        var(--ivory);
+    .resource-heading-v1 {
+      margin-bottom: 28px;
     }
 
-
-    .assessment-grid {
-      max-width: 1050px;
-
-      margin:
-        46px
-        auto
-        0;
-
-      display: grid;
-
-      grid-template-columns:
-        1fr;
-
-      gap: 24px;
+    .resource-heading-v1 h2 {
+      margin-bottom: 12px;
     }
 
-
-    .assessment-card {
-      position: relative;
-
-      overflow: hidden;
-
-      display: grid;
-
-      grid-template-columns:
-        155px
-        minmax(0, 1fr);
-
-      align-items: center;
-
-      gap: 32px;
-
-      border:
-        1px solid
-        var(--line-gold);
-
-      border-radius:
-        var(--radius-xl);
-
-      padding:
-        35px;
-
-      background:
-        rgba(255, 255, 255, 0.88);
-
-      box-shadow:
-        var(--shadow-card);
-
-      transition:
-        transform var(--transition),
-        box-shadow var(--transition),
-        border-color var(--transition);
-    }
-
-
-    .assessment-card:nth-child(2) {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.94),
-          var(--blush-soft)
-        );
-    }
-
-
-    .assessment-card:hover {
-      border-color: var(--gold);
-
-      box-shadow:
-        0 22px 48px
-        rgba(76, 57, 48, 0.11);
-
-      transform:
-        translateY(-5px);
-    }
-
-
-    .assessment-icon {
-      width: 130px;
-      height: 130px;
-
-      display: grid;
-      place-items: center;
-
-      border:
-        1px solid
-        var(--gold-dark);
-
-      border-radius: 50%;
-
-      background:
-        var(--cream);
-
-      color:
-        var(--brown);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size: 1.25rem;
-
-      font-weight: 600;
-
-      text-align: center;
-    }
-
-
-    .assessment-card h3 {
-      margin-bottom: 11px;
-
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          1.75rem,
-          3vw,
-          2.5rem
-        );
-
-      line-height: 1.12;
-    }
-
-
-    .assessment-card p {
-      max-width: 690px;
-
-      color:
-        var(--text-soft);
-
-      line-height: 1.75;
-    }
-
-
-    .assessment-card .button-row {
-      margin-top: 21px;
-    }
-
-
-    /* =====================================================
-       RESOURCE CATEGORY
-    ===================================================== */
-
-    .resource-category {
-      padding:
-        95px
-        0;
-
-      border-top:
-        1px solid
-        var(--line);
-    }
-
-
-    .resource-category.light {
-      background:
-        var(--cream);
-    }
-
-
-    .category-heading {
-      max-width: 1000px;
-
-      margin-bottom: 42px;
-
-      display: grid;
-
-      grid-template-columns:
-        minmax(260px, 0.78fr)
-        minmax(0, 1.22fr);
-
-      align-items: center;
-
-      gap: 55px;
-    }
-
-
-    .category-title-wrap {
-      display: flex;
-
-      align-items: center;
-
-      gap: 20px;
-    }
-
-
-    .category-icon {
-      width: 68px;
-      height: 68px;
-
-      flex: 0 0 auto;
-
-      display: grid;
-      place-items: center;
-
-      border:
-        1px solid
-        var(--gold-dark);
-
-      border-radius: 50%;
-
-      background:
-        var(--blush-soft);
-
-      color:
-        var(--brown);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size: 1.15rem;
-
-      font-weight: 600;
-    }
-
-
-    .category-heading h2 {
-      color:
-        var(--brown-deep);
-
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3.35rem
-        );
-
-      line-height: 1.08;
-    }
-
-
-    .category-heading > p {
-      color:
-        var(--text-soft);
-
-      font-size: 1rem;
-
-      line-height: 1.8;
-    }
-
-
-    /* =====================================================
-       PDF GUIDES
-    ===================================================== */
-
-    .guide-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          3,
-          minmax(0, 1fr)
-        );
-
-      gap: 22px;
-    }
-
-
-    .guide-card {
-      position: relative;
-
-      overflow: hidden;
-
-      border:
-        1px solid
-        var(--line);
-
-      border-radius:
-        var(--radius-lg);
-
-      background:
-        var(--white);
-
-      box-shadow:
-        var(--shadow-card);
-
-      transition:
-        transform var(--transition),
-        box-shadow var(--transition),
-        border-color var(--transition);
-    }
-
-
-    .guide-card:nth-child(2) {
-      background:
-        var(--blush-soft);
-    }
-
-
-    .guide-card:nth-child(3) {
-      background:
-        var(--champagne-soft);
-    }
-
-
-    .guide-card:hover {
-      border-color:
-        var(--gold);
-
-      box-shadow:
-        0 22px 46px
-        rgba(76, 57, 48, 0.1);
-
-      transform:
-        translateY(-6px);
-    }
-
-
-    .guide-preview {
-      height: 370px;
-
-      overflow: hidden;
-
-      border-bottom:
-        1px solid
-        var(--line);
-
-      background:
-        #f2ede7;
-    }
-
-
-    .guide-preview iframe {
-      width: 100%;
-      height: 100%;
-
-      border: 0;
-
-      pointer-events: none;
-    }
-
-
-    .guide-content {
-      padding: 27px;
-    }
-
-
-    .guide-content h3 {
-      margin-bottom: 11px;
-
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size: 1.48rem;
-
-      line-height: 1.2;
-    }
-
-
-    .guide-content p {
-      color:
-        var(--text-soft);
-
-      font-size: 0.91rem;
-
-      line-height: 1.72;
-    }
-
-
-    .guide-actions {
-      margin-top: 22px;
-
-      display: flex;
-
-      gap: 10px;
-
-      flex-wrap: wrap;
-    }
-
-
-    /* =====================================================
-       PUBLICATIONS
-    ===================================================== */
-
-    .publication-grid {
+    .assessment-grid-v1 {
       display: grid;
 
       grid-template-columns:
@@ -674,16 +295,207 @@
           minmax(0, 1fr)
         );
 
-      gap: 24px;
+      gap: 20px;
+
+      margin-top: 28px;
     }
 
+    .assessment-card-v1 {
+      min-height: 100%;
 
-    .publication-card {
-      min-height: 350px;
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.65);
 
-      position: relative;
+      border-radius: 22px;
+
+      padding: 30px;
+
+      background: #f4ede7;
+
+      box-shadow:
+        var(--shadow-card);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .assessment-card-v1:nth-child(2) {
+      background: #f3dedd;
+    }
+
+    .assessment-card-v1:hover {
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 18px 40px
+        rgba(63, 45, 36, 0.1);
+    }
+
+    .assessment-icon-v1 {
+      display: inline-grid;
+
+      width: 48px;
+      height: 48px;
+
+      margin-bottom: 20px;
+
+      place-items: center;
+
+      border:
+        1px solid
+        #c7b6aa;
+
+      border-radius: 50%;
+
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.75rem;
+
+      font-weight: 800;
+    }
+
+    .assessment-card-v1 h3 {
+      margin-bottom: 12px;
+
+      color: var(--text);
+
+      font-size:
+        clamp(
+          1.3rem,
+          2.5vw,
+          1.8rem
+        );
+
+      font-weight: 800;
+    }
+
+    .guide-grid-v1 {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0, 1fr)
+        );
+
+      gap: 20px;
+
+      margin-top: 28px;
+    }
+
+    .guide-card-v1 {
+      overflow: hidden;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.65);
+
+      border-radius: 22px;
+
+      background: #f4ede7;
+
+      box-shadow:
+        var(--shadow-card);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .guide-card-v1:nth-child(2) {
+      background: #f3dedd;
+    }
+
+    .guide-card-v1:nth-child(3) {
+      background: #ead1ac;
+    }
+
+    .guide-card-v1:hover {
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 18px 40px
+        rgba(63, 45, 36, 0.1);
+    }
+
+    .guide-preview-v1 {
+      height: 360px;
 
       overflow: hidden;
+
+      border-bottom:
+        1px solid
+        var(--line);
+
+      background: #f2ede7;
+    }
+
+    .guide-preview-v1 iframe {
+      width: 100%;
+      height: 100%;
+
+      border: 0;
+
+      pointer-events: none;
+    }
+
+    .guide-content-v1 {
+      padding: 26px;
+    }
+
+    .guide-content-v1 h3 {
+      margin-bottom: 10px;
+
+      color: var(--text);
+
+      font-size: 1.25rem;
+
+      font-weight: 800;
+    }
+
+    .guide-content-v1 p {
+      color: var(--text) !important;
+
+      font-size: 0.92rem !important;
+
+      line-height: 1.7 !important;
+    }
+
+    .guide-actions-v1 {
+      margin-top: 20px;
+
+      display: flex;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+    }
+
+    .publication-grid-v1 {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 20px;
+
+      margin-top: 28px;
+    }
+
+    .publication-card-v1 {
+      min-height: 300px;
 
       display: flex;
 
@@ -693,174 +505,94 @@
 
       border:
         1px solid
-        var(--line-gold);
+        rgba(255, 255, 255, 0.65);
 
-      border-radius:
-        var(--radius-xl);
+      border-radius: 22px;
 
-      padding:
-        40px;
+      padding: 34px;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.96),
-          rgba(246,239,231,0.9)
-        );
+      background: #f4ede7;
 
       box-shadow:
-        var(--shadow-soft);
+        var(--shadow-card);
     }
 
-
-    .publication-card:nth-child(2) {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.96),
-          var(--blush-soft)
-        );
+    .publication-card-v1:nth-child(2) {
+      background: #f3dedd;
     }
 
+    .publication-label-v1 {
+      margin-bottom: 13px;
 
-    .publication-card::before {
-      width: 210px;
-      height: 210px;
+      color: var(--text);
 
-      position: absolute;
-
-      top: -115px;
-      right: -75px;
-
-      border:
-        1px solid
-        rgba(197, 155, 98, 0.27);
-
-      border-radius: 50%;
-
-      content: "";
-    }
-
-
-    .publication-label {
-      margin-bottom: 14px;
-
-      color:
-        var(--gold-dark);
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
       font-size: 0.72rem;
 
       font-weight: 800;
 
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
 
       text-transform: uppercase;
     }
 
+    .publication-card-v1 h3 {
+      margin-bottom: 12px;
 
-    .publication-card h3 {
-      margin-bottom: 13px;
-
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+      color: var(--text);
 
       font-size:
         clamp(
-          2rem,
-          3.6vw,
-          3rem
+          1.7rem,
+          3vw,
+          2.5rem
         );
 
-      line-height: 1.05;
+      font-weight: 800;
     }
 
-
-    .publication-card p {
-      max-width: 560px;
-
-      color:
-        var(--text-soft);
-
-      line-height: 1.75;
-    }
-
-
-    /* =====================================================
-       PROGRAMS
-    ===================================================== */
-
-    .program-panel {
-      max-width: 1000px;
-
-      position: relative;
-
-      overflow: hidden;
-
+    .program-v1 {
       border:
         1px solid
-        var(--line-gold);
+        rgba(255, 255, 255, 0.65);
 
-      border-radius:
-        var(--radius-xl);
+      border-radius: 22px;
 
-      padding:
-        50px;
+      padding: 34px;
 
-      background:
-        linear-gradient(
-          135deg,
-          var(--champagne-soft),
-          var(--blush-soft)
-        );
+      background: #ead1ac;
 
       box-shadow:
-        var(--shadow-soft);
+        var(--shadow-card);
     }
 
+    .program-v1 h3 {
+      margin-bottom: 12px;
 
-    .program-panel h3 {
-      margin-bottom: 17px;
-
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+      color: var(--text);
 
       font-size:
         clamp(
-          2.1rem,
-          4vw,
-          3.4rem
+          1.7rem,
+          3vw,
+          2.5rem
         );
+
+      font-weight: 800;
     }
 
-
-    .program-panel p {
-      max-width: 760px;
-
-      color:
-        var(--text-soft);
-
-      line-height: 1.8;
-    }
-
-
-    .coming-soon {
+    .coming-soon-v1 {
       display: inline-block;
 
-      margin-top: 22px;
+      margin-top: 20px;
 
       border:
         1px solid
-        var(--gold-dark);
+        #bba99e;
 
       border-radius: 999px;
 
@@ -868,254 +600,196 @@
         8px
         14px;
 
-      color:
-        var(--brown);
-
-      font-size: 0.71rem;
-
-      font-weight: 800;
-
-      letter-spacing: 0.12em;
-
-      text-transform: uppercase;
-    }
-
-
-    /* =====================================================
-       PODCAST
-    ===================================================== */
-
-    .podcast-strip {
-      position: relative;
-
-      overflow: hidden;
-
-      padding:
-        70px
-        0;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--brown-deep),
-          #594339
-        );
-    }
-
-
-    .podcast-strip .container {
-      display: grid;
-
-      grid-template-columns:
-        90px
-        minmax(0, 1fr)
-        auto;
-
-      align-items: center;
-
-      gap: 30px;
-    }
-
-
-    .podcast-icon {
-      width: 74px;
-      height: 74px;
-
-      display: grid;
-      place-items: center;
-
-      border:
-        1px solid
-        var(--gold-light);
-
-      border-radius: 50%;
-
-      color:
-        var(--gold-light);
-
-      font-size: 1.5rem;
-    }
-
-
-    .podcast-strip h2 {
-      margin-bottom: 5px;
-
-      color: var(--white);
-
-      font-size:
-        clamp(
-          1.8rem,
-          3vw,
-          2.8rem
-        );
-    }
-
-
-    .podcast-strip p {
-      color:
-        rgba(255,255,255,0.7);
-    }
-
-
-    .podcast-badge {
-      border:
-        1px solid
-        rgba(231,207,170,0.55);
-
-      border-radius: 999px;
-
-      padding:
-        10px
-        16px;
-
-      color:
-        var(--gold-light);
-
-      font-size: 0.72rem;
-
-      font-weight: 800;
-
-      letter-spacing: 0.12em;
-
-      text-transform: uppercase;
-    }
-
-
-    /* =====================================================
-       CLOSING
-    ===================================================== */
-
-    .resources-closing {
-      padding:
-        74px
-        0;
-
-      background:
-        var(--ivory);
-
-      text-align: center;
-    }
-
-
-    .resources-closing p {
-      color:
-        var(--brown);
+      color: var(--text);
 
       font-family:
         "Libre Franklin",
         Arial,
         sans-serif;
 
-      font-size: 0.94rem;
+      font-size: 0.72rem;
 
       font-weight: 800;
 
-      letter-spacing: 0.07em;
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
     }
 
+    .podcast-v1 {
+      display: grid;
 
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
+      grid-template-columns:
+        72px
+        minmax(0, 1fr)
+        auto;
+
+      align-items: center;
+
+      gap: 24px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.65);
+
+      border-radius: 22px;
+
+      padding: 28px;
+
+      background: #eee4de;
+
+      box-shadow:
+        var(--shadow-card);
+    }
+
+    .podcast-icon-v1 {
+      display: grid;
+
+      width: 58px;
+      height: 58px;
+
+      place-items: center;
+
+      border:
+        1px solid
+        #bba99e;
+
+      border-radius: 50%;
+
+      color: var(--text);
+
+      font-size: 1.3rem;
+    }
+
+    .podcast-v1 h2 {
+      margin-bottom: 5px;
+    }
+
+    .podcast-badge-v1 {
+      border:
+        1px solid
+        #bba99e;
+
+      border-radius: 999px;
+
+      padding:
+        9px
+        14px;
+
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
+    }
+
+    .resources-closing-v1 {
+      padding:
+        40px
+        20px
+        55px;
+
+      text-align: center;
+    }
+
+    .resources-closing-v1 p {
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.9rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.065em;
+    }
 
     @media (max-width: 980px) {
 
-      .resources-hero-inner {
+      .resources-v1-hero {
         grid-template-columns: 1fr;
       }
 
-
-      .resources-motion {
-        min-height: 350px;
-      }
-
-
-      .guide-grid {
+      .guide-grid-v1 {
         grid-template-columns: 1fr;
       }
 
-
-      .guide-preview {
-        height: 520px;
-      }
-
-
-      .category-heading {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
+      .guide-preview-v1 {
+        height: 500px;
       }
 
     }
 
-
     @media (max-width: 760px) {
 
-      .resources-hero {
-        padding:
-          75px
-          0
-          60px;
-      }
-
-
-      .resources-hero-inner {
+      .resources-v1-hero {
         width:
           min(
-            100% - 28px,
-            var(--max-width)
+            var(--max-width),
+            calc(100% - 28px)
           );
-      }
 
-
-      .resources-hero-copy h1 {
-        font-size:
-          clamp(
-            3.5rem,
-            17vw,
-            5rem
-          );
-      }
-
-
-      .assessment-card {
-        grid-template-columns: 1fr;
-
-        padding: 28px;
-      }
-
-
-      .assessment-icon {
-        width: 95px;
-        height: 95px;
-      }
-
-
-      .publication-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .publication-card {
-        min-height: 310px;
+        margin-top: 24px;
 
         padding: 30px;
       }
 
-
-      .program-panel {
-        padding: 32px;
+      .resources-v1-copy h1 {
+        font-size:
+          clamp(
+            3rem,
+            15vw,
+            4.5rem
+          );
       }
 
+      .resources-v1-motion {
+        min-height: 300px;
+      }
 
-      .podcast-strip .container {
+      .resources-v1-center {
+        width: 140px;
+        height: 140px;
+      }
+
+      .resources-v1-orbit.one {
+        width: 215px;
+        height: 215px;
+      }
+
+      .resources-v1-orbit.two {
+        width: 270px;
+        height: 270px;
+      }
+
+      .assessment-grid-v1,
+      .publication-grid-v1 {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-preview-v1 {
+        height: 410px;
+      }
+
+      .podcast-v1 {
         grid-template-columns:
-          70px
+          60px
           1fr;
       }
 
-
-      .podcast-badge {
+      .podcast-badge-v1 {
         grid-column:
           1 / -1;
 
@@ -1124,57 +798,9 @@
 
     }
 
-
-    @media (max-width: 560px) {
-
-      .resources-motion {
-        min-height: 300px;
-      }
-
-
-      .resources-motion-center {
-        width: 140px;
-        height: 140px;
-      }
-
-
-      .resources-motion-center span {
-        font-size: 1.1rem;
-      }
-
-
-      .resources-orbit.one {
-        width: 215px;
-        height: 215px;
-      }
-
-
-      .resources-orbit.two {
-        width: 270px;
-        height: 270px;
-      }
-
-
-      .guide-preview {
-        height: 410px;
-      }
-
-
-      .guide-actions {
-        flex-direction: column;
-      }
-
-
-      .guide-actions a {
-        width: 100%;
-      }
-
-    }
-
-
     @media (prefers-reduced-motion: reduce) {
 
-      .resources-orbit {
+      .resources-v1-orbit {
         animation: none !important;
       }
 
@@ -1186,10 +812,6 @@
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
 <header class="site-header">
 
@@ -1256,65 +878,50 @@
 <main>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
-<section class="resources-hero">
+<section class="resources-v1-hero">
 
-  <div class="resources-hero-inner">
+  <div class="resources-v1-copy">
+
+    <p class="resources-v1-kicker">
+      Focused • Clear • Ready™
+    </p>
+
+    <h1>
+      Resources
+    </h1>
+
+    <p class="resources-v1-lead">
+      Whether you’re seeking greater clarity, practical guidance,
+      or continued growth, these resources are designed to support
+      your next step.
+    </p>
+
+    <p class="resources-v1-season">
+      Explore what best fits your current season.
+    </p>
+
+  </div>
 
 
-    <div class="resources-hero-copy">
+  <div
+    class="resources-v1-motion"
+    aria-hidden="true"
+  >
 
-      <p class="eyebrow">
-        Focused • Clear • Ready™
-      </p>
+    <div class="resources-v1-orbit one"></div>
 
-
-      <h1>
-        Resources
-      </h1>
-
-
-      <p class="resources-lead">
-        Whether you’re seeking greater clarity, practical guidance,
-        or continued growth, these resources are designed to support
-        your next step.
-      </p>
-
-
-      <p class="resources-season">
-        Explore what best fits your current season.
-      </p>
-
+    <div class="resources-v1-orbit two">
+      <span class="resources-v1-orbit-dot"></span>
     </div>
 
+    <div class="resources-v1-center">
 
-
-    <div
-      class="resources-motion"
-      aria-hidden="true"
-    >
-
-      <div class="resources-orbit one"></div>
-
-
-      <div class="resources-orbit two">
-
-        <span class="resources-orbit-dot"></span>
-
-      </div>
-
-
-      <div class="resources-motion-center">
-
-        <span>
-          Begin<br>
-          Within.
-        </span>
-
-      </div>
+      <span>
+        Begin<br>
+        Within.
+      </span>
 
     </div>
 
@@ -1324,29 +931,20 @@
 
 
 
-<!-- =====================================================
-     FCR CLARITY ASSESSMENTS
-===================================================== -->
+<!-- ASSESSMENTS -->
 
 <section
-  class="section assessment-section"
+  class="section light"
   id="assessments"
 >
 
   <div class="container">
 
-
-    <div class="section-heading centered">
-
-      <p class="eyebrow">
-        Begin Here
-      </p>
-
+    <div class="resource-heading-v1">
 
       <h2>
         FCR Clarity Assessments
       </h2>
-
 
       <p>
         Choose the assessment that best reflects your current focus.
@@ -1355,100 +953,66 @@
     </div>
 
 
-
-    <div class="assessment-grid">
-
-
-      <!-- WHOLE-LIFE -->
-
-      <article class="assessment-card">
+    <div class="assessment-grid-v1">
 
 
-        <div
-          class="assessment-icon"
-          aria-hidden="true"
-        >
+      <article class="assessment-card-v1">
+
+        <div class="assessment-icon-v1">
           WL
         </div>
 
+        <h3>
+          Whole-Life Assessment
+        </h3>
 
-        <div>
+        <p>
+          Designed for women seeking greater clarity,
+          alignment, and intention in their personal lives.
+        </p>
 
-          <h3>
-            Whole-Life Assessment
-          </h3>
+        <div class="button-row">
 
-
-          <p>
-            Designed for women seeking greater clarity,
-            alignment, and intention in their personal lives.
-          </p>
-
-
-          <div class="button-row">
-
-            <a
-              class="primary-button"
-              href="https://form.jotform.com/222217613216143"
-              target="_blank"
-              rel="noopener"
-            >
-              Take the Whole-Life Clarity Assessment
-            </a>
-
-          </div>
+          <a
+            class="primary-button"
+            href="https://form.jotform.com/222217613216143"
+            target="_blank"
+            rel="noopener"
+          >
+            Take the Whole-Life Clarity Assessment
+          </a>
 
         </div>
 
       </article>
 
 
+      <article class="assessment-card-v1">
 
-      <!-- BUSINESS -->
-
-      <article class="assessment-card">
-
-
-        <div
-          class="assessment-icon"
-          aria-hidden="true"
-        >
+        <div class="assessment-icon-v1">
           BP
         </div>
 
+        <h3>
+          Business &amp; Professional Assessment
+        </h3>
 
-        <div>
+        <p>
+          Designed for women entrepreneurs and professionals
+          seeking greater clarity, alignment, and sustainability
+          in the way they lead and build.
+        </p>
 
-          <h3>
-            Business &amp; Professional Assessment
-          </h3>
+        <div class="button-row">
 
-
-          <p>
-            Designed for women entrepreneurs and professionals
-            seeking greater clarity, alignment, and sustainability
-            in the way they lead and build.
-          </p>
-
-
-          <div class="button-row">
-
-            <!--
-              Replace this URL with Allegra's dedicated
-              Business & Professional Assessment link
-              once she provides it.
-            -->
-
-            <a
-              class="primary-button"
-              href="https://form.jotform.com/222217613216143"
-              target="_blank"
-              rel="noopener"
-            >
-              Take the Business &amp; Professional Assessment
-            </a>
-
-          </div>
+          <a
+            class="primary-button"
+            href="https://form.jotform.com/222217613216143"
+            target="_blank"
+            rel="noopener"
+          >
+            Take the Business &amp; Professional Assessment
+          </a>
 
         </div>
 
@@ -1462,34 +1026,17 @@
 
 
 
-<!-- =====================================================
-     REFLECTION GUIDES & TOOLS
-===================================================== -->
+<!-- REFLECTION GUIDES -->
 
-<section class="resource-category light">
+<section class="section">
 
   <div class="container">
 
+    <div class="resource-heading-v1">
 
-    <div class="category-heading">
-
-
-      <div class="category-title-wrap">
-
-        <div
-          class="category-icon"
-          aria-hidden="true"
-        >
-          RG
-        </div>
-
-
-        <h2>
-          Reflection Guides &amp; Tools
-        </h2>
-
-      </div>
-
+      <h2>
+        Reflection Guides &amp; Tools
+      </h2>
 
       <p>
         Simple, practical resources designed to help you pause,
@@ -1499,16 +1046,12 @@
     </div>
 
 
-
-    <div class="guide-grid">
-
-
-      <!-- OVERWHELMED -->
-
-      <article class="guide-card">
+    <div class="guide-grid-v1">
 
 
-        <div class="guide-preview">
+      <article class="guide-card-v1">
+
+        <div class="guide-preview-v1">
 
           <iframe
             src="pdfs/overwhelmed.pdf#toolbar=0&navpanes=0&scrollbar=0"
@@ -1518,21 +1061,18 @@
 
         </div>
 
-
-        <div class="guide-content">
+        <div class="guide-content-v1">
 
           <h3>
             If You’re Feeling Overwhelmed
           </h3>
-
 
           <p>
             A practical resource designed to help you understand
             overwhelm, reconnect with yourself, and return to clarity.
           </p>
 
-
-          <div class="guide-actions">
+          <div class="guide-actions-v1">
 
             <a
               class="primary-button"
@@ -1542,7 +1082,6 @@
             >
               View Guide
             </a>
-
 
             <a
               class="secondary-button"
@@ -1559,13 +1098,9 @@
       </article>
 
 
+      <article class="guide-card-v1">
 
-      <!-- BEFORE YOUR DAY -->
-
-      <article class="guide-card">
-
-
-        <div class="guide-preview">
+        <div class="guide-preview-v1">
 
           <iframe
             src="pdfs/before-your-day.pdf#toolbar=0&navpanes=0&scrollbar=0"
@@ -1575,13 +1110,11 @@
 
         </div>
 
-
-        <div class="guide-content">
+        <div class="guide-content-v1">
 
           <h3>
             Before You Start Your Day
           </h3>
-
 
           <p>
             A grounding guide for beginning your day by checking
@@ -1589,8 +1122,7 @@
             waiting for your attention.
           </p>
 
-
-          <div class="guide-actions">
+          <div class="guide-actions-v1">
 
             <a
               class="primary-button"
@@ -1600,7 +1132,6 @@
             >
               View Guide
             </a>
-
 
             <a
               class="secondary-button"
@@ -1617,13 +1148,9 @@
       </article>
 
 
+      <article class="guide-card-v1">
 
-      <!-- DAILY CAPACITY -->
-
-      <article class="guide-card">
-
-
-        <div class="guide-preview">
+        <div class="guide-preview-v1">
 
           <iframe
             src="pdfs/daily-capacity.pdf#toolbar=0&navpanes=0&scrollbar=0"
@@ -1633,13 +1160,11 @@
 
         </div>
 
-
-        <div class="guide-content">
+        <div class="guide-content-v1">
 
           <h3>
             Daily Capacity Check-In
           </h3>
-
 
           <p>
             A practical framework for considering your current
@@ -1647,8 +1172,7 @@
             with greater awareness and intention.
           </p>
 
-
-          <div class="guide-actions">
+          <div class="guide-actions-v1">
 
             <a
               class="primary-button"
@@ -1658,7 +1182,6 @@
             >
               View Guide
             </a>
-
 
             <a
               class="secondary-button"
@@ -1682,34 +1205,17 @@
 
 
 
-<!-- =====================================================
-     PUBLICATIONS
-===================================================== -->
+<!-- PUBLICATIONS -->
 
-<section class="resource-category">
+<section class="section light">
 
   <div class="container">
 
+    <div class="resource-heading-v1">
 
-    <div class="category-heading">
-
-
-      <div class="category-title-wrap">
-
-        <div
-          class="category-icon"
-          aria-hidden="true"
-        >
-          P
-        </div>
-
-
-        <h2>
-          Publications
-        </h2>
-
-      </div>
-
+      <h2>
+        Publications
+      </h2>
 
       <p>
         Thoughtful publications created to encourage
@@ -1719,30 +1225,24 @@
     </div>
 
 
+    <div class="publication-grid-v1">
 
-    <div class="publication-grid">
 
+      <article class="publication-card-v1">
 
-      <!-- FCR MAGAZINE -->
-
-      <article class="publication-card">
-
-        <span class="publication-label">
+        <span class="publication-label-v1">
           Publication
         </span>
-
 
         <h3>
           FCR Magazine
         </h3>
-
 
         <p>
           Conversations, reflections, and practical insights
           designed to support self-leadership, clarity,
           and intentional growth.
         </p>
-
 
         <div class="button-row">
 
@@ -1760,27 +1260,21 @@
       </article>
 
 
+      <article class="publication-card-v1">
 
-      <!-- CH@H -->
-
-      <article class="publication-card">
-
-        <span class="publication-label">
+        <span class="publication-label-v1">
           Lifestyle Publication
         </span>
-
 
         <h3>
           Create Heaven at Home
         </h3>
-
 
         <p>
           A lifestyle and inspiration publication that brings
           thoughtful, intentional living into your home and
           everyday life.
         </p>
-
 
         <div class="button-row">
 
@@ -1805,34 +1299,17 @@
 
 
 
-<!-- =====================================================
-     WORKSHOPS & PROGRAMS
-===================================================== -->
+<!-- WORKSHOPS & PROGRAMS -->
 
-<section class="resource-category light">
+<section class="section">
 
   <div class="container">
 
+    <div class="resource-heading-v1">
 
-    <div class="category-heading">
-
-
-      <div class="category-title-wrap">
-
-        <div
-          class="category-icon"
-          aria-hidden="true"
-        >
-          WP
-        </div>
-
-
-        <h2>
-          Workshops &amp; Programs
-        </h2>
-
-      </div>
-
+      <h2>
+        Workshops &amp; Programs
+      </h2>
 
       <p>
         Seasonal workshops, guided learning experiences,
@@ -1842,19 +1319,11 @@
     </div>
 
 
-
-    <article class="program-panel">
-
-
-      <p class="eyebrow">
-        Focused • Clear • Ready™
-      </p>
-
+    <article class="program-v1">
 
       <h3>
-        Guided experiences for deeper growth.
+        Guided Experiences for Deeper Growth
       </h3>
-
 
       <p>
         Workshops and programs will provide opportunities to
@@ -1863,8 +1332,7 @@
         and intentional learning.
       </p>
 
-
-      <span class="coming-soon">
+      <span class="coming-soon-v1">
         Coming Soon
       </span>
 
@@ -1876,41 +1344,39 @@
 
 
 
-<!-- =====================================================
-     PODCAST
-===================================================== -->
+<!-- PODCAST -->
 
-<section class="podcast-strip">
+<section class="section light">
 
   <div class="container">
 
+    <article class="podcast-v1">
 
-    <div
-      class="podcast-icon"
-      aria-hidden="true"
-    >
-      ◉
-    </div>
+      <div
+        class="podcast-icon-v1"
+        aria-hidden="true"
+      >
+        ◉
+      </div>
 
+      <div>
 
-    <div>
+        <h2>
+          Podcast
+        </h2>
 
-      <h2>
-        Podcast
-      </h2>
+        <p>
+          Conversations about self-leadership, clarity,
+          intentional living, and sustainable growth.
+        </p>
 
+      </div>
 
-      <p>
-        Conversations about self-leadership, clarity,
-        intentional living, and sustainable growth.
-      </p>
+      <span class="podcast-badge-v1">
+        Coming Soon
+      </span>
 
-    </div>
-
-
-    <span class="podcast-badge">
-      Coming Soon
-    </span>
+    </article>
 
   </div>
 
@@ -1918,19 +1384,11 @@
 
 
 
-<!-- =====================================================
-     BRAND CLOSING
-===================================================== -->
+<section class="resources-closing-v1">
 
-<section class="resources-closing">
-
-  <div class="container">
-
-    <p>
-      BEGIN WITHIN. LEAD WITH EASE.™
-    </p>
-
-  </div>
+  <p>
+    BEGIN WITHIN. LEAD WITH EASE.™
+  </p>
 
 </section>
 
@@ -1939,29 +1397,17 @@
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer class="site-footer">
 
   <div class="footer-container">
 
+    <div>
 
-    <div class="footer-brand">
-
-
-      <p class="footer-logo">
-        Focused • Clear • Ready™
-      </p>
-
-
-      <p style="font-style: normal;">
-        Begin Within. Lead With Ease.™
+      <p>
+        © 2026 Focused • Clear • Ready™
       </p>
 
     </div>
-
 
 
     <nav aria-label="Footer navigation">
@@ -1992,20 +1438,14 @@
 
     </nav>
 
-
-
-    <p class="copyright">
-      © 2026 Focused • Clear • Ready™. All rights reserved.
-    </p>
-
   </div>
 
 </footer>
-
 
 
 <script src="js/main.js"></script>
 
 
 </body>
+
 </html>

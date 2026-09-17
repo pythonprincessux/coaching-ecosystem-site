@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -18,146 +19,163 @@
   </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  >
 
   <style>
 
     /* =====================================================
-       BUSINESS LEADERSHIP PAGE ONLY
+       BUSINESS LEADERSHIP V1 RESTORATION
     ===================================================== */
 
-    .leadership-hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-
-      padding: 105px 0 90px;
-
-      background:
-        radial-gradient(
-          circle at 78% 30%,
-          rgba(197, 155, 98, 0.15),
-          transparent 26%
-        ),
-        linear-gradient(
-          135deg,
-          var(--ivory),
-          var(--cream)
-        );
-    }
-
-    .leadership-hero-inner {
+    .business-page-hero {
       width:
         min(
           var(--max-width),
           calc(100% - 48px)
         );
 
-      margin-inline: auto;
+      margin:
+        38px
+        auto
+        34px;
 
       display: grid;
 
       grid-template-columns:
-        minmax(0, 1fr)
-        minmax(300px, 0.7fr);
+        minmax(0, 1.05fr)
+        minmax(320px, 0.95fr);
 
       align-items: center;
 
-      gap: 70px;
+      gap: 46px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 34px;
+
+      padding: 58px;
+
+      background:
+        rgba(255, 255, 255, 0.34);
+
+      box-shadow:
+        var(--shadow-soft);
+
+      overflow: hidden;
     }
 
-    .leadership-hero-copy {
-      max-width: 760px;
-    }
-
-    .leadership-hero-copy .eyebrow {
-      margin-bottom: 13px;
-    }
-
-    .leadership-hero-copy h1 {
-      margin-bottom: 18px;
-
-      color: var(--brown-deep);
-
-      font-size:
-        clamp(
-          3.5rem,
-          6vw,
-          6rem
-        );
-
-      line-height: 0.98;
-
-      letter-spacing: -0.05em;
-    }
-
-    .leadership-tagline {
-      margin-bottom: 8px;
-
-      color: var(--gold-dark) !important;
-
-      font-family:
-        "Libre Franklin",
-        Arial,
-        sans-serif;
-
-      font-size:
-        clamp(
-          1.05rem,
-          2.3vw,
-          1.35rem
-        ) !important;
-
-      font-weight: 800;
-
-      line-height: 1.45 !important;
-    }
-
-    .leadership-tagline-secondary {
-      margin-bottom: 27px;
-
-      color: var(--brown-deep) !important;
-
-      font-family:
-        "Libre Franklin",
-        Arial,
-        sans-serif;
-
-      font-size: 1.08rem !important;
-
-      font-weight: 800;
-
-      line-height: 1.55 !important;
-    }
-
-    .leadership-hero-copy p:not(.eyebrow):not(.leadership-tagline):not(.leadership-tagline-secondary) {
-      max-width: 700px;
+    .business-page-copy h1 {
+      margin-bottom: 16px;
 
       color: var(--text);
 
-      font-size: 1.04rem;
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
-      line-height: 1.84;
+      font-size:
+        clamp(
+          3rem,
+          6vw,
+          5rem
+        );
+
+      font-weight: 800;
+
+      line-height: 0.98;
+
+      letter-spacing: -0.045em;
     }
 
-    .leadership-hero-copy p + p {
-      margin-top: 18px;
+    .business-page-kicker {
+      margin-bottom: 14px;
+
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.82rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
     }
 
+    .business-page-tagline {
+      margin-bottom: 8px;
 
-    /* =====================================================
-       MOTION GRAPHIC
-    ===================================================== */
+      color: var(--text);
 
-    .leadership-motion {
-      min-height: 420px;
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size:
+        clamp(
+          1.1rem,
+          2.4vw,
+          1.4rem
+        );
+
+      font-weight: 800;
+
+      line-height: 1.45;
+    }
+
+    .business-page-tagline-secondary {
+      margin-bottom: 22px;
+
+      color: var(--text);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1.1rem;
+
+      line-height: 1.6;
+    }
+
+    .business-page-copy p:last-child {
+      color: var(--muted);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1rem;
+
+      line-height: 1.82;
+    }
+
+    .business-motion {
+      min-height: 360px;
 
       position: relative;
 
@@ -165,9 +183,9 @@
       place-items: center;
     }
 
-    .leadership-motion-center {
-      width: 185px;
-      height: 185px;
+    .business-motion-center {
+      width: 170px;
+      height: 170px;
 
       position: relative;
       z-index: 3;
@@ -177,199 +195,140 @@
 
       border:
         1px solid
-        var(--gold-dark);
+        rgba(90, 70, 61, 0.4);
 
       border-radius: 50%;
 
       background:
-        rgba(251, 248, 243, 0.88);
+        rgba(246, 239, 232, 0.9);
 
       box-shadow:
-        0 0 0 20px rgba(197, 155, 98, 0.06),
-        0 24px 55px rgba(76, 57, 48, 0.13);
-
-      backdrop-filter: blur(5px);
+        0 14px 35px
+        rgba(63, 45, 36, 0.08);
     }
 
-    .leadership-motion-center span {
-      color: var(--brown);
+    .business-motion-center span {
+      color: var(--text);
 
       font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
-      font-size: 1.7rem;
+      font-size: 1.4rem;
 
-      font-weight: 600;
+      font-weight: 800;
     }
 
-    .leadership-orbit {
+    .business-orbit {
       position: absolute;
 
       border:
         1px solid
-        rgba(167, 121, 66, 0.4);
+        rgba(90, 70, 61, 0.22);
 
       border-radius: 50%;
 
       pointer-events: none;
     }
 
-    .leadership-orbit.one {
-      width: 285px;
-      height: 285px;
+    .business-orbit.one {
+      width: 260px;
+      height: 260px;
 
       animation:
-        business-orbit-reverse
+        business-spin-reverse
         58s
         linear
         infinite;
     }
 
-    .leadership-orbit.two {
-      width: 365px;
-      height: 365px;
+    .business-orbit.two {
+      width: 330px;
+      height: 330px;
 
       border-style: dashed;
 
       animation:
-        business-orbit
+        business-spin
         36s
         linear
         infinite;
     }
 
-    .leadership-orbit-dot {
-      width: 11px;
-      height: 11px;
+    .business-orbit-dot {
+      width: 10px;
+      height: 10px;
 
       position: absolute;
 
-      top: 18px;
+      top: 17px;
       left: 50%;
 
       border-radius: 50%;
 
-      background: var(--gold);
+      background: #8a7063;
 
       box-shadow:
-        0 0 18px
-        rgba(197, 155, 98, 0.5);
+        0 0 14px
+        rgba(90, 70, 61, 0.2);
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
     }
 
-    @keyframes business-orbit {
+    @keyframes business-spin {
       to {
         transform: rotate(360deg);
       }
     }
 
-    @keyframes business-orbit-reverse {
+    @keyframes business-spin-reverse {
       to {
         transform: rotate(-360deg);
       }
     }
 
-
-    /* =====================================================
-       CONTENT
-    ===================================================== */
-
-    .leadership-content {
-      max-width: 980px;
-
-      margin-inline: auto;
-    }
-
-    .leadership-block {
-      padding: 75px 0;
-
-      border-bottom:
-        1px solid
-        var(--line-gold);
-    }
-
-    .leadership-block:last-child {
-      border-bottom: 0;
-    }
-
-    .leadership-block h2 {
-      margin-bottom: 25px;
-
-      color: var(--brown-deep);
-
-      font-size:
-        clamp(
-          2.25rem,
-          4vw,
-          3.6rem
-        );
-
-      line-height: 1.06;
-    }
-
-    .leadership-block > p {
-      max-width: 870px;
-
-      color: var(--text-soft);
-
-      font-size: 1rem;
-
-      line-height: 1.82;
-    }
-
-    .leadership-block > p + p {
-      margin-top: 17px;
-    }
-
-
-    /* =====================================================
-       INTRO / BRAND STATEMENTS
-    ===================================================== */
-
-    .business-intro {
+    .business-intro-v1 {
       text-align: center;
     }
 
-    .business-intro > p {
-      margin-inline: auto;
+    .business-intro-v1 p {
+      max-width: 850px !important;
+
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .business-intro-lead {
-      max-width: 790px !important;
+    .business-intro-lead-v1 {
+      margin-top: 24px !important;
 
-      color: var(--brown-deep) !important;
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+      color: var(--text) !important;
 
       font-size:
         clamp(
-          1.35rem,
+          1.3rem,
           2.8vw,
-          1.85rem
+          1.8rem
         ) !important;
 
       line-height: 1.55 !important;
     }
 
-    .business-emphasis {
-      max-width: 780px !important;
+    .business-emphasis-v1 {
+      margin-top: 22px !important;
 
-      margin-inline: auto;
+      color: var(--text) !important;
 
-      color: var(--brown-deep) !important;
-
-      font-size: 1.08rem !important;
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
 
       font-weight: 800;
     }
 
-    .business-gold-line {
+    .business-divider {
       width: 86px;
       height: 1px;
 
@@ -378,72 +337,29 @@
         auto;
 
       background:
-        var(--gold);
+        #bba99e;
     }
 
+    .business-list {
+      margin-top: 20px;
 
-    /* =====================================================
-       LISTS
-    ===================================================== */
-
-    .leadership-list {
-      margin-top: 27px;
-
-      display: grid;
-
-      gap: 14px;
-
-      list-style: none;
+      padding-left: 24px;
     }
 
-    .leadership-list li {
-      position: relative;
+    .business-list li {
+      margin-bottom: 10px;
 
-      padding:
-        17px
-        20px
-        17px
-        50px;
+      color: var(--text);
 
-      border:
-        1px solid
-        var(--line);
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-      border-radius:
-        var(--radius-sm);
-
-      background:
-        rgba(255, 255, 255, 0.7);
-
-      color:
-        var(--text-soft);
-
-      line-height: 1.66;
+      line-height: 1.75;
     }
 
-    .leadership-list li::before {
-      position: absolute;
-
-      top: 18px;
-      left: 18px;
-
-      color: var(--gold-dark);
-
-      content: "•";
-
-      font-size: 1.4rem;
-
-      line-height: 1;
-    }
-
-
-    /* =====================================================
-       HELPS YOU DO CARDS
-    ===================================================== */
-
-    .business-benefits {
-      margin-top: 32px;
-
+    .business-benefits-v1 {
       display: grid;
 
       grid-template-columns:
@@ -453,181 +369,126 @@
         );
 
       gap: 18px;
+
+      margin-top: 28px;
     }
 
-    .business-benefit {
+    .business-benefit-v1 {
       min-height: 230px;
 
       border:
         1px solid
-        var(--line);
+        rgba(255, 255, 255, 0.65);
 
-      border-radius:
-        var(--radius-lg);
+      border-radius: 22px;
 
-      padding: 30px;
-
-      background:
-        rgba(255, 255, 255, 0.82);
+      padding: 28px;
 
       box-shadow:
         var(--shadow-card);
 
       transition:
-        transform var(--transition),
-        box-shadow var(--transition),
-        border-color var(--transition);
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
-    .business-benefit:nth-child(2n) {
-      background: var(--blush-soft);
+    .business-benefit-v1:nth-child(1) {
+      background: #f4ede7;
     }
 
-    .business-benefit:nth-child(3) {
-      background: var(--champagne-soft);
+    .business-benefit-v1:nth-child(2) {
+      background: #f3dedd;
     }
 
-    .business-benefit:hover {
-      border-color:
-        rgba(197, 155, 98, 0.65);
+    .business-benefit-v1:nth-child(3) {
+      background: #ead1ac;
+    }
+
+    .business-benefit-v1:nth-child(4) {
+      background: #eee4de;
+    }
+
+    .business-benefit-v1:nth-child(5) {
+      background: #f4ede7;
+    }
+
+    .business-benefit-v1:hover {
+      transform:
+        translateY(-6px);
 
       box-shadow:
-        0 20px 42px
-        rgba(76, 57, 48, 0.1);
-
-      transform:
-        translateY(-5px);
+        0 18px 40px
+        rgba(63, 45, 36, 0.1);
     }
 
-    .business-benefit-number {
-      width: 42px;
-      height: 42px;
+    .business-benefit-v1 span {
+      display: inline-grid;
 
-      margin-bottom: 19px;
+      width: 38px;
+      height: 38px;
 
-      display: grid;
+      margin-bottom: 18px;
+
       place-items: center;
 
       border:
         1px solid
-        var(--gold-dark);
+        #c7b6aa;
 
       border-radius: 50%;
 
-      color: var(--brown);
+      color: var(--text);
 
-      font-size: 0.78rem;
+      font-size: 0.75rem;
 
       font-weight: 800;
     }
 
-    .business-benefit h3 {
-      margin-bottom: 11px;
+    .business-benefit-v1 h3 {
+      margin-bottom: 10px;
 
-      color: var(--brown-deep);
+      color: var(--text);
 
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+      font-size: 1.1rem;
 
-      font-size: 1.35rem;
+      font-weight: 800;
     }
 
-    .business-benefit p {
-      color: var(--text-soft);
+    .business-benefit-v1 p {
+      color: var(--text) !important;
 
-      font-size: 0.92rem;
+      font-size: 0.94rem !important;
 
-      line-height: 1.72;
+      line-height: 1.7 !important;
     }
 
-
-    /* =====================================================
-       OUTCOME
-    ===================================================== */
-
-    .outcome-panel {
-      position: relative;
-
-      overflow: hidden;
-
+    .business-outcome-v1 {
       border:
         1px solid
-        var(--line-gold);
+        rgba(255, 255, 255, 0.65);
 
-      border-radius:
-        var(--radius-xl);
+      border-radius: 22px;
 
-      padding: 50px;
+      padding: 32px;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.95),
-          rgba(239, 220, 220, 0.4)
-        );
+      background: #f4ede7;
 
       box-shadow:
-        var(--shadow-soft);
+        var(--shadow-card);
     }
 
-    .outcome-panel::after {
-      width: 220px;
-      height: 220px;
-
-      position: absolute;
-
-      right: -100px;
-      bottom: -120px;
-
-      border:
-        1px solid
-        rgba(197, 155, 98, 0.25);
-
-      border-radius: 50%;
-
-      content: "";
-    }
-
-    .outcome-panel h2 {
-      max-width: 760px;
-    }
-
-    .outcome-panel p {
-      max-width: 830px;
-    }
-
-
-    /* =====================================================
-       WORK WITH ME
-    ===================================================== */
-
-    .leadership-cta {
+    .business-cta-v1 {
       text-align: center;
     }
 
-    .leadership-cta h2 {
-      max-width: 770px;
-
-      margin-inline: auto;
-    }
-
-    .leadership-cta p {
-      max-width: 720px;
-
-      margin-inline: auto;
-    }
-
-    .leadership-cta .button-row {
+    .business-cta-v1 .button-row {
       justify-content: center;
     }
 
-    .leadership-signature {
-      margin-top: 30px !important;
+    .business-signature-v1 {
+      margin-top: 26px !important;
 
-      color:
-        var(--brown) !important;
+      color: var(--text) !important;
 
       font-family:
         "Libre Franklin",
@@ -638,96 +499,75 @@
 
       font-weight: 800;
 
-      letter-spacing: 0.05em;
+      letter-spacing: 0.055em;
     }
-
-
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
 
     @media (max-width: 900px) {
 
-      .leadership-hero-inner {
+      .business-page-hero {
         grid-template-columns: 1fr;
       }
 
-      .leadership-motion {
-        min-height: 360px;
-      }
-
-      .business-benefits {
+      .business-benefits-v1 {
         grid-template-columns: 1fr;
       }
+
     }
 
+    @media (max-width: 760px) {
 
-    @media (max-width: 680px) {
-
-      .leadership-hero {
-        padding:
-          72px
-          0
-          58px;
-      }
-
-      .leadership-hero-inner {
+      .business-page-hero {
         width:
           min(
-            100% - 28px,
-            var(--max-width)
+            var(--max-width),
+            calc(100% - 28px)
           );
-      }
 
-      .leadership-hero-copy h1 {
-        font-size:
-          clamp(
-            3rem,
-            15vw,
-            4.2rem
-          );
-      }
+        margin-top: 24px;
 
-      .leadership-motion {
-        min-height: 315px;
-      }
-
-      .leadership-motion-center {
-        width: 145px;
-        height: 145px;
-      }
-
-      .leadership-motion-center span {
-        font-size: 1.35rem;
-      }
-
-      .leadership-orbit.one {
-        width: 225px;
-        height: 225px;
-      }
-
-      .leadership-orbit.two {
-        width: 280px;
-        height: 280px;
-      }
-
-      .leadership-block {
-        padding:
-          58px
-          0;
-      }
-
-      .outcome-panel {
         padding: 30px;
       }
-    }
 
+      .business-page-copy h1 {
+        font-size:
+          clamp(
+            2.7rem,
+            13vw,
+            4rem
+          );
+      }
+
+      .business-motion {
+        min-height: 300px;
+      }
+
+      .business-motion-center {
+        width: 140px;
+        height: 140px;
+      }
+
+      .business-orbit.one {
+        width: 215px;
+        height: 215px;
+      }
+
+      .business-orbit.two {
+        width: 270px;
+        height: 270px;
+      }
+
+      .business-outcome-v1 {
+        padding: 24px;
+      }
+
+    }
 
     @media (prefers-reduced-motion: reduce) {
 
-      .leadership-orbit {
+      .business-orbit {
         animation: none !important;
       }
+
     }
 
   </style>
@@ -736,10 +576,6 @@
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
 <header class="site-header">
 
@@ -806,63 +642,288 @@
 <main>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
-<section class="leadership-hero">
+<section class="business-page-hero">
 
-  <div class="leadership-hero-inner">
+  <div class="business-page-copy">
+
+    <p class="business-page-kicker">
+      Business &amp; Professional Leadership
+    </p>
+
+    <h1>
+      Learn More
+    </h1>
+
+    <p class="business-page-tagline">
+      Build the woman who builds the business.
+    </p>
+
+    <p class="business-page-tagline-secondary">
+      You are the most important factor in all you build.
+    </p>
+
+    <p>
+      When you consider yourself first, you lead with greater
+      intention, make better decisions, and build a business
+      that’s sustainable.
+    </p>
+
+  </div>
 
 
-    <div class="leadership-hero-copy">
+  <div
+    class="business-motion"
+    aria-hidden="true"
+  >
 
-      <p class="eyebrow">
-        Business &amp; Professional Leadership
-      </p>
+    <div class="business-orbit one"></div>
 
-
-      <h1>
-        Learn More
-      </h1>
-
-
-      <p class="leadership-tagline">
-        Build the woman who builds the business.
-      </p>
-
-
-      <p class="leadership-tagline-secondary">
-        You are the most important factor in all you build.
-      </p>
-
-
-      <p>
-        When you consider yourself first, you lead with greater
-        intention, make better decisions, and build a business
-        that’s sustainable.
-      </p>
-
+    <div class="business-orbit two">
+      <span class="business-orbit-dot"></span>
     </div>
 
+    <div class="business-motion-center">
+      <span>BPL</span>
+    </div>
+
+  </div>
+
+</section>
 
 
-    <div
-      class="leadership-motion"
-      aria-hidden="true"
-    >
 
-      <div class="leadership-orbit one"></div>
+<!-- BUSINESS INTRO -->
+
+<section class="section light">
+
+  <div class="container business-intro-v1">
+
+    <p>
+      Too often, women invest their best thinking, energy, and
+      care into building their business, career, and the people
+      they lead while quietly placing themselves last.
+    </p>
 
 
-      <div class="leadership-orbit two">
-        <span class="leadership-orbit-dot"></span>
-      </div>
+    <div class="business-divider"></div>
 
 
-      <div class="leadership-motion-center">
-        <span>BPL</span>
-      </div>
+    <p class="business-intro-lead-v1">
+      Self-leadership begins by putting yourself back into
+      the equation.
+    </p>
+
+
+    <p>
+      Here, you become the first consideration because when
+      you begin to consider yourself with the same intention
+      you bring to everything else, everything you do becomes
+      more aligned.
+    </p>
+
+
+    <p class="business-emphasis-v1">
+      That’s how you lead with ease, not pressure.
+    </p>
+
+
+    <div class="business-divider"></div>
+
+
+    <p>
+      Our framework strengthens the woman behind the business
+      or professional role.
+    </p>
+
+
+    <p>
+      We also help you clarify and strengthen the practical
+      areas of your business, including strategy, visibility,
+      systems, decision-making, and sustainable growth.
+    </p>
+
+
+    <p>
+      Together, we’ll help you cultivate greater self-leadership,
+      clarity, alignment, and intentional decision-making so you
+      can move forward in your business, career, and life with
+      greater steadiness, purposeful direction, and ease.
+    </p>
+
+
+    <p>
+      As you strengthen your foundation, the way you think,
+      decide, communicate, prioritize, and lead naturally begins
+      to change. Your business or professional work becomes a
+      reflection of that stronger foundation.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- WHEN THIS PATH MAY BE RIGHT FOR YOU -->
+
+<section class="section">
+
+  <div class="container">
+
+    <h2>
+      When This Path May Be Right for You
+    </h2>
+
+    <p>
+      You may recognize yourself here if:
+    </p>
+
+    <ul class="business-list">
+
+      <li>
+        You rarely consider yourself before making decisions,
+        and self-neglect has quietly become your normal.
+      </li>
+
+      <li>
+        You carry the weight of everything, feeling responsible
+        for holding it all together.
+      </li>
+
+      <li>
+        Your days are driven by urgency, deadlines, and other
+        people’s needs rather than deliberate choices.
+      </li>
+
+      <li>
+        You’ve become disconnected from what you need, what you
+        value most, and what your current capacity allows.
+      </li>
+
+      <li>
+        You realize something needs to change, even if you
+        can’t yet define what that change looks like.
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- WHAT BUSINESS LEADERSHIP HELPS YOU DO -->
+
+<section class="section light">
+
+  <div class="container">
+
+    <h2>
+      What Business &amp; Professional Leadership Helps You Do
+    </h2>
+
+    <p>
+      Through the Focused • Clear • Ready™ Method,
+      you’ll learn to:
+    </p>
+
+
+    <div class="business-benefits-v1">
+
+
+      <article class="business-benefit-v1">
+
+        <span>
+          01
+        </span>
+
+        <h3>
+          Reconnect With Yourself
+        </h3>
+
+        <p>
+          Reconnect with yourself before responding to the
+          demands around you.
+        </p>
+
+      </article>
+
+
+      <article class="business-benefit-v1">
+
+        <span>
+          02
+        </span>
+
+        <h3>
+          Clarify What Needs Attention
+        </h3>
+
+        <p>
+          Clarify what needs attention in your business or
+          professional work, including strategy, visibility,
+          systems, offers, operations, and growth, so your
+          decisions reflect your values, priorities, and vision.
+        </p>
+
+      </article>
+
+
+      <article class="business-benefit-v1">
+
+        <span>
+          03
+        </span>
+
+        <h3>
+          Lead With Greater Intention
+        </h3>
+
+        <p>
+          Lead with greater intention instead of constantly
+          reacting to what comes next.
+        </p>
+
+      </article>
+
+
+      <article class="business-benefit-v1">
+
+        <span>
+          04
+        </span>
+
+        <h3>
+          Build Sustainably
+        </h3>
+
+        <p>
+          Build in ways that honor your capacity while creating
+          meaningful, sustainable progress.
+        </p>
+
+      </article>
+
+
+      <article class="business-benefit-v1">
+
+        <span>
+          05
+        </span>
+
+        <h3>
+          Create Alignment
+        </h3>
+
+        <p>
+          Create a way of leading and growing that feels aligned,
+          sustainable, and true to who you are.
+        </p>
+
+      </article>
 
     </div>
 
@@ -872,371 +933,89 @@
 
 
 
-<!-- =====================================================
-     BUSINESS LEADERSHIP INTRO
-===================================================== -->
+<!-- THE OUTCOME -->
+
+<section class="section">
+
+  <div class="container">
+
+    <article class="business-outcome-v1">
+
+      <h2>
+        Consider yourself first so you can lead your work
+        with greater intention, sustainability, and ease.
+      </h2>
+
+      <p>
+        Business &amp; Professional Leadership is about
+        considering yourself first, so you can lead your
+        business or professional work with greater intention,
+        sustainability, and ease.
+      </p>
+
+      <p>
+        As you begin to consider yourself before your
+        responsibilities, your decisions become clearer,
+        your priorities become more intentional, and your
+        work becomes a more authentic reflection of your
+        values, vision, and purpose.
+      </p>
+
+      <p>
+        Instead of building from constant pressure or obligation,
+        you begin to build from clarity, alignment, and a way of
+        leading that is sustainable over time.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- WORK WITH ME -->
 
 <section class="section light">
 
-  <div class="container leadership-content">
+  <div class="container business-cta-v1">
+
+    <h2>
+      Discover what your next chapter can look like.
+    </h2>
+
+    <p>
+      If you’re ready to move forward with greater steadiness,
+      purposeful direction, and ease, I’d love to help you
+      discover what your next chapter can look like.
+    </p>
 
 
-    <div class="leadership-block business-intro">
+    <div class="button-row">
 
-      <p>
-        Too often, women invest their best thinking, energy, and
-        care into building their business, career, and the people
-        they lead while quietly placing themselves last.
-      </p>
+      <a
+        class="primary-button"
+        href="resources.html#assessments"
+      >
+        Take the Business &amp; Professional Leadership Assessment
+      </a>
 
-
-      <div class="business-gold-line"></div>
-
-
-      <p class="business-intro-lead">
-        Self-leadership begins by putting yourself back into
-        the equation.
-      </p>
-
-
-      <p>
-        Here, you become the first consideration because when
-        you begin to consider yourself with the same intention
-        you bring to everything else, everything you do becomes
-        more aligned.
-      </p>
-
-
-      <p class="business-emphasis">
-        That’s how you lead with ease, not pressure.
-      </p>
-
-
-      <div class="business-gold-line"></div>
-
-
-      <p>
-        Our framework strengthens the woman behind the business
-        or professional role.
-      </p>
-
-
-      <!-- Allegra's later requested insertion -->
-
-      <p>
-        We also help you clarify and strengthen the practical
-        areas of your business, including strategy, visibility,
-        systems, decision-making, and sustainable growth.
-      </p>
-
-
-      <p>
-        Together, we’ll help you cultivate greater self-leadership,
-        clarity, alignment, and intentional decision-making so you
-        can move forward in your business, career, and life with
-        greater steadiness, purposeful direction, and ease.
-      </p>
-
-
-      <p>
-        As you strengthen your foundation, the way you think,
-        decide, communicate, prioritize, and lead naturally begins
-        to change. Your business or professional work becomes a
-        reflection of that stronger foundation.
-      </p>
+      <a
+        class="secondary-button"
+        href="https://calendly.com/fcrlife-info/30min"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Clarity Call
+      </a>
 
     </div>
 
 
-
-    <!-- =================================================
-         WHEN THIS PATH MAY BE RIGHT FOR YOU
-    ================================================== -->
-
-    <div class="leadership-block">
-
-      <p class="eyebrow">
-        Business &amp; Professional Leadership
-      </p>
-
-
-      <h2>
-        When This Path May Be Right for You
-      </h2>
-
-
-      <p>
-        You may recognize yourself here if:
-      </p>
-
-
-      <ul class="leadership-list">
-
-        <li>
-          You rarely consider yourself before making decisions,
-          and self-neglect has quietly become your normal.
-        </li>
-
-        <li>
-          You carry the weight of everything, feeling responsible
-          for holding it all together.
-        </li>
-
-        <li>
-          Your days are driven by urgency, deadlines, and other
-          people’s needs rather than deliberate choices.
-        </li>
-
-        <li>
-          You’ve become disconnected from what you need, what you
-          value most, and what your current capacity allows.
-        </li>
-
-        <li>
-          You realize something needs to change, even if you
-          can’t yet define what that change looks like.
-        </li>
-
-      </ul>
-
-    </div>
-
-
-
-    <!-- =================================================
-         WHAT BUSINESS LEADERSHIP HELPS YOU DO
-    ================================================== -->
-
-    <div class="leadership-block">
-
-      <p class="eyebrow">
-        This Path Helps You
-      </p>
-
-
-      <h2>
-        What Business &amp; Professional Leadership Helps You Do
-      </h2>
-
-
-      <p>
-        Through the Focused • Clear • Ready™ Method,
-        you’ll learn to:
-      </p>
-
-
-      <div class="business-benefits">
-
-
-        <article class="business-benefit">
-
-          <span class="business-benefit-number">
-            01
-          </span>
-
-
-          <h3>
-            Reconnect With Yourself
-          </h3>
-
-
-          <p>
-            Reconnect with yourself before responding to the
-            demands around you.
-          </p>
-
-        </article>
-
-
-
-        <article class="business-benefit">
-
-          <span class="business-benefit-number">
-            02
-          </span>
-
-
-          <h3>
-            Clarify What Needs Attention
-          </h3>
-
-
-          <p>
-            Clarify what needs attention in your business or
-            professional work, including strategy, visibility,
-            systems, offers, operations, and growth, so your
-            decisions reflect your values, priorities, and vision.
-          </p>
-
-        </article>
-
-
-
-        <article class="business-benefit">
-
-          <span class="business-benefit-number">
-            03
-          </span>
-
-
-          <h3>
-            Lead With Greater Intention
-          </h3>
-
-
-          <p>
-            Lead with greater intention instead of constantly
-            reacting to what comes next.
-          </p>
-
-        </article>
-
-
-
-        <article class="business-benefit">
-
-          <span class="business-benefit-number">
-            04
-          </span>
-
-
-          <h3>
-            Build Sustainably
-          </h3>
-
-
-          <p>
-            Build in ways that honor your capacity while creating
-            meaningful, sustainable progress.
-          </p>
-
-        </article>
-
-
-
-        <article class="business-benefit">
-
-          <span class="business-benefit-number">
-            05
-          </span>
-
-
-          <h3>
-            Create Alignment
-          </h3>
-
-
-          <p>
-            Create a way of leading and growing that feels aligned,
-            sustainable, and true to who you are.
-          </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- =================================================
-         THE OUTCOME
-    ================================================== -->
-
-    <div class="leadership-block">
-
-      <article class="outcome-panel">
-
-        <p class="eyebrow">
-          The Outcome
-        </p>
-
-
-        <h2>
-          Consider yourself first so you can lead your work
-          with greater intention, sustainability, and ease.
-        </h2>
-
-
-        <p>
-          Business &amp; Professional Leadership is about
-          considering yourself first, so you can lead your
-          business or professional work with greater intention,
-          sustainability, and ease.
-        </p>
-
-
-        <p>
-          As you begin to consider yourself before your
-          responsibilities, your decisions become clearer,
-          your priorities become more intentional, and your
-          work becomes a more authentic reflection of your
-          values, vision, and purpose.
-        </p>
-
-
-        <p>
-          Instead of building from constant pressure or obligation,
-          you begin to build from clarity, alignment, and a way of
-          leading that is sustainable over time.
-        </p>
-
-      </article>
-
-    </div>
-
-
-
-    <!-- =================================================
-         WORK WITH ME
-    ================================================== -->
-
-    <div class="leadership-block leadership-cta">
-
-      <p class="eyebrow">
-        Work With Me
-      </p>
-
-
-      <h2>
-        Discover what your next chapter can look like.
-      </h2>
-
-
-      <p>
-        If you’re ready to move forward with greater steadiness,
-        purposeful direction, and ease, I’d love to help you
-        discover what your next chapter can look like.
-      </p>
-
-
-      <div class="button-row">
-
-        <a
-          class="primary-button"
-          href="resources.html#assessments"
-        >
-          Take the Business &amp; Professional Leadership Assessment
-        </a>
-
-
-        <a
-          class="secondary-button"
-          href="https://calendly.com/fcrlife-info/30min"
-          target="_blank"
-          rel="noopener"
-        >
-          Book a Clarity Call
-        </a>
-
-      </div>
-
-
-      <p class="leadership-signature">
-        Begin Within. Lead With Ease.™
-      </p>
-
-    </div>
+    <p class="business-signature-v1">
+      BEGIN WITHIN. LEAD WITH EASE.™
+    </p>
 
   </div>
 
@@ -1247,28 +1026,15 @@
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer class="site-footer">
 
   <div class="footer-container">
 
-
-    <div class="footer-brand">
-
-      <p class="footer-logo">
-        Focused • Clear • Ready™
+    <div>
+      <p>
+        © 2026 Focused • Clear • Ready™
       </p>
-
-
-      <p style="font-style: normal;">
-        Begin Within. Lead With Ease.™
-      </p>
-
     </div>
-
 
 
     <nav aria-label="Footer navigation">
@@ -1299,20 +1065,14 @@
 
     </nav>
 
-
-
-    <p class="copyright">
-      © 2026 Focused • Clear • Ready™. All rights reserved.
-    </p>
-
   </div>
 
 </footer>
-
 
 
 <script src="js/main.js"></script>
 
 
 </body>
+
 </html>

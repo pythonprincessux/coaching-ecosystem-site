@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -18,88 +19,116 @@
   </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  >
 
   <style>
+
     /* =====================================================
-       WHOLE-LIFE PAGE ONLY
+       WHOLE-LIFE V1 RESTORATION
     ===================================================== */
 
-    .leadership-hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-
-      padding: 105px 0 90px;
-
-      background:
-        radial-gradient(
-          circle at 78% 30%,
-          rgba(197, 155, 98, 0.15),
-          transparent 26%
-        ),
-        linear-gradient(
-          135deg,
-          var(--ivory),
-          var(--cream)
+    .whole-page-hero {
+      width:
+        min(
+          var(--max-width),
+          calc(100% - 48px)
         );
-    }
 
-    .leadership-hero-inner {
-      width: min(
-        var(--max-width),
-        calc(100% - 48px)
-      );
-
-      margin-inline: auto;
+      margin:
+        38px
+        auto
+        34px;
 
       display: grid;
 
       grid-template-columns:
-        minmax(0, 1fr)
-        minmax(300px, 0.7fr);
+        minmax(0, 1.05fr)
+        minmax(320px, 0.95fr);
 
       align-items: center;
 
-      gap: 70px;
+      gap: 46px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 34px;
+
+      padding:
+        58px;
+
+      background:
+        rgba(255, 255, 255, 0.34);
+
+      box-shadow:
+        var(--shadow-soft);
+
+      overflow: hidden;
     }
 
-    .leadership-hero-copy {
-      max-width: 720px;
-    }
+    .whole-page-copy h1 {
+      margin-bottom: 14px;
 
-    .leadership-hero-copy .eyebrow {
-      margin-bottom: 13px;
-    }
+      color: var(--text);
 
-    .leadership-hero-copy h1 {
-      margin-bottom: 13px;
-
-      color: var(--brown-deep);
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
       font-size:
         clamp(
-          3.5rem,
+          3rem,
           6vw,
-          6rem
+          5rem
         );
+
+      font-weight: 800;
 
       line-height: 0.98;
 
-      letter-spacing: -0.05em;
+      letter-spacing: -0.045em;
     }
 
-    .leadership-tagline {
-      margin-bottom: 29px;
+    .whole-page-kicker {
+      margin-bottom: 14px;
 
-      color: var(--gold-dark) !important;
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.82rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+    }
+
+    .whole-page-tagline {
+      margin-bottom: 22px;
+
+      color: var(--text);
 
       font-family:
         "Playfair Display",
@@ -108,33 +137,33 @@
 
       font-size:
         clamp(
-          1.4rem,
-          3vw,
-          2rem
-        ) !important;
+          1.25rem,
+          2.6vw,
+          1.75rem
+        );
 
-      line-height: 1.35 !important;
+      line-height: 1.5;
     }
 
-    .leadership-hero-copy p:not(.eyebrow):not(.leadership-tagline) {
-      max-width: 680px;
+    .whole-page-copy p:not(.whole-page-kicker):not(.whole-page-tagline) {
+      color: var(--muted);
 
-      color: var(--text);
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-      font-size: 1.04rem;
+      font-size: 1rem;
 
-      line-height: 1.84;
+      line-height: 1.82;
     }
 
-    .leadership-hero-copy p + p {
-      margin-top: 18px;
+    .whole-page-copy p + p {
+      margin-top: 16px;
     }
 
-
-    /* motion graphic */
-
-    .leadership-motion {
-      min-height: 420px;
+    .whole-motion {
+      min-height: 360px;
 
       position: relative;
 
@@ -142,9 +171,9 @@
       place-items: center;
     }
 
-    .leadership-motion-center {
-      width: 185px;
-      height: 185px;
+    .whole-motion-center {
+      width: 170px;
+      height: 170px;
 
       position: relative;
       z-index: 3;
@@ -154,208 +183,120 @@
 
       border:
         1px solid
-        var(--gold-dark);
+        rgba(90, 70, 61, 0.4);
 
       border-radius: 50%;
 
       background:
-        rgba(251, 248, 243, 0.88);
+        rgba(246, 239, 232, 0.9);
 
       box-shadow:
-        0 0 0 20px rgba(197, 155, 98, 0.06),
-        0 24px 55px rgba(76, 57, 48, 0.13);
-
-      backdrop-filter: blur(5px);
+        0 14px 35px
+        rgba(63, 45, 36, 0.08);
     }
 
-    .leadership-motion-center span {
-      color: var(--brown);
+    .whole-motion-center span {
+      color: var(--text);
 
       font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
-      font-size: 1.8rem;
+      font-size: 1.6rem;
 
-      font-weight: 600;
+      font-weight: 800;
     }
 
-    .leadership-orbit {
+    .whole-orbit {
       position: absolute;
 
       border:
         1px solid
-        rgba(167, 121, 66, 0.4);
+        rgba(90, 70, 61, 0.22);
 
       border-radius: 50%;
 
       pointer-events: none;
     }
 
-    .leadership-orbit.one {
-      width: 285px;
-      height: 285px;
+    .whole-orbit.one {
+      width: 260px;
+      height: 260px;
 
       animation:
-        leadership-orbit-reverse
+        whole-spin-reverse
         58s
         linear
         infinite;
     }
 
-    .leadership-orbit.two {
-      width: 365px;
-      height: 365px;
+    .whole-orbit.two {
+      width: 330px;
+      height: 330px;
 
       border-style: dashed;
 
       animation:
-        leadership-orbit
+        whole-spin
         36s
         linear
         infinite;
     }
 
-    .leadership-orbit-dot {
-      width: 11px;
-      height: 11px;
+    .whole-orbit-dot {
+      width: 10px;
+      height: 10px;
 
       position: absolute;
 
-      top: 18px;
+      top: 17px;
       left: 50%;
 
       border-radius: 50%;
 
-      background: var(--gold);
+      background: #8a7063;
 
       box-shadow:
-        0 0 18px
-        rgba(197, 155, 98, 0.5);
+        0 0 14px
+        rgba(90, 70, 61, 0.2);
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
     }
 
-    @keyframes leadership-orbit {
+    @keyframes whole-spin {
       to {
         transform: rotate(360deg);
       }
     }
 
-    @keyframes leadership-orbit-reverse {
+    @keyframes whole-spin-reverse {
       to {
         transform: rotate(-360deg);
       }
     }
 
+    .whole-list {
+      margin-top: 20px;
 
-    /* =====================================================
-       EDITORIAL CONTENT
-    ===================================================== */
-
-    .leadership-content {
-      max-width: 980px;
-      margin-inline: auto;
+      padding-left: 24px;
     }
 
-    .leadership-block {
-      padding: 75px 0;
+    .whole-list li {
+      margin-bottom: 10px;
 
-      border-bottom:
-        1px solid
-        var(--line-gold);
+      color: var(--text);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      line-height: 1.75;
     }
 
-    .leadership-block:last-child {
-      border-bottom: 0;
-    }
-
-    .leadership-block h2 {
-      margin-bottom: 25px;
-
-      color: var(--brown-deep);
-
-      font-size:
-        clamp(
-          2.25rem,
-          4vw,
-          3.6rem
-        );
-
-      line-height: 1.06;
-    }
-
-    .leadership-block > p {
-      max-width: 850px;
-
-      color: var(--text-soft);
-
-      font-size: 1rem;
-
-      line-height: 1.82;
-    }
-
-    .leadership-block > p + p {
-      margin-top: 17px;
-    }
-
-    .leadership-list {
-      margin-top: 27px;
-
-      display: grid;
-
-      gap: 14px;
-
-      list-style: none;
-    }
-
-    .leadership-list li {
-      position: relative;
-
-      padding:
-        17px
-        20px
-        17px
-        50px;
-
-      border:
-        1px solid
-        var(--line);
-
-      border-radius:
-        var(--radius-sm);
-
-      background:
-        rgba(255, 255, 255, 0.7);
-
-      color:
-        var(--text-soft);
-
-      line-height: 1.66;
-    }
-
-    .leadership-list li::before {
-      position: absolute;
-
-      top: 18px;
-      left: 18px;
-
-      color: var(--gold-dark);
-
-      content: "•";
-
-      font-size: 1.4rem;
-
-      line-height: 1;
-    }
-
-
-    /* what it helps you do */
-
-    .leadership-benefits {
-      margin-top: 32px;
-
+    .whole-benefits {
       display: grid;
 
       grid-template-columns:
@@ -365,282 +306,197 @@
         );
 
       gap: 18px;
+
+      margin-top: 28px;
     }
 
-    .leadership-benefit {
+    .whole-benefit {
       min-height: 220px;
 
       border:
         1px solid
-        var(--line);
+        rgba(255, 255, 255, 0.65);
 
-      border-radius:
-        var(--radius-lg);
+      border-radius: 22px;
 
-      padding: 30px;
-
-      background:
-        rgba(255, 255, 255, 0.82);
+      padding: 28px;
 
       box-shadow:
         var(--shadow-card);
 
       transition:
-        transform var(--transition),
-        box-shadow var(--transition),
-        border-color var(--transition);
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
-    .leadership-benefit:nth-child(2) {
-      background: var(--blush-soft);
+    .whole-benefit:nth-child(1) {
+      background: #f4ede7;
     }
 
-    .leadership-benefit:nth-child(3) {
-      background: var(--champagne-soft);
+    .whole-benefit:nth-child(2) {
+      background: #f3dedd;
     }
 
-    .leadership-benefit:hover {
-      border-color:
-        rgba(197, 155, 98, 0.65);
+    .whole-benefit:nth-child(3) {
+      background: #ead1ac;
+    }
+
+    .whole-benefit:hover {
+      transform:
+        translateY(-6px);
 
       box-shadow:
-        0 20px 42px
-        rgba(76, 57, 48, 0.1);
-
-      transform:
-        translateY(-5px);
+        0 18px 40px
+        rgba(63, 45, 36, 0.1);
     }
 
-    .leadership-benefit-number {
-      width: 42px;
-      height: 42px;
+    .whole-benefit span {
+      display: inline-grid;
 
-      margin-bottom: 19px;
+      width: 38px;
+      height: 38px;
 
-      display: grid;
+      margin-bottom: 18px;
+
       place-items: center;
 
       border:
         1px solid
-        var(--gold-dark);
+        #c7b6aa;
 
       border-radius: 50%;
 
-      color:
-        var(--brown);
+      color: var(--text);
 
-      font-size: 0.78rem;
+      font-size: 0.75rem;
+
       font-weight: 800;
     }
 
-    .leadership-benefit h3 {
-      margin-bottom: 11px;
+    .whole-benefit h3 {
+      margin-bottom: 10px;
 
-      color:
-        var(--brown-deep);
+      color: var(--text);
 
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+      font-size: 1.1rem;
 
-      font-size: 1.35rem;
+      font-weight: 800;
     }
 
-    .leadership-benefit p {
-      color:
-        var(--text-soft);
+    .whole-benefit p {
+      color: var(--text) !important;
 
-      font-size: 0.92rem;
+      font-size: 0.94rem !important;
 
-      line-height: 1.72;
+      line-height: 1.7 !important;
     }
 
-
-    /* outcome */
-
-    .outcome-panel {
-      position: relative;
-
-      overflow: hidden;
-
+    .whole-outcome {
       border:
         1px solid
-        var(--line-gold);
+        rgba(255, 255, 255, 0.65);
 
-      border-radius:
-        var(--radius-xl);
+      border-radius: 22px;
 
-      padding:
-        50px;
+      padding: 32px;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.95),
-          rgba(239, 220, 220, 0.4)
-        );
+      background: #f4ede7;
 
       box-shadow:
-        var(--shadow-soft);
+        var(--shadow-card);
     }
 
-    .outcome-panel::after {
-      width: 220px;
-      height: 220px;
-
-      position: absolute;
-
-      right: -100px;
-      bottom: -120px;
-
-      border:
-        1px solid
-        rgba(197, 155, 98, 0.25);
-
-      border-radius: 50%;
-
-      content: "";
-    }
-
-    .outcome-panel h2 {
-      max-width: 720px;
-    }
-
-    .outcome-panel p {
-      max-width: 800px;
-    }
-
-
-    /* work with me */
-
-    .leadership-cta {
+    .whole-cta {
       text-align: center;
     }
 
-    .leadership-cta h2 {
-      max-width: 760px;
-
-      margin-inline: auto;
-    }
-
-    .leadership-cta p {
-      max-width: 700px;
-
-      margin-inline: auto;
-    }
-
-    .leadership-cta .button-row {
+    .whole-cta .button-row {
       justify-content: center;
     }
 
-    .leadership-signature {
-      margin-top: 30px !important;
+    .whole-signature {
+      margin-top: 26px;
 
-      color:
-        var(--brown) !important;
+      color: var(--text);
 
       font-family:
         "Libre Franklin",
         Arial,
-        sans-serif !important;
+        sans-serif;
 
-      font-size:
-        0.9rem !important;
+      font-size: 0.9rem;
 
       font-weight: 800;
 
-      letter-spacing:
-        0.05em;
+      letter-spacing: 0.055em;
     }
-
-
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
 
     @media (max-width: 900px) {
 
-      .leadership-hero-inner {
+      .whole-page-hero {
         grid-template-columns: 1fr;
       }
 
-      .leadership-motion {
-        min-height: 360px;
-      }
-
-      .leadership-benefits {
+      .whole-benefits {
         grid-template-columns: 1fr;
       }
+
     }
 
+    @media (max-width: 760px) {
 
-    @media (max-width: 680px) {
-
-      .leadership-hero {
-        padding:
-          72px
-          0
-          58px;
-      }
-
-      .leadership-hero-inner {
+      .whole-page-hero {
         width:
           min(
-            100% - 28px,
-            var(--max-width)
+            var(--max-width),
+            calc(100% - 28px)
           );
-      }
 
-      .leadership-hero-copy h1 {
-        font-size:
-          clamp(
-            3rem,
-            15vw,
-            4.2rem
-          );
-      }
+        margin-top: 24px;
 
-      .leadership-motion {
-        min-height: 315px;
-      }
-
-      .leadership-motion-center {
-        width: 145px;
-        height: 145px;
-      }
-
-      .leadership-motion-center span {
-        font-size: 1.45rem;
-      }
-
-      .leadership-orbit.one {
-        width: 225px;
-        height: 225px;
-      }
-
-      .leadership-orbit.two {
-        width: 280px;
-        height: 280px;
-      }
-
-      .leadership-block {
-        padding:
-          58px
-          0;
-      }
-
-      .outcome-panel {
         padding: 30px;
       }
-    }
 
+      .whole-page-copy h1 {
+        font-size:
+          clamp(
+            2.7rem,
+            13vw,
+            4rem
+          );
+      }
+
+      .whole-motion {
+        min-height: 300px;
+      }
+
+      .whole-motion-center {
+        width: 140px;
+        height: 140px;
+      }
+
+      .whole-orbit.one {
+        width: 215px;
+        height: 215px;
+      }
+
+      .whole-orbit.two {
+        width: 270px;
+        height: 270px;
+      }
+
+      .whole-outcome {
+        padding: 24px;
+      }
+
+    }
 
     @media (prefers-reduced-motion: reduce) {
 
-      .leadership-orbit {
+      .whole-orbit {
         animation: none !important;
       }
+
     }
 
   </style>
@@ -723,64 +579,52 @@
      HERO
 ===================================================== -->
 
-<section class="leadership-hero">
+<section class="whole-page-hero">
 
-  <div class="leadership-hero-inner">
+  <div class="whole-page-copy">
+
+    <p class="whole-page-kicker">
+      Whole-Life Leadership
+    </p>
+
+    <h1>
+      Lead Yourself First
+    </h1>
+
+    <p class="whole-page-tagline">
+      Begin Within. Lead With Ease.
+    </p>
+
+    <p>
+      Whole-Life Leadership is a self-leadership framework that
+      helps you intentionally consider yourself so you can move
+      through life with greater steadiness, purposeful direction,
+      and ease.
+    </p>
+
+    <p>
+      Whether you’re navigating a life transition, balancing
+      multiple responsibilities, strengthening your relationships,
+      caring for your well-being, or simply sensing that something
+      needs to change, it begins with how you lead yourself.
+    </p>
+
+  </div>
 
 
-    <div class="leadership-hero-copy">
+  <div
+    class="whole-motion"
+    aria-hidden="true"
+  >
 
-      <p class="eyebrow">
-        Whole-Life Leadership
-      </p>
+    <div class="whole-orbit one"></div>
 
-
-      <h1>
-        Lead Yourself First
-      </h1>
-
-
-      <p class="leadership-tagline">
-        Begin Within. Lead With Ease.
-      </p>
-
-
-      <p>
-        Whole-Life Leadership is a self-leadership framework that
-        helps you intentionally consider yourself so you can move
-        through life with greater steadiness, purposeful direction,
-        and ease.
-      </p>
-
-
-      <p>
-        Whether you’re navigating a life transition, balancing
-        multiple responsibilities, strengthening your relationships,
-        caring for your well-being, or simply sensing that something
-        needs to change, it begins with how you lead yourself.
-      </p>
-
+    <div class="whole-orbit two">
+      <span class="whole-orbit-dot"></span>
     </div>
 
-
-
-    <div
-      class="leadership-motion"
-      aria-hidden="true"
-    >
-
-      <div class="leadership-orbit one"></div>
-
-
-      <div class="leadership-orbit two">
-        <span class="leadership-orbit-dot"></span>
-      </div>
-
-
-      <div class="leadership-motion-center">
-        <span>WL</span>
-      </div>
-
+    <div class="whole-motion-center">
+      <span>WL</span>
     </div>
 
   </div>
@@ -795,231 +639,210 @@
 
 <section class="section light">
 
-  <div class="container leadership-content">
+  <div class="container">
 
+    <h2>
+      When This Path May Be Right for You
+    </h2>
 
-    <div class="leadership-block">
+    <p>
+      You may recognize yourself here if you are:
+    </p>
 
-      <p class="eyebrow">
-        Whole-Life Leadership
-      </p>
+    <ul class="whole-list">
 
+      <li>
+        Feeling stretched by the demands of daily life.
+      </li>
 
-      <h2>
-        When This Path May Be Right for You
-      </h2>
+      <li>
+        Carrying responsibilities that leave little space
+        for yourself.
+      </li>
 
+      <li>
+        Facing decisions that require greater clarity.
+      </li>
 
-      <p>
-        You may recognize yourself here if you are:
-      </p>
+      <li>
+        Ready to reconnect with what matters most.
+      </li>
 
+      <li>
+        Looking for a more intentional way to move through
+        this season of your life.
+      </li>
 
-      <ul class="leadership-list">
+    </ul>
 
-        <li>
-          Feeling stretched by the demands of daily life.
-        </li>
+  </div>
 
-        <li>
-          Carrying responsibilities that leave little space
-          for yourself.
-        </li>
-
-        <li>
-          Facing decisions that require greater clarity.
-        </li>
-
-        <li>
-          Ready to reconnect with what matters most.
-        </li>
-
-        <li>
-          Looking for a more intentional way to move through
-          this season of your life.
-        </li>
-
-      </ul>
-
-    </div>
+</section>
 
 
 
-    <!-- =================================================
-         WHAT WHOLE-LIFE LEADERSHIP HELPS YOU DO
-    ================================================== -->
+<!-- =====================================================
+     WHAT WHOLE-LIFE LEADERSHIP HELPS YOU DO
+===================================================== -->
 
-    <div class="leadership-block">
+<section class="section">
 
-      <p class="eyebrow">
-        This Path Helps You
-      </p>
+  <div class="container">
 
+    <h2>
+      What Whole-Life Leadership Helps You Do
+    </h2>
 
-      <h2>
-        What Whole-Life Leadership Helps You Do
-      </h2>
-
-
-      <p>
-        Through the Focused • Clear • Ready™ Method,
-        you’ll learn to:
-      </p>
+    <p>
+      Through the Focused • Clear • Ready™ Method,
+      you’ll learn to:
+    </p>
 
 
-      <div class="leadership-benefits">
+    <div class="whole-benefits">
 
 
-        <article class="leadership-benefit">
+      <article class="whole-benefit">
 
-          <span class="leadership-benefit-number">
-            01
-          </span>
+        <span>
+          01
+        </span>
 
-          <h3>
-            Consider Yourself First
-          </h3>
-
-          <p>
-            Pause before responding so your decisions reflect
-            what matters most, not simply what feels most urgent.
-          </p>
-
-        </article>
-
-
-
-        <article class="leadership-benefit">
-
-          <span class="leadership-benefit-number">
-            02
-          </span>
-
-          <h3>
-            Gain Clarity
-          </h3>
-
-          <p>
-            Clarify your priorities, values, and direction so
-            you can make intentional decisions with confidence.
-          </p>
-
-        </article>
-
-
-
-        <article class="leadership-benefit">
-
-          <span class="leadership-benefit-number">
-            03
-          </span>
-
-          <h3>
-            Move Forward
-          </h3>
-
-          <p>
-            Take aligned action with greater steadiness,
-            purposeful direction, and ease.
-          </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- =================================================
-         OUTCOME
-    ================================================== -->
-
-    <div class="leadership-block">
-
-      <article class="outcome-panel">
-
-        <p class="eyebrow">
-          The Outcome
-        </p>
-
-
-        <h2>
-          Lead yourself more intentionally within the life
-          you are already building.
-        </h2>
-
+        <h3>
+          Consider Yourself First
+        </h3>
 
         <p>
-          Whole-Life Leadership doesn’t ask you to step away
-          from your life. It helps you lead yourself more
-          intentionally within it.
+          Pause before responding so your decisions reflect
+          what matters most, not simply what feels most urgent.
         </p>
 
+      </article>
+
+
+      <article class="whole-benefit">
+
+        <span>
+          02
+        </span>
+
+        <h3>
+          Gain Clarity
+        </h3>
 
         <p>
-          As you strengthen the way you lead yourself, your
-          decisions become clearer, your actions become more
-          purposeful, and you begin to move through life with
-          greater steadiness, purposeful direction, and ease.
+          Clarify your priorities, values, and direction so
+          you can make intentional decisions with confidence.
+        </p>
+
+      </article>
+
+
+      <article class="whole-benefit">
+
+        <span>
+          03
+        </span>
+
+        <h3>
+          Move Forward
+        </h3>
+
+        <p>
+          Take aligned action with greater steadiness,
+          purposeful direction, and ease.
         </p>
 
       </article>
 
     </div>
 
+  </div>
+
+</section>
 
 
-    <!-- =================================================
-         WORK WITH ME
-    ================================================== -->
 
-    <div class="leadership-block leadership-cta">
+<!-- =====================================================
+     THE OUTCOME
+===================================================== -->
 
-      <p class="eyebrow">
-        Work With Me
-      </p>
+<section class="section light">
 
+  <div class="container">
+
+    <article class="whole-outcome">
 
       <h2>
-        Move forward with greater steadiness,
-        purposeful direction, and ease.
+        Lead yourself more intentionally within the life
+        you are already building.
       </h2>
 
+      <p>
+        Whole-Life Leadership doesn’t ask you to step away
+        from your life. It helps you lead yourself more
+        intentionally within it.
+      </p>
 
       <p>
-        If you’re ready to move forward with greater steadiness,
-        purposeful direction, and ease, I’d love to help you
-        discover what your next chapter can look like.
+        As you strengthen the way you lead yourself, your
+        decisions become clearer, your actions become more
+        purposeful, and you begin to move through life with
+        greater steadiness, purposeful direction, and ease.
       </p>
 
+    </article>
 
-      <div class="button-row">
+  </div>
 
-        <a
-          class="primary-button"
-          href="resources.html#assessments"
-        >
-          Take the Whole-Life Clarity Assessment
-        </a>
-
-        <a
-          class="secondary-button"
-          href="https://calendly.com/fcrlife-info/30min"
-          target="_blank"
-          rel="noopener"
-        >
-          Book a Clarity Call
-        </a>
-
-      </div>
+</section>
 
 
-      <p class="leadership-signature">
-        Begin Within. Lead With Ease.™
-      </p>
+
+<!-- =====================================================
+     WORK WITH ME
+===================================================== -->
+
+<section class="section">
+
+  <div class="container whole-cta">
+
+    <h2>
+      Move forward with greater steadiness,
+      purposeful direction, and ease.
+    </h2>
+
+    <p>
+      If you’re ready to move forward with greater steadiness,
+      purposeful direction, and ease, I’d love to help you
+      discover what your next chapter can look like.
+    </p>
+
+
+    <div class="button-row">
+
+      <a
+        class="primary-button"
+        href="resources.html#assessments"
+      >
+        Take the Whole-Life Clarity Assessment
+      </a>
+
+      <a
+        class="secondary-button"
+        href="https://calendly.com/fcrlife-info/30min"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Clarity Call
+      </a>
 
     </div>
+
+
+    <p class="whole-signature">
+      BEGIN WITHIN. LEAD WITH EASE.™
+    </p>
 
   </div>
 
@@ -1038,20 +861,13 @@
 
   <div class="footer-container">
 
+    <div>
 
-    <div class="footer-brand">
-
-      <p class="footer-logo">
-        Focused • Clear • Ready™
-      </p>
-
-
-      <p style="font-style: normal;">
-        Begin Within. Lead With Ease.™
+      <p>
+        © 2026 Focused • Clear • Ready™
       </p>
 
     </div>
-
 
 
     <nav aria-label="Footer navigation">
@@ -1082,20 +898,14 @@
 
     </nav>
 
-
-
-    <p class="copyright">
-      © 2026 Focused • Clear • Ready™. All rights reserved.
-    </p>
-
   </div>
 
 </footer>
-
 
 
 <script src="js/main.js"></script>
 
 
 </body>
+
 </html>

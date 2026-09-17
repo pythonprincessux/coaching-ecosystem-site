@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -18,135 +19,149 @@
   </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/styles.css">
-
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  >
 
   <style>
 
     /* =====================================================
-       METHOD PAGE ONLY
+       METHOD PAGE V1 RESTORATION
     ===================================================== */
 
-    .method-page-hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-
-      padding:
-        110px
-        0
-        95px;
-
-      background:
-        radial-gradient(
-          circle at 80% 35%,
-          rgba(197, 155, 98, 0.16),
-          transparent 27%
-        ),
-        linear-gradient(
-          135deg,
-          var(--ivory),
-          var(--cream)
-        );
-    }
-
-
-    .method-page-hero-inner {
+    .method-v1-hero {
       width:
         min(
           var(--max-width),
           calc(100% - 48px)
         );
 
-      margin-inline: auto;
+      margin:
+        38px
+        auto
+        34px;
 
       display: grid;
 
       grid-template-columns:
-        minmax(0, 1fr)
-        minmax(300px, 0.72fr);
+        minmax(0, 1.05fr)
+        minmax(320px, 0.95fr);
 
       align-items: center;
 
-      gap: 72px;
+      gap: 46px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 34px;
+
+      padding: 58px;
+
+      background:
+        rgba(255, 255, 255, 0.34);
+
+      box-shadow:
+        var(--shadow-soft);
+
+      overflow: hidden;
     }
 
-
-    .method-page-copy {
-      max-width: 760px;
-    }
-
-
-    .method-page-copy h1 {
-      margin-bottom: 25px;
-
-      color: var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          3.5rem,
-          6.2vw,
-          6rem
-        );
-
-      line-height: 0.98;
-
-      letter-spacing: -0.05em;
-    }
-
-
-    .method-page-copy .method-intro {
-      max-width: 730px;
+    .method-v1-copy h1 {
+      margin-bottom: 24px;
 
       color: var(--text);
-
-      font-size: 1.08rem;
-
-      line-height: 1.86;
-    }
-
-
-    .method-page-copy .method-intro + .method-intro {
-      margin-top: 18px;
-    }
-
-
-    .method-page-signature {
-      margin-top: 30px;
-
-      color: var(--brown);
 
       font-family:
         "Libre Franklin",
         Arial,
         sans-serif;
 
-      font-size: 0.92rem;
+      font-size:
+        clamp(
+          3rem,
+          6vw,
+          5rem
+        );
+
+      font-weight: 800;
+
+      line-height: 0.98;
+
+      letter-spacing: -0.045em;
+    }
+
+    .method-v1-kicker {
+      margin-bottom: 14px;
+
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.82rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+    }
+
+    .method-v1-intro {
+      max-width: 720px;
+
+      color: var(--muted);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 1rem;
+
+      line-height: 1.82;
+    }
+
+    .method-v1-intro + .method-v1-intro {
+      margin-top: 16px;
+    }
+
+    .method-v1-signature {
+      margin-top: 26px;
+
+      color: var(--text);
+
+      font-family:
+        "Libre Franklin",
+        Arial,
+        sans-serif;
+
+      font-size: 0.9rem;
 
       font-weight: 800;
 
       letter-spacing: 0.055em;
     }
 
-
-    /* =====================================================
-       MOTION
-    ===================================================== */
-
-    .method-motion {
-      min-height: 430px;
+    .method-v1-motion {
+      min-height: 360px;
 
       position: relative;
 
@@ -154,10 +169,9 @@
       place-items: center;
     }
 
-
-    .method-motion-center {
-      width: 190px;
-      height: 190px;
+    .method-v1-center {
+      width: 170px;
+      height: 170px;
 
       position: relative;
       z-index: 3;
@@ -167,181 +181,145 @@
 
       border:
         1px solid
-        var(--gold-dark);
+        rgba(90, 70, 61, 0.4);
 
       border-radius: 50%;
 
       background:
-        rgba(251, 248, 243, 0.9);
+        rgba(246, 239, 232, 0.9);
 
       box-shadow:
-        0 0 0 21px rgba(197, 155, 98, 0.06),
-        0 24px 55px rgba(76, 57, 48, 0.13);
-
-      backdrop-filter: blur(5px);
+        0 14px 35px
+        rgba(63, 45, 36, 0.08);
 
       text-align: center;
     }
 
+    .method-v1-center span {
+      max-width: 120px;
 
-    .method-motion-center span {
-      max-width: 145px;
-
-      color: var(--brown);
+      color: var(--text);
 
       font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+        "Libre Franklin",
+        Arial,
+        sans-serif;
 
-      font-size: 1.35rem;
+      font-size: 1.1rem;
 
-      font-weight: 600;
+      font-weight: 800;
 
       line-height: 1.35;
     }
 
-
-    .method-orbit {
+    .method-v1-orbit {
       position: absolute;
 
       border:
         1px solid
-        rgba(167, 121, 66, 0.4);
+        rgba(90, 70, 61, 0.22);
 
       border-radius: 50%;
 
       pointer-events: none;
     }
 
-
-    .method-orbit.one {
-      width: 290px;
-      height: 290px;
+    .method-v1-orbit.one {
+      width: 260px;
+      height: 260px;
 
       animation:
-        method-orbit-reverse
+        method-v1-spin-reverse
         58s
         linear
         infinite;
     }
 
-
-    .method-orbit.two {
-      width: 375px;
-      height: 375px;
+    .method-v1-orbit.two {
+      width: 330px;
+      height: 330px;
 
       border-style: dashed;
 
       animation:
-        method-orbit
+        method-v1-spin
         36s
         linear
         infinite;
     }
 
-
-    .method-orbit-dot {
-      width: 11px;
-      height: 11px;
+    .method-v1-orbit-dot {
+      width: 10px;
+      height: 10px;
 
       position: absolute;
 
-      top: 19px;
+      top: 17px;
       left: 50%;
 
       border-radius: 50%;
 
-      background: var(--gold);
+      background: #8a7063;
 
       box-shadow:
-        0 0 18px
-        rgba(197, 155, 98, 0.5);
+        0 0 14px
+        rgba(90, 70, 61, 0.2);
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
     }
 
-
-    @keyframes method-orbit {
-
+    @keyframes method-v1-spin {
       to {
         transform: rotate(360deg);
       }
-
     }
 
-
-    @keyframes method-orbit-reverse {
-
+    @keyframes method-v1-spin-reverse {
       to {
         transform: rotate(-360deg);
       }
-
     }
 
+    .method-definition-v1 {
+      max-width: 900px;
 
-    /* =====================================================
-       METHOD INTRO
-    ===================================================== */
-
-    .method-definition {
-      max-width: 970px;
-
-      margin-inline: auto;
+      margin:
+        0
+        auto;
 
       text-align: center;
     }
 
+    .method-definition-v1 h2 {
+      max-width: 850px;
 
-    .method-definition h2 {
-      margin-bottom: 24px;
+      margin:
+        0
+        auto
+        22px;
 
-      color: var(--brown-deep);
+      color: var(--text);
 
       font-size:
         clamp(
-          2.5rem,
-          4.8vw,
-          4rem
+          2rem,
+          4vw,
+          3.4rem
         );
 
-      line-height: 1.05;
+      line-height: 1.08;
     }
 
+    .method-definition-v1 p {
+      max-width: 760px !important;
 
-    .method-definition p {
-      max-width: 870px;
-
-      margin-inline: auto;
-
-      font-size: 1.04rem;
-
-      line-height: 1.85;
+      margin:
+        0
+        auto;
     }
 
-
-    /* =====================================================
-       FOUR METHOD STAGES
-    ===================================================== */
-
-    .method-stage-section {
-      position: relative;
-
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 20% 25%,
-          rgba(197, 155, 98, 0.1),
-          transparent 28%
-        ),
-        var(--cream);
-    }
-
-
-    .method-stage-grid {
-      margin-top: 45px;
-
+    .method-stage-grid-v1 {
       display: grid;
 
       grid-template-columns:
@@ -350,202 +328,137 @@
           minmax(0, 1fr)
         );
 
-      gap: 20px;
+      gap: 18px;
+
+      margin-top: 28px;
     }
 
-
-    .method-stage {
+    .method-stage-v1 {
       min-height: 100%;
-
-      position: relative;
-
-      overflow: hidden;
 
       border:
         1px solid
-        var(--line);
+        rgba(255, 255, 255, 0.65);
 
-      border-radius:
-        var(--radius-lg);
+      border-radius: 22px;
 
-      padding:
-        33px;
-
-      background:
-        rgba(255, 255, 255, 0.88);
+      padding: 28px;
 
       box-shadow:
         var(--shadow-card);
 
       transition:
-        transform var(--transition),
-        box-shadow var(--transition),
-        border-color var(--transition);
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
-
-    .method-stage:nth-child(2) {
-      background:
-        var(--blush-soft);
+    .method-stage-v1:nth-child(1) {
+      background: #f4ede7;
     }
 
-
-    .method-stage:nth-child(3) {
-      background:
-        var(--champagne-soft);
+    .method-stage-v1:nth-child(2) {
+      background: #f3dedd;
     }
 
-
-    .method-stage:nth-child(4) {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.94),
-          rgba(246,239,231,0.92)
-        );
+    .method-stage-v1:nth-child(3) {
+      background: #ead1ac;
     }
 
-
-    .method-stage::before {
-      position: absolute;
-
-      top: 0;
-      right: 0;
-      left: 0;
-
-      height: 3px;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--brown),
-          var(--gold)
-        );
-
-      content: "";
+    .method-stage-v1:nth-child(4) {
+      background: #eee4de;
     }
 
-
-    .method-stage:hover {
-      border-color:
-        rgba(197, 155, 98, 0.7);
-
-      box-shadow:
-        0 22px 46px
-        rgba(76, 57, 48, 0.11);
-
+    .method-stage-v1:hover {
       transform:
         translateY(-6px);
+
+      box-shadow:
+        0 18px 40px
+        rgba(63, 45, 36, 0.1);
     }
 
+    .method-stage-number-v1 {
+      display: inline-grid;
 
-    .method-stage-number {
-      width: 54px;
-      height: 54px;
+      width: 42px;
+      height: 42px;
 
-      margin-bottom: 23px;
+      margin-bottom: 18px;
 
-      display: grid;
       place-items: center;
 
       border:
         1px solid
-        var(--gold-dark);
+        #c7b6aa;
 
       border-radius: 50%;
 
-      background:
-        rgba(255, 255, 255, 0.6);
+      color: var(--text);
 
-      color:
-        var(--brown);
+      font-size: 0.78rem;
 
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size: 1.15rem;
-
-      font-weight: 600;
+      font-weight: 800;
     }
 
-
-    .method-stage h3 {
+    .method-stage-v1 h3 {
       margin-bottom: 9px;
 
-      color:
-        var(--brown-deep);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+      color: var(--text);
 
       font-size:
         clamp(
-          1.55rem,
-          2.5vw,
-          2rem
+          1.15rem,
+          2vw,
+          1.45rem
         );
 
-      line-height: 1.15;
+      font-weight: 800;
+
+      line-height: 1.2;
     }
 
+    .method-stage-tagline-v1 {
+      margin-bottom: 14px !important;
 
-    .method-stage-tagline {
-      margin-bottom: 19px !important;
-
-      color:
-        var(--gold-dark) !important;
+      color: var(--text) !important;
 
       font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+        "Libre Franklin",
+        Arial,
+        sans-serif !important;
 
-      font-size: 1rem !important;
+      font-size: 0.82rem !important;
 
-      font-style: normal;
-
-      line-height: 1.55 !important;
+      font-weight: 800;
     }
 
+    .method-stage-v1 p {
+      color: var(--text) !important;
 
-    .method-stage p {
-      color:
-        var(--text-soft);
+      font-size: 0.92rem !important;
 
-      font-size: 0.94rem;
-
-      line-height: 1.78;
+      line-height: 1.7 !important;
     }
 
+    .method-path-v1 {
+      max-width: 900px;
 
-    /* =====================================================
-       CONNECTING LINE
-    ===================================================== */
-
-    .method-path {
-      max-width: 970px;
+      height: 42px;
 
       margin:
-        50px
+        40px
         auto
         0;
 
       position: relative;
-
-      height: 42px;
     }
 
-
-    .method-path-line {
+    .method-path-line-v1 {
       position: absolute;
 
       top: 50%;
-      right: 4%;
-      left: 4%;
+      right: 5%;
+      left: 5%;
 
       height: 1px;
 
@@ -553,16 +466,15 @@
         linear-gradient(
           90deg,
           transparent,
-          var(--gold),
-          var(--gold),
+          #bba99e,
+          #bba99e,
           transparent
         );
     }
 
-
-    .method-path-dot {
-      width: 9px;
-      height: 9px;
+    .method-path-dot-v1 {
+      width: 8px;
+      height: 8px;
 
       position: absolute;
 
@@ -570,125 +482,78 @@
 
       border-radius: 50%;
 
-      background: var(--gold);
+      background: #8a7063;
 
       transform:
-        translate(-50%, -50%);
-
-      box-shadow:
-        0 0 13px
-        rgba(197, 155, 98, 0.4);
+        translate(
+          -50%,
+          -50%
+        );
     }
 
-
-    .method-path-dot:nth-child(2) {
+    .method-path-dot-v1:nth-child(2) {
       left: 12%;
     }
 
-
-    .method-path-dot:nth-child(3) {
+    .method-path-dot-v1:nth-child(3) {
       left: 37%;
     }
 
-
-    .method-path-dot:nth-child(4) {
+    .method-path-dot-v1:nth-child(4) {
       left: 63%;
     }
 
-
-    .method-path-dot:nth-child(5) {
+    .method-path-dot-v1:nth-child(5) {
       left: 88%;
     }
 
-
-    /* =====================================================
-       METHOD CLOSING
-    ===================================================== */
-
-    .method-closing {
-      position: relative;
-
-      overflow: hidden;
-
+    .method-closing-v1 {
       padding:
-        105px
+        36px
         0;
+    }
 
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(197, 155, 98, 0.15),
-          transparent 43%
-        ),
-        linear-gradient(
-          135deg,
-          var(--blush-soft),
-          var(--cream)
-        );
-
+    .method-closing-v1 .container {
       text-align: center;
     }
 
+    .method-closing-v1 h2 {
+      max-width: 800px;
 
-    .method-closing .container {
-      max-width: 880px;
+      margin:
+        0
+        auto
+        20px;
     }
 
+    .method-closing-v1 p {
+      max-width: 720px !important;
 
-    .method-closing h2 {
-      margin-bottom: 23px;
-
-      color: var(--brown-deep);
-
-      font-size:
-        clamp(
-          2.8rem,
-          5vw,
-          4.6rem
-        );
-
-      line-height: 1.04;
+      margin:
+        0
+        auto;
     }
 
+    .method-closing-brand-v1 {
+      margin-top: 28px !important;
 
-    .method-closing p {
-      max-width: 720px;
-
-      margin-inline: auto;
-
-      color: var(--text-soft);
-
-      font-size: 1.02rem;
-
-      line-height: 1.82;
-    }
-
-
-    .method-closing-brand {
-      margin-top: 32px !important;
-
-      color: var(--brown) !important;
+      color: var(--text) !important;
 
       font-family:
         "Libre Franklin",
         Arial,
         sans-serif !important;
 
-      font-size: 0.92rem !important;
+      font-size: 0.9rem !important;
 
       font-weight: 800;
 
       letter-spacing: 0.06em;
     }
 
-
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
-
     @media (max-width: 1050px) {
 
-      .method-stage-grid {
+      .method-stage-grid-v1 {
         grid-template-columns:
           repeat(
             2,
@@ -698,105 +563,69 @@
 
     }
 
-
     @media (max-width: 900px) {
 
-      .method-page-hero-inner {
+      .method-v1-hero {
         grid-template-columns: 1fr;
-      }
-
-
-      .method-motion {
-        min-height: 360px;
       }
 
     }
 
+    @media (max-width: 760px) {
 
-    @media (max-width: 680px) {
-
-      .method-page-hero {
-        padding:
-          72px
-          0
-          58px;
-      }
-
-
-      .method-page-hero-inner {
+      .method-v1-hero {
         width:
           min(
-            100% - 28px,
-            var(--max-width)
+            var(--max-width),
+            calc(100% - 28px)
           );
+
+        margin-top: 24px;
+
+        padding: 30px;
       }
 
-
-      .method-page-copy h1 {
+      .method-v1-copy h1 {
         font-size:
           clamp(
-            3rem,
-            15vw,
-            4.25rem
+            2.7rem,
+            13vw,
+            4rem
           );
       }
 
-
-      .method-motion {
-        min-height: 315px;
+      .method-v1-motion {
+        min-height: 300px;
       }
 
-
-      .method-motion-center {
-        width: 145px;
-        height: 145px;
+      .method-v1-center {
+        width: 140px;
+        height: 140px;
       }
 
-
-      .method-motion-center span {
-        font-size: 1.08rem;
+      .method-v1-orbit.one {
+        width: 215px;
+        height: 215px;
       }
 
-
-      .method-orbit.one {
-        width: 225px;
-        height: 225px;
+      .method-v1-orbit.two {
+        width: 270px;
+        height: 270px;
       }
 
-
-      .method-orbit.two {
-        width: 280px;
-        height: 280px;
-      }
-
-
-      .method-stage-grid {
+      .method-stage-grid-v1 {
         grid-template-columns: 1fr;
       }
 
-
-      .method-stage {
-        padding: 27px;
-      }
-
-
-      .method-path {
+      .method-path-v1 {
         display: none;
       }
 
-
-      .method-closing {
-        padding:
-          75px
-          0;
-      }
-
     }
-
 
     @media (prefers-reduced-motion: reduce) {
 
-      .method-orbit {
+      .method-v1-orbit {
         animation: none !important;
       }
 
@@ -809,14 +638,9 @@
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header class="site-header">
 
   <div class="nav-container">
-
 
     <a
       class="logo"
@@ -879,76 +703,59 @@
 <main>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
-<section class="method-page-hero">
+<section class="method-v1-hero">
 
-  <div class="method-page-hero-inner">
+  <div class="method-v1-copy">
 
+    <p class="method-v1-kicker">
+      The Focused • Clear • Ready™ Method
+    </p>
 
-    <div class="method-page-copy">
+    <h1>
+      Begin Within.<br>
+      Lead With Ease.
+    </h1>
 
+    <p class="method-v1-intro">
+      The Focused • Clear • Ready™ Method is a self-leadership
+      framework that helps you intentionally consider yourself
+      before responding to life’s demands, responsibilities,
+      obligations, and important decisions.
+    </p>
 
-      <p class="eyebrow">
-        The Focused • Clear • Ready™ Method
-      </p>
+    <p class="method-v1-intro">
+      From that foundation, you gain clarity about what matters
+      most and move forward with greater steadiness, purposeful
+      direction, and ease.
+    </p>
 
+    <p class="method-v1-signature">
+      BEGIN WITHIN. LEAD WITH EASE.™
+    </p>
 
-      <h1>
-        Begin Within.<br>
-        Lead With Ease.
-      </h1>
-
-
-      <p class="method-intro">
-        The Focused • Clear • Ready™ Method is a self-leadership
-        framework that helps you intentionally consider yourself
-        before responding to life’s demands, responsibilities,
-        obligations, and important decisions.
-      </p>
-
-
-      <p class="method-intro">
-        From that foundation, you gain clarity about what matters
-        most and move forward with greater steadiness, purposeful
-        direction, and ease.
-      </p>
+  </div>
 
 
-      <p class="method-page-signature">
-        BEGIN WITHIN. LEAD WITH EASE.™
-      </p>
+  <div
+    class="method-v1-motion"
+    aria-hidden="true"
+  >
 
+    <div class="method-v1-orbit one"></div>
+
+    <div class="method-v1-orbit two">
+      <span class="method-v1-orbit-dot"></span>
     </div>
 
+    <div class="method-v1-center">
 
-
-    <div
-      class="method-motion"
-      aria-hidden="true"
-    >
-
-      <div class="method-orbit one"></div>
-
-
-      <div class="method-orbit two">
-
-        <span class="method-orbit-dot"></span>
-
-      </div>
-
-
-      <div class="method-motion-center">
-
-        <span>
-          Focused<br>
-          • Clear •<br>
-          Ready™
-        </span>
-
-      </div>
+      <span>
+        Focused<br>
+        • Clear •<br>
+        Ready™
+      </span>
 
     </div>
 
@@ -958,22 +765,13 @@
 
 
 
-<!-- =====================================================
-     METHOD DEFINITION
-===================================================== -->
+<!-- METHOD DEFINITION -->
 
 <section class="section">
 
   <div class="container">
 
-
-    <div class="method-definition">
-
-
-      <p class="eyebrow">
-        A Four-Part Self-Leadership Framework
-      </p>
-
+    <div class="method-definition-v1">
 
       <h2>
         Consider yourself first.
@@ -981,7 +779,6 @@
         Create alignment.
         Lead with ease.
       </h2>
-
 
       <p>
         The Focused • Clear • Ready™ Method helps you move
@@ -997,56 +794,36 @@
 
 
 
-<!-- =====================================================
-     FOUR METHOD STAGES
-===================================================== -->
+<!-- FOUR METHOD STAGES -->
 
 <section
-  class="section method-stage-section"
+  class="section light"
   id="four-phases"
 >
 
   <div class="container">
 
-
-    <div class="section-heading centered">
-
-
-      <p class="eyebrow">
-        The Focused • Clear • Ready™ Method
-      </p>
+    <h2>
+      Four Stages for Building a More Considered Life
+    </h2>
 
 
-      <h2>
-        Four stages for building a more considered life.
-      </h2>
-
-    </div>
+    <div class="method-stage-grid-v1">
 
 
+      <article class="method-stage-v1">
 
-    <div class="method-stage-grid">
-
-
-      <!-- STAGE 1 -->
-
-      <article class="method-stage">
-
-
-        <div class="method-stage-number">
+        <div class="method-stage-number-v1">
           1
         </div>
-
 
         <h3>
           Begin Within™
         </h3>
 
-
-        <p class="method-stage-tagline">
+        <p class="method-stage-tagline-v1">
           Pause before responding.
         </p>
-
 
         <p>
           Become aware of what’s happening within you by observing
@@ -1059,58 +836,43 @@
       </article>
 
 
+      <article class="method-stage-v1">
 
-      <!-- STAGE 2 -->
-
-      <article class="method-stage">
-
-
-        <div class="method-stage-number">
+        <div class="method-stage-number-v1">
           2
         </div>
-
 
         <h3>
           Clarify
         </h3>
 
-
-        <p class="method-stage-tagline">
+        <p class="method-stage-tagline-v1">
           Discover what matters most.
         </p>
-
 
         <p>
           Clarify your values, priorities, responsibilities, and
           direction within this season of your life. As your thinking
           becomes clearer, your decisions begin reflecting what truly
-          matters rather than simply responding to what feels most
-          urgent.
+          matters rather than simply responding to what feels most urgent.
         </p>
 
       </article>
 
 
+      <article class="method-stage-v1">
 
-      <!-- STAGE 3 -->
-
-      <article class="method-stage">
-
-
-        <div class="method-stage-number">
+        <div class="method-stage-number-v1">
           3
         </div>
-
 
         <h3>
           Become Focused • Clear • Ready™
         </h3>
 
-
-        <p class="method-stage-tagline">
+        <p class="method-stage-tagline-v1">
           Create alignment.
         </p>
-
 
         <p>
           Bring your decisions, priorities, habits, boundaries,
@@ -1123,34 +885,26 @@
       </article>
 
 
+      <article class="method-stage-v1">
 
-      <!-- STAGE 4 -->
-
-      <article class="method-stage">
-
-
-        <div class="method-stage-number">
+        <div class="method-stage-number-v1">
           4
         </div>
-
 
         <h3>
           Lead With Ease™
         </h3>
 
-
-        <p class="method-stage-tagline">
+        <p class="method-stage-tagline-v1">
           Live what you’ve created.
         </p>
-
 
         <p>
           Self-leadership becomes more than something you practice.
           It becomes how you naturally move through life. You continue
           making intentional decisions, responding thoughtfully to
           challenges, and creating sustainable rhythms that support
-          both your well-being and everything you’ve been called
-          to lead.
+          both your well-being and everything you’ve been called to lead.
         </p>
 
       </article>
@@ -1158,18 +912,17 @@
     </div>
 
 
-
     <div
-      class="method-path"
+      class="method-path-v1"
       aria-hidden="true"
     >
 
-      <div class="method-path-line"></div>
+      <div class="method-path-line-v1"></div>
 
-      <span class="method-path-dot"></span>
-      <span class="method-path-dot"></span>
-      <span class="method-path-dot"></span>
-      <span class="method-path-dot"></span>
+      <span class="method-path-dot-v1"></span>
+      <span class="method-path-dot-v1"></span>
+      <span class="method-path-dot-v1"></span>
+      <span class="method-path-dot-v1"></span>
 
     </div>
 
@@ -1179,24 +932,15 @@
 
 
 
-<!-- =====================================================
-     CLOSING
-===================================================== -->
+<!-- CLOSING -->
 
-<section class="method-closing">
+<section class="method-closing-v1 section">
 
   <div class="container">
 
-
-    <p class="eyebrow">
-      Focused • Clear • Ready™
-    </p>
-
-
     <h2>
-      A more intentional way to lead yourself through life.
+      A More Intentional Way to Lead Yourself Through Life
     </h2>
-
 
     <p>
       The Focused • Clear • Ready™ Method is the practical
@@ -1206,8 +950,7 @@
       matters most to you.
     </p>
 
-
-    <p class="method-closing-brand">
+    <p class="method-closing-brand-v1">
       BEGIN WITHIN. LEAD WITH EASE.™
     </p>
 
@@ -1220,29 +963,17 @@
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer class="site-footer">
 
   <div class="footer-container">
 
+    <div>
 
-    <div class="footer-brand">
-
-
-      <p class="footer-logo">
-        Focused • Clear • Ready™
-      </p>
-
-
-      <p style="font-style: normal;">
-        Begin Within. Lead With Ease.™
+      <p>
+        © 2026 Focused • Clear • Ready™
       </p>
 
     </div>
-
 
 
     <nav aria-label="Footer navigation">
@@ -1273,20 +1004,14 @@
 
     </nav>
 
-
-
-    <p class="copyright">
-      © 2026 Focused • Clear • Ready™. All rights reserved.
-    </p>
-
   </div>
 
 </footer>
-
 
 
 <script src="js/main.js"></script>
 
 
 </body>
+
 </html>
